@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Барбер с 0</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ 
+		<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+		<link href="css/fontawesome/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+
+
+	</head>
+	<body>
+		<div class="main-bg">
+			<div class="container">
+				<header class="row d-flex justify-content-between px-3 px-md-0">
+					<div class="logo col-2 d-none d-sm-flex p-0"><a href="#"><img src="img/logo.svg" alt="logo"></a></div>
+					<div class="logo col-3 d-flex d-sm-none p-0"><a href="#"><img src="img/logo-mob.svg" alt="logo"></a></div>
+					<div class="contact col-8 col-sm-6 col-md-8 col-lg-10 row justify-content-between p-0">
+						<div class="contact-number col-4 col-md-6 col-lg-5 col-xl-4 d-none d-md-flex" >+7 123 456-78-90<span data-toggle="modal" data-target="#entryModal">обратный звонок</span></div>
+						<div class="contact-messenger col-md-4 col-lg-3 col-xl-2 d-flex align-items-center justify-content-between justify-content-md-around ">
+							<a href="#" class="d-block d-md-none" data-toggle="modal" data-target="#entryModal">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.9777 14.8673C18.4856 14.3557 17.8921 14.0822 17.2631 14.0822C16.6391 14.0822 16.0406 14.3506 15.5282 14.8622L13.9252 16.4578C13.7933 16.3869 13.6614 16.321 13.5346 16.2552C13.352 16.164 13.1795 16.0779 13.0324 15.9867C11.5309 15.0344 10.1663 13.7934 8.85757 12.1877C8.22348 11.3874 7.79737 10.7137 7.48793 10.0299C7.9039 9.64997 8.28943 9.25487 8.66481 8.87497C8.80684 8.73314 8.94888 8.58624 9.09092 8.44441C10.1562 7.38069 10.1562 6.00291 9.09092 4.93919L7.70606 3.55634C7.54881 3.39932 7.38648 3.23723 7.2343 3.07513C6.92993 2.76108 6.61035 2.4369 6.28062 2.13298C5.78857 1.6467 5.20013 1.38837 4.58126 1.38837C3.96239 1.38837 3.3638 1.6467 2.85653 2.13298C2.85146 2.13804 2.85146 2.13804 2.84639 2.14311L1.12166 3.88053C0.472347 4.52889 0.102037 5.31909 0.0208735 6.23592C-0.100872 7.715 0.335383 9.09278 0.670183 9.99441C1.49197 12.208 2.71957 14.2594 4.55082 16.4578C6.77268 19.107 9.44601 21.199 12.4998 22.673C13.6665 23.2251 15.2239 23.8786 16.9638 23.99C17.0703 23.9951 17.1819 24.0001 17.2834 24.0001C18.4552 24.0001 19.4393 23.5797 20.2103 22.7439C20.2154 22.7338 20.2256 22.7287 20.2306 22.7186C20.4944 22.3995 20.7988 22.1108 21.1184 21.8018C21.3365 21.5941 21.5597 21.3763 21.7778 21.1483C22.28 20.6266 22.5438 20.0188 22.5438 19.3957C22.5438 18.7676 22.2749 18.1648 21.7626 17.6583L18.9777 14.8673Z"/>
+									<path d="M12.9716 5.70895C14.3006 5.93183 15.508 6.55993 16.4718 7.52235C17.4356 8.48477 18.0595 9.69033 18.2878 11.0175C18.3436 11.3518 18.6328 11.5848 18.9625 11.5848C19.0031 11.5848 19.0386 11.5797 19.0792 11.5746C19.4545 11.5139 19.7031 11.1593 19.6422 10.7844C19.3683 9.17873 18.6074 7.71484 17.4457 6.55487C16.2841 5.3949 14.8181 4.6351 13.21 4.36157C12.8346 4.30078 12.4846 4.54899 12.4187 4.91876C12.3527 5.28853 12.5962 5.64817 12.9716 5.70895Z"/>
+									<path d="M23.9896 10.5869C23.5381 7.94278 22.2902 5.53673 20.3727 3.62203C18.4552 1.70732 16.0457 0.461242 13.3977 0.0104253C13.0274 -0.0554244 12.6774 0.197844 12.6114 0.567615C12.5505 0.942451 12.7991 1.29196 13.1745 1.35781C15.5384 1.75797 17.6943 2.87742 19.4089 4.58444C21.1235 6.29654 22.2395 8.44931 22.6402 10.8098C22.696 11.1441 22.9852 11.3771 23.3149 11.3771C23.3555 11.3771 23.391 11.372 23.4316 11.367C23.8019 11.3112 24.0555 10.9567 23.9896 10.5869Z"/>
+								</svg>
+							</a>
+							<a href="#">
+								<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M15 7.43304C15 5.42411 14.2522 3.67188 12.7567 2.17634C11.3058 0.725446 9.55357 0 7.5 0C5.44643 0 3.6942 0.725446 2.2433 2.17634C0.792411 3.62723 0.0669643 5.37946 0.0669643 7.43304C0.0669643 8.77232 0.401786 10.0112 1.07143 11.1496L0 15L3.95089 13.9621C5.04464 14.5647 6.22768 14.8661 7.5 14.8661C9.55357 14.8661 11.317 14.1406 12.7902 12.6897C14.2634 11.2388 15 9.48661 15 7.43304ZM11.25 9.20755C11.2277 9.16291 11.1049 9.08479 10.8817 8.97318C10.212 8.63836 9.78792 8.43747 9.60935 8.3705C9.43078 8.30354 9.29685 8.33702 9.20756 8.47095C9.09596 8.6272 8.89506 8.87273 8.60489 9.20755C8.5156 9.31916 8.38167 9.33032 8.2031 9.24104C7.5781 8.92854 7.07587 8.6272 6.6964 8.33702C6.33926 8.04684 6.00444 7.61157 5.69194 7.03122C5.6473 6.89729 5.63614 6.81916 5.65846 6.79684L5.89283 6.56247C6.02676 6.40622 6.13837 6.22764 6.22765 6.02675C6.2723 5.93746 6.26113 5.82586 6.19417 5.69193L5.62497 4.31916C5.55801 4.11827 5.42408 4.01782 5.22319 4.01782H4.85488C4.67631 4.01782 4.5089 4.08479 4.35265 4.21872C3.92855 4.70979 3.71649 5.23434 3.71649 5.79238C3.71649 6.37273 3.97319 7.00889 4.48658 7.70086C5.49105 9.10711 6.54015 10.0446 7.6339 10.5134C8.54908 10.9151 9.29685 11.0714 9.87721 10.9821C10.0781 10.9598 10.3125 10.8593 10.5803 10.6808C10.8705 10.4799 11.0491 10.2901 11.116 10.1116C11.2723 9.64282 11.3169 9.34148 11.25 9.20755Z"/>
+								</svg>
+							</a>
+							<a href="#">
+								<svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13.9498 1.06403C14.1373 0.189034 13.6373 -0.154716 13.0748 0.0640337L0.637258 4.84528C-0.206492 5.18903 -0.175242 5.65778 0.512258 5.87653L3.66851 6.84528L11.0435 2.22028C11.3873 1.97028 11.731 2.12653 11.4498 2.34528L5.48101 7.72028L5.26226 11.0015C5.60601 11.0015 5.73101 10.8765 5.91851 10.689L7.44976 9.18903L10.6685 11.564C11.2623 11.9078 11.6998 11.7203 11.856 11.0328L13.9498 1.06403Z"/>
+								</svg>
+							</a>
+							<a href="#">
+								<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.26518 0.010382C11.5537 0.010382 13.0538 1.12305 13.4288 1.44513C14.6404 2.52851 15.3039 4.90024 14.8423 8.67744C14.4544 11.9322 12.2352 12.5516 11.4472 12.7716C11.3562 12.797 11.2842 12.8171 11.2364 12.8353L11.2302 12.8369C10.9749 12.9017 9.16832 13.3606 6.82283 13.1574C6.6132 13.4174 6.34715 13.7157 6.11579 13.975C6.06061 14.0369 6.00741 14.0965 5.95741 14.1529C5.8703 14.2469 5.79039 14.3398 5.71475 14.4277C5.38964 14.8056 5.14368 15.0915 4.74584 14.9728C4.34198 14.8264 4.37083 14.2115 4.37083 14.2115V12.7182C0.912217 11.7235 0.966774 8.06897 0.995643 6.13512L0.995719 6.13003C1.02457 4.16823 1.39958 2.61636 2.46692 1.53297C4.37083 -0.223863 8.26518 0.010382 8.26518 0.010382ZM8.52482 4.66601C9.33254 4.72457 9.76525 5.19306 9.79409 6.0422C9.82294 6.27644 9.44793 6.30572 9.44793 6.0422C9.39023 5.39802 9.10176 5.10522 8.49597 5.04666C8.23635 5.04666 8.2652 4.66601 8.52482 4.66601ZM10.7749 6.36428C10.7749 6.62781 10.3999 6.59853 10.3999 6.36428C10.4287 5.1345 9.64986 4.13896 8.2075 4.05112C7.94788 4.02183 7.97673 3.64119 8.23635 3.67047C9.90948 3.78759 10.8037 4.95881 10.7749 6.36428ZM7.89019 2.67493C10.0249 2.70421 11.7268 4.19752 11.7557 6.74493C11.7557 7.00846 11.3807 7.00846 11.3807 6.74493C11.3518 4.3732 9.79409 3.08486 7.89019 3.05557C7.65941 3.05557 7.65941 2.67493 7.89019 2.67493ZM11.323 8.94098C11.5249 9.11666 11.5538 9.35091 11.4095 9.61443V9.64371C11.1211 10.2 10.5153 10.8149 9.93833 10.61H9.90948C9.30369 10.4343 7.89019 9.67299 6.96708 8.94098C6.50553 8.56033 6.07282 8.12112 5.7555 7.71119C5.46703 7.33054 5.14972 6.89133 4.86124 6.335C4.25546 5.22234 4.11122 4.69529 4.11122 4.69529C3.90929 4.10968 4.51508 3.49478 5.06317 3.20198H5.09202C5.35164 3.05557 5.61127 3.08486 5.7555 3.3191C5.7555 3.3191 6.13052 3.72903 6.27475 3.96327C6.41899 4.13896 6.62092 4.46104 6.70746 4.63673C6.88054 4.95881 6.794 5.2809 6.62092 5.4273L6.27475 5.72011C6.10167 5.86651 6.10167 6.13004 6.10167 6.13004C6.10167 6.13004 6.62092 8.09184 8.55367 8.58961C8.55367 8.58961 8.81329 8.61889 8.95753 8.44321L9.21715 8.09184C9.36139 7.91616 9.6787 7.79903 9.99602 7.97472C10.4287 8.20896 10.948 8.58961 11.323 8.94098Z"/>
+								</svg>
+							</a>
+						</div>
+					</div>	
+				</header>
+				<main class="row px-3 px-md-0">
+					<h1 class="col-7 col-sm-5 col-md-12 p-0">Барбер <span>с 0</span></h1>
+					<div class="main-text col-9 col-sm-8 col-md-7 col-lg-5  p-0">
+						<span class="text-stroke">55 000Р</span>
+						<h4>45 000Р<br class="d-inline d-md-none"> <span>за 22 дня</span>
+						</h4>
+						<span class="text-clarify p-0">при оплате <br class="d-block d-md-none">до 31.12.2020</span>
+						<p class="d-none d-md-block">Современный курс обучения мужским стрижкам и бритью от признанных профессионалов своего дела.</p>
+					</div>
+					<div class="w-100"></div>
+					<button class="main-btn col-9 col-sm-7 col-lg-5 col-xl-4 p-0" type="button" data-toggle="modal" data-target="#entryModal">Записаться
+					</button>	
+				</main>
+			</div>	
+		</div>
+		<div class="about container-fluid">
+			<div class="container">
+				<div class="about-content row px-3 px-md-0">
+					<div class="logo col-9 col-md-7  col-lg-5 p-0"><a href="#"><img src="img/logo.svg" alt="logo"></a></div>
+					<p class="about-text col-xl-10 p-0"><span>Raketa Barber School</span> – это авторский проект обучения барберов с нуля. Практикующие преподаватели передадут Вам свой багаж знаний, чтобы по окончанию обучения Вы смогли приступить к самостоятельной работе в любом барбершопе страны.</p>
+				</div>	
+			</div>
+		</div>
+		<div class="advantage container-fluid">
+			<section class="container">
+				<h3 class="basic-title ">Наши преимущества</h3>
+				<div class="advantage-content row px-3 px-md-0">
+					<div class="advantage-item col-12 col-sm-6 col-xl-4 px-4 pb-4 pt-0">
+						<img src="img/group.svg" alt="">
+						<h5>Мини группы<br>из 4 учеников</h5>
+						<p class="advantage-text d-none d-md-block">В течение всех 22 дней обучения преподаватель уделит максимум времени каждому, до тех пор пока, весь  материал не будет усвоен.</p>
+					</div>
+					<div class="advantage-item col-12 col-sm-6 col-xl-4 p-4 pt-sm-0">
+						<img src="img/group1.svg" alt="">
+						<h5>Инструменты  и расходные материалы  включены в стоимость</h5>
+						<p class="advantage-text d-none d-md-block">Вам не потребуется для обучения еще тратить порядка 30 000 руб и покупать инструменты. Мы всем вас обеспечим для комфортного обучения.</p>
+					</div>
+					<div class="advantage-item col-12 col-sm-6 col-xl-4 p-4 pt-xl-0">
+						<img src="img/group2.svg" alt="">
+						<h5>Курс разработан<br>с учетом современных тенденций.</h5>
+						<p class="advantage-text d-none d-md-block">Мы научим Вас не только круто стричь, но и как правильно общаться с клиентом, предлагать дополнительные услуги (Black mask, ваксинг), требованиям СанПина</p>
+					</div>
+					<div class="advantage-item col-12 col-sm-6 col-xl-4 p-4 pb-xl-0">
+						<img src="img/group3.svg" alt="">
+						<h5>Гибкие<br>условия оплаты</h5>
+						<p class="advantage-text d-none d-md-block">Возможна рассрочка оплаты до конца обучения.</p>
+					</div>
+					<div class="advantage-item col-12 col-sm-6 col-xl-4 p-4 pb-sm-0">
+						<img src="img/group4.svg" alt="">
+						<h5>Диплом<br>по окончанию обучения</h5>
+						<p class="advantage-text d-none d-md-block">Диплом котируется в сети наших барбершопов и у наших партнеров в более 400 городах РФ.</p>
+					</div>
+					<div class="advantage-item col-12 col-sm-6 col-xl-4 px-4 pt-4 pb-0">
+						<img src="img/group5.svg" alt="">
+						<h5>Стажировка<br>после прохождения курса</h5>
+						<p class="advantage-text d-none d-md-block">Закончив обучение, лучшие ученики смогут пройти стажировку в действующем барбершопе.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="signUp container-fluid">
+			<section class="container">
+				<h3 class="basic-title ">Записаться на курс</h3>
+				<div class="signUp-content ">
+					<form class="row px-3 px-md-0 d-flex">
+						<div class="form-group col-12 col-lg-4 pr-lg-3 pr-xl-0 mb-lg-0">
+							<input type="text" class="form-control" id="inputName" placeholder="Ваше имя">
+						</div>
+						<div class="form-group col-12 col-lg-4 pr-lg-3 pr-xl-0 mb-lg-0">
+							<input type="tel"  name="phone" class="form-control" id="inputPhone" required  placeholder="Номер телефона">
+						</div>
+						<button type="submit" class="btn col-12 col-lg-4">Отправить</button>
+					</form>	
+				</div>	
+			
+			</section>
+		</div>
+		<div class="teachers container-fluid">
+			<section class="container">
+				<h3 class="basic-title ">Преподаватели</h3>
+				<div class="teachers-content">
+					<div class="owl-carousel owl-theme">
+					    <div class="item row px-3 px-md-0 ">
+					    	<div class="teachers-photo col-12 col-md-6 col-lg-5">
+				      		</div>
+				      		<div class="teachers-text col-12 col-md-6 col-lg-7">
+				      			<h4 class="col-7 p-0">Кирилл Хомченко</h4>
+				      			<span>стаж 15 лет</span>
+				      			<p>Начал свой путь в 2015 году закончив академию барберинга в Москве и сразу начал профессиональную карьеру.  За 5 лет стажа работы в различных барбершопах Москвы, получил колоссальный опыт , постоянно повышая уровень квалификации у топовых мастеров страны.</p>
+				      		</div>
+					    </div>
+					    <div class="item row px-3 px-md-0 ">
+					    	<div class="teachers-photo col-12 col-md-6 col-lg-5">
+				      		</div>
+				      		<div class="teachers-text col-12 col-md-6 col-lg-7">
+				      			<h4 class="col-7 p-0">Кирилл Хомченко</h4>
+				      			<span>стаж 15 лет</span>
+				      			<p>Начал свой путь в 2015 году закончив академию барберинга в Москве и сразу начал профессиональную карьеру.  За 5 лет стажа работы в различных барбершопах Москвы, получил колоссальный опыт , постоянно повышая уровень квалификации у топовых мастеров страны.</p>
+				      		</div>
+					    </div>   
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="description container-fluid">
+			<section class="container">
+				<h2 class="description-title">Барбер с 0</h2>
+				<div class="description-content row px-3 px-md-0">
+					<div class="col-md-6 col-xl-5 d-flex flex-column justify-content-between p-0">
+						<div class="description-item"><div class="rect-item">22</div><span>дня или 110 академических <br>часов обучения.</span></div>
+						<div class="description-item"><div class="rect-item">5</div><span>часов в неделю <br>с 17-00 до 22-00.</span></div>
+						<div class="description-item"><div class="rect-item">50</div><span>часов теории и отработка <br>на манекене</span></div>
+						<div class="description-item"><div class="rect-item">60</div><span>часов отработки <br>на живых моделях</span></div>
+					</div>
+					<div class="col-md-6 col-xl-5 d-flex flex-column justify-content-between p-0">
+						<h5>В курс включены:</h5>
+						<ul>
+							
+							<li>Стрижки на средние и длинные волосы</li>
+							<li>Разбор самых топовых и популярных мужских стрижек: Side part , Undercut, Pompadour, Caeser</li>
+							<li>Оформление бороды, бритье лица и головы</li>
+							<li>Тонирование волос, ваксинг, Black mask</li>
+							<li>Уход за волосами , стайлинг</li>
+						</ul>
+					</div>	
+					<button class="description-btn col-12 col-lg-5 col-xl-4 p-0" type="button" data-toggle="modal" data-target="#entryModal">Оставить заявку
+					</button>
+				</div>
+			</section>
+		</div>
+		<div class="portfolio container-fluid">
+			<section class="container">
+				<h2 class="basic-title">Портфолио</h2>
+				<div class="portfolio-content ">
+					<p class="portfolio-text">Текст о том, какие молодцы выпускники предыдущего курса, как красиво они всех стригут и будут стричь. И сам студент будет стричь и мазать, мазать и стричь. И все будут красивые как пироженко!</p>
+					<div class="portfolio-photo row px-3 ">
+						<div class="photo-column photo-columnQuatro col-md-8 px-3 p-md-0 pr-md-3 order-2 order-md-1">
+							<div class="row pt-2 py-md-0 pb-md-3">
+								<img class="photo-item col-6 p-0 pr-2 pr-md-3" src="img/photo1.png">
+								<img class="photo-item col-6 p-0 pl-2 px-md-3" src="img/photo3.png">
+							</div>
+							<div class="row pt-3">	
+								<img class="photo-item col-6 p-0 pr-2 pr-md-3" src="img/photo2.png">
+								<img class="photo-item col-6 p-0 pl-2 px-md-3" src="img/photo4.png">
+							</div>	
+						</div>
+						<div class="photo-column col-12 col-md-4 pb-2 px-3 p-md-0 pl-md-3 order-1 order-md-2">
+							<div class="row p-0">
+								<img class="photo-item col-12 p-0 pl-md-3 " src="img/photo5.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="answer container-fluid">
+			<section class="container p-md-0">
+				<h2 class="basic-title">Вопрос-ответ</h2>
+				<div class="answer-content">
+				
+
+					<div id="accordion">
+						<div class="card">
+					    	<div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					    		<h5 class="mb-0">На кого рассчитан курс?</h5>
+					    	</div>
+					    	<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+					      		<div class="card-body">
+					      			Людей без опыта или мастеров с минимальным опытом, которые хотят повысить свою квалификацию.
+					     		</div>
+					    	</div>
+					  	</div>
+					  	<div class="card">
+					    	<div class="card-header" id="headingTwo"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+					    		<h5 class="mb-0">В какое время проводится обучение?</h5>
+					    	</div>
+					    	<div id="collapseTwo" class="collapse" aria-labelledby="headingYwo" data-parent="#accordion">
+					      		<div class="card-body">
+					      			Обучение проводится с понедельника по пятницу с 17-00 до 22-00.
+					     		</div>
+					    	</div>
+					  	</div>
+					  	<div class="card">
+					    	<div class="card-header" id="headingThree"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+					    		<h5 class="mb-0">Что студенту необходимо иметь при себе на обучении?</h5>
+					    	</div>
+					    	<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+					      		<div class="card-body">
+					      			Все инструменты и расходные материалы предоставляет школа, студенты не отвлекаются на дополнительные расходы.  Им остается только получать новые знания.
+					     		</div>
+					    	</div>
+					  	</div>
+					  	<div class="card">
+					    	<div class="card-header" id="headingFour"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+					    		<h5 class="mb-0">Какие документы получит студент успешно сдавший экзамен?</h5>
+					    	</div>
+					    	<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+					      		<div class="card-body">
+					      			Школа предоставляет фирменный именной диплом  Raketa Barber School.
+					     		</div>
+					    	</div>
+					  	</div>
+					  	<div class="card">
+					    	<div class="card-header" id="headingFive"  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+					    		<h5 class="mb-0">Помогаете ли вы с трудоустройством?</h5>
+					    	</div>
+					    	<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+					      		<div class="card-body">
+					      			Школа предоставляет рекомендации вашим потенциальным работодателям.
+					     		</div>
+					    	</div>
+					  	</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="map container-fluid d-flex px-0 flex-column align-items-center">
+			<div class="map-content row px-0" id="map">
+				<style>
+					.ymaps-map {
+						width: 100% !important;
+					}
+
+					.ymaps-layers-pane {
+				    -webkit-filter: grayscale(100%);
+					}
+				</style>
+			</div>
+			<div class="info container">
+				<div class="logo"><a href="#"><img src="img/logo-cont.svg" alt="logo"></a></div>
+				<div class="row info-content">
+					<div class="info-address info-item col-12">
+						<div class="address-icon"><img src="img/addressIcon.svg"></div>Москва , Преображенская улица 5/7
+					</div>
+					<div class="info-phone info-item col-7">
+						<div class="phone-icon"><img src="img/phoneIcon.svg"></div>+7 123 456 78 90
+					</div>
+					<div class="info-messenger  info-item  col-5">
+						<a href="#" class="messenger-itemWP"><img src="img/wp.svg" alt="wp"></a>
+						<a href="#" class="messenger-itemTM"><img src="img/tm.svg" alt="tm"></a>
+						<a href="#" class="messenger-itemVB"><img src="img/vb.svg" alt="vb"></a>
+					</div>
+					<div class="info-email  info-item  col-12">
+						<div class="email-icon"><img src="img/mailIcon.svg"></div>info@raketabarber.ru
+					</div>
+
+				</div>
+					
+			</div>
+			<div class="container">
+				<div class="info-cop row px-3 px-md-0">
+					<div class="cop-text col-md-3 p-0 order-3 order-md-1">Raketa Barber School © 2020</div>
+					<div class="col-md-6 d-flex justify-content-center flex-column flex-md-row justify-content-md-end align-items-center order-1 order-md-2">
+						<span>Авторский проект обучения барберов с нуля</span>
+						<button class="info-btn" type="button" data-toggle="modal" data-target="#entryModal">Записаться на курс</button>
+					</div>
+					<div class="cop-messenger mx-0 col- 6 col-sm-3 col-md-2 order-2 order-md-3">
+						<a href="#" class="messenger-itemIG"><img src="img/ig.svg" alt="wp"></a>
+						<a href="#" class="messenger-itemFB"><img src="img/fb.svg" alt="tm"></a>
+						<a href="#" class="messenger-itemTW"><img src="img/tw.svg" alt="vb"></a>
+					</div>
+				</div>
+			</div>
+		</footer>		
+
+
+
+
+
+
+		<!-- Модальное окно записи!-->
+
+
+		<div class="modal fade" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			    <div class="modal-content">
+					<div class="modal-header">
+			        	<h4 class="modal-title" id="entryModalLongTitle">Записаться на курс</h4>
+			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          		<svg class="closeIcon" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19 18.2105L0.789474 0L0 0.789474L18.2105 19L19 18.2105Z"/>
+								<path d="M0.789474 19L19 0.789474L18.2105 0L0 18.2105L0.789474 19Z"/>
+							</svg>
+			        	</button>
+			      	</div>
+			    	<div class="modal-body">
+				        <form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="inputText" placeholder="Ваше имя">
+							</div>
+							<div class="form-group">
+								<input type="tel"  name="phone" class="form-control" id="inputNumber" required placeholder="Номер телефона">
+							</div>
+						</form>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn" data-toggle="modal" data-target="#successModal">Отправить</button>
+			      	</div>
+			    </div>
+		    </div>
+		</div>
+
+
+		<!-- Модальное окно подтверждение!-->
+
+		<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			    <div class="modal-content">
+					<div class="modal-header">
+			        	<h4 class="modal-title" id="successModalTitle">Запрос отправлен</h4>
+			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          		<svg class="closeIcon" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19 18.2105L0.789474 0L0 0.789474L18.2105 19L19 18.2105Z"/>
+								<path d="M0.789474 19L19 0.789474L18.2105 0L0 18.2105L0.789474 19Z"/>
+							</svg>
+			        	</button>
+			      	</div>
+			    	<div class="modal-body">
+				        <p>Мы с Вами свяжемся для уточнения деталей.</p>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+			      	</div>
+			    </div>
+		    </div>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+		<script src="owlcarousel/dist/owl.carousel.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+		
+		<script src="js/script.js"></script>
+	</body>
+</html> 

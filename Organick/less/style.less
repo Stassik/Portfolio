@@ -1,0 +1,39 @@
+@fontFamily_heading: "Roboto", sans-serif;
+@fontFamily_text: "Open Sans", sans-serif;
+
+
+
+.font_text {
+    font-family: @fontFamily_text;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.font_heading {
+    font-family: @fontFamily_heading;
+    font-weight: 800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    .font_heading;
+}
+
+p {
+    .font_text;
+}
+
+header {
+   padding: 0 162px;
+ 
+   ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: @fontFamily_heading;
+    font-weight: 600;
+    font-size: 20px;
+    color: #274C5B;
+   }
+}

@@ -12,6 +12,15 @@
 		<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
 		<link href="css/fontawesome/css/all.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
+		<style>
+					.ymaps-map {
+						width: 100% !important;
+					}
+
+					.ymaps-layers-pane {
+				    -webkit-filter: grayscale(100%);
+					}
+				</style>
 
 
 	</head>
@@ -266,18 +275,8 @@
 			</section>
 		</div>
 		<footer class="map container-fluid d-flex px-0 flex-column align-items-center">
-			<div class="map-content row px-0" id="map">
-				
-			</div>
-			<style>
-					.ymaps-map {
-						width: 100% !important;
-					}
-
-					.ymaps-layers-pane {
-				    -webkit-filter: grayscale(100%);
-					}
-				</style>
+			<div class="map-content row px-0" id="map"></div>
+			
 			<div class="info container">
 				<div class="logo"><a href="#"><img src="img/logo-cont.svg" alt="logo"></a></div>
 				<div class="row info-content">

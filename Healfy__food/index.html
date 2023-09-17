@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c71a3f0222.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Healthy Food</title>
 </head>
 <body>
     <header class="header">
-        .logo>img.logo__img+
+        <div class="header__left">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="logo image" class="logo__img">
+                <span class="logo__text">Organick</span>
+            </div>
+            <nav class="header__menu">
+                <a href="#" class="menu__link">Home</a>
+                <a href="#" class="menu__link">About</a>
+                <a href="#" class="menu__link">Pages</a>
+                <a href="#" class="menu__link">Shop</a>
+                <a href="#" class="menu__link">Projects</a>
+                <a href="#" class="menu__link">News</a>
+            </nav>
+        </div>
+        <div class="header__right">
+            <form action="#" class="header__form">
+                <input type="text" class="header__search">
+                <button class="header__btn btn_search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="header__cart">
+                <button class="header__btn btn_cart"><i class="fa-solid fa-cart-shopping"></i></button><span>Cart(0)</span>
+            </div>
+        </div>
     </header>
+    <main class="top">
+        <section class="top__content center">
+            <h2 class="top__subtitle">100% Natural Food</h2>
+            <h1 class="top__title">Choose the best <br>healthier way <br>of life</h1>
+            <button class="top__btn btn_contrast">Explore Now<i class="fa-solid fa-circle-arrow-right"></i></button>
+        </section>
+    </main>
 </body>
 </html>

@@ -23,6 +23,7 @@
 
         .title_underline {
             position: relative;
+
             &::after {
                 content: "";
                 width: 232px;

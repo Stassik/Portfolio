@@ -20,6 +20,7 @@
 %fontSizeSubTitle {
     @include fontSizeWeight(20px, 400);
     @extend %fontStyle;
+    color: $colorTitle;
 }
 
 %fontSizeText {

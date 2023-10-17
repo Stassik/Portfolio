@@ -1,7 +1,82 @@
 .services {
-&__title {
-@extend %fontSizeTitle;
-margin-bottom: 50px;
-}
+    &__title {
+        @extend %fontSizeTitle;
+        margin-bottom: 50px;
+    }
+
+    &-main {
+        margin-bottom: 150px;
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 430px;
+        width: calc(25% - 20px);
+        padding: 30px;
+        background: rgb(54, 95, 239);
+        border: 1px solid #FCFCFC;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+
+        &:nth-child(odd) {
+            background: linear-gradient(166deg, rgba(54, 95, 239, .1) 0%, rgba(252, 252, 252, 1) 100%);
+        }
+
+        &:nth-child(even) {
+            background: linear-gradient(346deg, rgba(54, 95, 239, .1) 0%, rgba(252, 252, 252, 1) 100%);
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+
+        &-price {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-bottom: 25px;
+            background-color: #FFF;
+            border-radius: 30px;
+        }
+
+        &-title {
+            @extend %fontSizeSubTitle;
+            margin-bottom: 25px;
+        }
+
+        &-text {
+            @extend %fontSizeText;
+            color: $colorSubTitle;
+            margin-bottom: 15px;
+        }
+
+        &-link {
+            @extend %fontSizeText;
+            color: $colorSubTitle;
+            text-decoration: underline;
+        }
+
+
+
+    }
+
+    &__link {
+        @extend %fontSizeText;
+        @extend %flexCenter;
+        color: $colorHover;
+
+        &-icon {
+            margin-left: 5px;
+        }
+    }
+
 
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap");
-.header__logo, .btn_light:hover, .btn_light, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav, .about__list-item .list-item__heading, .services__title, .about__title {
+.header__logo, .btn_light:hover, .btn_light, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav, .services__item-title, .about__list-item .about__list-title, .services__title, .about__title {
   font-style: normal;
   line-height: normal;
 }
@@ -13,12 +13,13 @@
   -webkit-text-fill-color: transparent;
 }
 
-.about__list-item .list-item__heading {
+.services__item-title, .about__list-item .about__list-title {
   font-size: 20px;
   font-weight: 400;
+  color: #191919;
 }
 
-.about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav {
+.services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav {
   font-size: 14px;
   font-weight: 400;
 }
@@ -28,7 +29,7 @@
   font-weight: 400;
 }
 
-.about__list-item .list-item__heading, .about__box-info, .about__box-item, .header__contacts .contacts-social__list, .header__contacts .contacts-city, .header__logo, .header__heading, .header__nav-summary, .header__nav-list, .about__list-item .list-item__icon, .main__btn-box, .main, .header__contacts .contacts-social__link, .header__contacts .contacts-phone__number, .header__contacts {
+.services__link, .about__list-item .list-item__heading, .about__box-info, .about__box-item, .header__contacts .contacts-social__list, .header__contacts .contacts-city, .header__logo, .header__heading, .header__nav-summary, .header__nav-list, .about__list-item .list-item__icon, .main__btn-box, .main, .header__contacts .contacts-social__link, .header__contacts .contacts-phone__number, .header__contacts {
   display: flex;
   align-items: center;
 }
@@ -401,6 +402,10 @@ ul {
 .about__list-item {
   padding-bottom: 25px;
   border-bottom: 1px solid #EFEFEF;
+  transition: transform 0.3s ease-in-out;
+}
+.about__list-item:hover {
+  transform: scale(1.05);
 }
 .about__list-item .list-item__heading {
   margin-bottom: 15px;
@@ -418,4 +423,57 @@ ul {
 
 .services__title {
   margin-bottom: 50px;
+}
+.services-main {
+  margin-bottom: 150px;
+}
+.services-main__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 430px;
+  width: calc(25% - 20px);
+  padding: 30px;
+  background: rgb(54, 95, 239);
+  border: 1px solid #FCFCFC;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.services__item:nth-child(odd) {
+  background: linear-gradient(166deg, rgba(54, 95, 239, 0.1) 0%, rgb(252, 252, 252) 100%);
+}
+.services__item:nth-child(even) {
+  background: linear-gradient(346deg, rgba(54, 95, 239, 0.1) 0%, rgb(252, 252, 252) 100%);
+}
+.services__item:hover {
+  transform: scale(1.05);
+}
+.services__item-price {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 25px;
+  background-color: #FFF;
+  border-radius: 30px;
+}
+.services__item-title {
+  margin-bottom: 25px;
+}
+.services__item-text {
+  color: #737373;
+  margin-bottom: 15px;
+}
+.services__item-link {
+  color: #737373;
+  text-decoration: underline;
+}
+.services__link {
+  color: #365FEF;
+}
+.services__link-icon {
+  margin-left: 5px;
 }/*# sourceMappingURL=style.css.map */

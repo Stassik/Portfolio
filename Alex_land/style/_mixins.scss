@@ -1,0 +1,18 @@
+@mixin flexCenterJustify($justify) {
+    @extend %flexCenter;
+    justify-content: $justify;
+}
+
+@mixin fontSizeWeight($fontSize, $fontWeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin btnStyle ($colorText, $borderColor, $colorBG: transparent, $borderRadius: 30px, $borderWidth: 1px) {
+    color: $colorText;
+    background: $colorBG;
+    border-radius: $borderRadius;
+    border: $borderWidth solid $borderColor;
+    overflow: hidden;
+    transition: all .3s ease-in;
+}

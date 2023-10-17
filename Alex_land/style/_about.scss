@@ -1,0 +1,176 @@
+.about {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-gap: 10%;
+
+    &__left {
+        width: 47%;
+        // grid-column: 1 / 2;
+        position: relative;
+
+        &-box {
+            position: sticky;
+            top: 0;
+        }
+
+    }
+
+    &__title {
+        @extend %fontSizeTitle;
+        margin-bottom: 48px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        // display: grid;
+        // grid-template-columns: repeat(6, 100px);
+        // grid-template-rows: repeat(3, 1fr);
+        // grid-gap: 15px;
+
+        &-item {
+            @extend %flexCenter;
+            gap: 10px;
+            width: 70%;
+            max-width: 427px;
+        }
+
+        &-info {
+            @extend %flexCenter;
+            padding: 28px 25px;
+            border-radius: 13px;
+            background-color: $bgColorSuperLight;
+        }
+
+        &-title {
+            min-width: 100px;
+            font-size: 32px;
+            margin-right: 10px;
+            font-weight: 600;
+            background: linear-gradient(90deg, #15151A 17.55%, rgba(21, 21, 26, 0.60) 42.57%, rgba(21, 21, 26, 0.76) 60.08%, rgba(21, 21, 26, 0.80) 95.52%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &-text {
+            @extend %fontSizeText;
+            color: $bgColorDarkNeutral;
+            letter-spacing: -0.5px;
+        }
+
+        &-img {
+            min-width: 100px;
+            height: 100px;
+            border-radius: 13px;
+        }
+
+        &-item:first-child {
+            align-self: flex-start;
+            // grid-column: 1 / 5;
+            // grid-row: 1 / 2;
+
+            & .about__box-title {
+                min-width: auto;
+            }
+
+            & .about__box-img {
+                background-image: url("/img/about1.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+        }
+
+        &-item:nth-child(2) {
+            align-self: center;
+            // grid-column: 2 / 6;
+            // grid-row: 2 / 3;
+
+            & .about__box-info {
+                background-image: url("/img/bgBtn.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            & .about__box-title {
+                background: none;
+                -webkit-text-fill-color: #fff;
+            }
+
+            & .about__box-text {
+                color: #fff;
+            }
+        }
+
+        &-item:last-child {
+            align-self: flex-end;
+            // grid-column: 3 / 7;
+            // grid-row: 3 / 4;
+
+            & .about__box-img {
+                background-image: url("/img/about2.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__right {
+        width: 47%;
+        // grid-column: 2 / 3;
+        // column-gap: 204px;
+        padding-top: 12px;
+
+
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &-item {
+            padding-bottom: 25px;
+            border-bottom: 1px solid #EFEFEF;
+
+            .list-item__heading {
+                @extend %flexCenter;
+                @extend %fontSizeSubTitle;
+                margin-bottom: 15px;
+            }
+
+            .list-item__icon {
+                @extend %flexCenterCenter;
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+                border-radius: 12px;
+                background: linear-gradient(135deg, #15151A 0%, rgba(21, 21, 26, 0.68) 37.97%, rgba(21, 21, 26, 0.86) 59.87%, #15151A 91.03%);
+
+            }
+
+            .list-item__text {
+                @extend %fontSizeText;
+                color: $colorSubTitle;
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+}

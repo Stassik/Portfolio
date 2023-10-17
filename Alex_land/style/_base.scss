@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap');
+
+
+
+
+%fontStyle {
+    font-style: normal;
+    line-height: normal;
+}
+
+%fontSizeTitle {
+    @include fontSizeWeight(36px, 600);
+    @extend %fontStyle;
+    background: linear-gradient(90deg, #15151A 17.55%, rgba(21, 21, 26, 0.60) 42.57%, rgba(21, 21, 26, 0.76) 60.08%, rgba(21, 21, 26, 0.80) 95.52%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%fontSizeSubTitle {
+    @include fontSizeWeight(20px, 400);
+    @extend %fontStyle;
+}
+
+%fontSizeText {
+    @include fontSizeWeight(14px, 400);
+    @extend %fontStyle;
+}
+
+%fontSizeBtn {
+    @include fontSizeWeight(16px, 400);
+    @extend %fontStyle;
+}
+
+%flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+%flexCenterCenter {
+    @extend %flexCenter;
+    justify-content: center;
+}
+
+%BtnLight {
+    @include btnStyle($colorHover, $colorHover);
+    @extend %fontSizeBtn;
+    padding: 19px 10px;
+    position: relative;
+}
+
+%BtnLightHover {
+    @include btnStyle(#fff, $colorHover);
+    cursor: pointer;
+    @extend %fontSizeBtn;
+    padding: 19px 10px;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.center {
+    max-width: $contentWidth;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn_light {
+    @extend %BtnLight;
+
+    &:hover {
+        @extend %BtnLightHover;
+    }
+
+    &:hover .btn_bg {
+        opacity: 1;
+    }
+
+    .btn_bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        min-height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(../img/bgBtn.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity .3s ease-in;
+    }
+}

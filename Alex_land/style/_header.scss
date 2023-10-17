@@ -1,0 +1,204 @@
+.header {
+
+    &__nav {
+        @extend %fontSizeText;
+        color: $colorRegular;
+        padding: 20px 0;
+
+
+        &-list {
+            @include flexCenterJustify(center);
+            gap: 45px;
+        }
+
+        &-details {
+            position: relative;
+        }
+
+        &-summary {
+            list-style-type: none;
+            @extend %flexCenter;
+            transition: color .3s ease-in;
+
+            .summary__icon {
+                margin-left: 4px;
+                transition: transform .3s ease-in;
+            }
+
+            &:hover {
+                color: $colorHover;
+                cursor: pointer;
+            }
+        }
+
+
+        &-sub {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 273px;
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px 3px rgba(75, 75, 75, 0.15);
+            background-color: #fff;
+        }
+
+        &-link {
+            color: $colorRegular;
+            transition: color .3s ease-in;
+
+            &:hover {
+                color: $colorHover;
+            }
+        }
+
+        &-details[open] .summary__icon {
+            transform: rotate(-90deg);
+        }
+
+        &-details[open] &-sub {
+            top: 23px;
+        }
+
+        &-details[open] &-summary {
+            color: $colorHover;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        z-index: 9;
+        @include flexCenterJustify(space-between);
+        padding: 21px 20px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: linear-gradient(270deg, #312B2D 13.02%, rgba(49, 43, 45, 0.87) 34.54%, #312B2D 55.18%, rgba(49, 43, 45, 0.85) 79.33%, #312B2D 97.33%);
+        backdrop-filter: blur(5px);
+        color: #fff;
+    }
+
+    &__logo {
+        @extend %flexCenter;
+        @include fontSizeWeight(24px, 600);
+        @extend %fontStyle;
+        gap: 8px;
+        font-family: Montserrat, sans-serif;
+        color: #fff;
+        text-transform: lowercase;
+        transition: color .3s ease-in;
+
+        &:hover {
+            color: $colorHover;
+        }
+
+    }
+
+    &__contacts {
+        @extend %fontSizeText;
+        @extend %flexCenterCenter;
+        gap: 45px;
+
+
+        .contacts-city {
+            @extend %flexCenter;
+
+            &__icon {
+                margin-right: 5px;
+            }
+        }
+
+        .contacts-phone {
+            &__icon {
+                margin-right: 5px;
+            }
+
+            &__number {
+                @extend %flexCenterCenter;
+            }
+
+            & span {
+                display: block;
+                font-size: 13px;
+                opacity: 0.47;
+            }
+
+        }
+
+        .contacts-social {
+
+            &__list {
+                @extend %flexCenter;
+                gap: 20px;
+            }
+
+            &__item {
+                width: 32px;
+                height: 32px;
+                background-color: transparent;
+                border-radius: 50%;
+                transition: all .2s ease-in;
+                background-color: #fff;
+
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    background-color: transparent;
+                }
+
+                &:not(:first-child) path {
+                    fill: rgba(49, 43, 45, 0.87);
+                    transition: fill .2s ease-in;
+                }
+
+                &:not(:first-child):hover path {
+                    fill: $colorHover;
+                }
+            }
+
+            &__link {
+                @extend %flexCenterCenter;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__btn {
+        @extend %fontSizeText;
+        @include btnStyle(#fff, rgba(255, 255, 255, 0.30));
+        position: relative;
+        padding: 14px 10px;
+
+
+        &:hover {
+            cursor: pointer;
+            border-color: $colorHover;
+
+        }
+
+        &:hover .btn_bg {
+            opacity: 1;
+        }
+
+        .btn_bg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            min-height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url(../img/bgBtn.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity .3s ease-in;
+        }
+    }
+
+
+}

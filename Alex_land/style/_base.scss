@@ -67,8 +67,8 @@
 }
 
 html {
-    
-  scroll-behavior: smooth;
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -112,4 +112,114 @@ ul {
         opacity: 0;
         transition: opacity .3s ease-in;
     }
+}
+
+.swiper {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+
+    .services__item {
+        &.swiper-slide-active {
+            background: rgb(54, 95, 239);
+            background: linear-gradient(152deg, rgba(54, 95, 239, 1) 23%, rgba(110, 157, 247, 1) 33%, rgba(54, 95, 239, 1) 56%, rgba(252, 252, 252, 1) 100%);
+
+            & .services__item-title,
+            & .services__item-text,
+            & .services__item-link,
+            & .services__item-price,
+            & .services__item-icon path {
+                color: $colorIconActive;
+                fill: $colorIconActive;
+            }
+
+            & .services__item-price {
+                background-color: transparent;
+                outline: 1px solid $colorIconActive;
+            }
+
+        }
+    }
+
+    &-pagination {
+
+
+        &-bullet {
+            width: 36px;
+            height: 1px;
+            background-color: #D3D3D3;
+            opacity: 1;
+            border-radius: 0;
+            transition: width .3s ease-in-out;
+
+            &-active {
+                width: 70px;
+                background-color: $colorRegular;
+            }
+        }
+
+    }
+
+    &-horizontal>&-pagination-bullets,
+    &-pagination-bullets.swiper-pagination-horizontal,
+    &-pagination-custom,
+    &-pagination-fraction {
+        bottom: 16px;
+        @extend %flexCenter;
+        justify-content: flex-end;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after,
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        display: none;
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: calc(100% - 6px);
+        padding: 12px 15px;
+        height: 24px;
+        width: 60px;
+        background-color: transparent;
+        border-radius: 20px;
+        border-radius: 20px;
+        background: rgba(25, 25, 25, 0.05);
+
+        & svg {
+            height: 8px;
+            fill: $colorTitle;
+        }
+
+        &:hover {
+
+            background: $colorHover;
+
+            & svg path {
+                fill: $colorIconActive;
+            }
+        }
+    }
+
+    .swiper-button-disabled {
+        background: transparent;
+
+        & svg {
+            fill: #D3D3D3;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: 0px;
+    }
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        left: 65px;
+    }
+
+
 }

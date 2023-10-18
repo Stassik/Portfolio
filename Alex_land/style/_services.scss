@@ -94,8 +94,33 @@
     }
 
     &__info {
+        @extend %fontSizeText;
         grid-column: 1 / 2;
         padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: $colorLight;
+
+        .services__text {
+            margin-bottom: 30px;
+        }
+
+        .services__link {
+            padding: 10px 12px;
+            border: 1px solid $colorHover;
+            border-radius: 30px;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: $colorHover;
+                color: $colorIconActive;
+
+                & svg {
+                    fill: $colorIconActive;
+                }
+            }
+        }
     }
 
     &__slider {

@@ -94,6 +94,7 @@ ul {
     &:hover {
         @extend %BtnLightHover;
     }
+    
 
     &:hover .btn_bg {
         opacity: 1;
@@ -115,14 +116,20 @@ ul {
 }
 
 .swiper {
+    display: flex;
     width: 100%;
-    min-height: 500px;
+    padding-bottom: 64px;
     position: relative;
+
+    &-wrapper {
+        height: auto;
+    }
 
     .services__item {
         &.swiper-slide-active {
             background: rgb(54, 95, 239);
             background: linear-gradient(152deg, rgba(54, 95, 239, 1) 23%, rgba(110, 157, 247, 1) 33%, rgba(54, 95, 239, 1) 56%, rgba(252, 252, 252, 1) 100%);
+            border-radius: 15px;
 
             & .services__item-title,
             & .services__item-text,

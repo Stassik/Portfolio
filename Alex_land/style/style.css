@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap");
-.header__logo, .btn_light:hover, .btn_light, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav, .services__item-title, .about__list-item .about__list-title, .services__title, .about__title {
+.header__logo, .btn_light:hover, .btn_light, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav, .services__item-title, .about__list-item .about__list-title, .services__title, .about__title {
   font-style: normal;
   line-height: normal;
 }
@@ -19,7 +19,7 @@
   color: #191919;
 }
 
-.services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav {
+.services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav {
   font-size: 14px;
   font-weight: 400;
 }
@@ -105,13 +105,18 @@ ul {
 }
 
 .swiper {
+  display: flex;
   width: 100%;
-  min-height: 500px;
+  padding-bottom: 64px;
   position: relative;
+}
+.swiper-wrapper {
+  height: auto;
 }
 .swiper .services__item.swiper-slide-active {
   background: rgb(54, 95, 239);
   background: linear-gradient(152deg, rgb(54, 95, 239) 23%, rgb(110, 157, 247) 33%, rgb(54, 95, 239) 56%, rgb(252, 252, 252) 100%);
+  border-radius: 15px;
 }
 .swiper .services__item.swiper-slide-active .services__item-title, .swiper .services__item.swiper-slide-active .services__item-text, .swiper .services__item.swiper-slide-active .services__item-link, .swiper .services__item.swiper-slide-active .services__item-price, .swiper .services__item.swiper-slide-active .services__item-icon path {
   color: #fff;
@@ -568,6 +573,26 @@ ul {
 .services__info {
   grid-column: 1/2;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #858585;
+}
+.services__info .services__text {
+  margin-bottom: 30px;
+}
+.services__info .services__link {
+  padding: 10px 12px;
+  border: 1px solid #365FEF;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.services__info .services__link:hover {
+  background-color: #365FEF;
+  color: #fff;
+}
+.services__info .services__link:hover svg {
+  fill: #fff;
 }
 .services__slider {
   grid-column: 2/3;

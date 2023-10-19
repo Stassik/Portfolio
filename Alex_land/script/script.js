@@ -3,6 +3,8 @@
 var swiper = new Swiper(".swiper", {
     slidesPerView: 1,
     spaceBetween: 20,
+    grabCursor: true,
+    loop: true,
 
     breakpoints: {
 

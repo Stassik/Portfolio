@@ -43,19 +43,20 @@
     justify-content: center;
 }
 
-%BtnLight {
-    @include btnStyle($colorHover, $colorHover);
+%BtnMainStyle {
+    //@include btnStyle($colorSubTitle);
     @extend %fontSizeBtn;
+    min-height: 60px;
     padding: 19px 10px;
     position: relative;
 }
 
-%BtnLightHover {
-    @include btnStyle(#fff, $colorHover);
-    cursor: pointer;
-    @extend %fontSizeBtn;
-    padding: 19px 10px;
-}
+// %BtnMainHover {
+//     @include btnStyle($colorIconActive, $colorIconActive, $colorIconActive);
+//     cursor: pointer;
+//     @extend %fontSizeBtn;
+//     padding: 19px 10px;
+// }
 
 
 
@@ -88,30 +89,45 @@ ul {
     list-style: none;
 }
 
-.btn_light {
-    @extend %BtnLight;
-
-    &:hover {
-        @extend %BtnLightHover;
-    }
-
-
-    &:hover .btn_bg {
-        opacity: 1;
-    }
+.btn_main {
+    @extend %BtnMainStyle;
+    @include btnStyle($colorSubTitle);
+    z-index: 10;
 
     .btn_bg {
         position: absolute;
         z-index: -1;
-        width: 100%;
-        min-height: 100%;
-        top: 0;
         left: 0;
-        background-image: url(../img/bgBtn.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 30px;
         opacity: 0;
-        transition: opacity .3s ease-in;
+        background: url(../img/bgBtn.svg), lightgray 8.158px -128.423px / 131.344% 459.705% no-repeat;
+        box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.30);
+        //transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        @include btnStyle($colorIconActive, $colorIconActive, $colorIconActive, none);
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.30);
+
+        & .btn_bg {
+            opacity: 1;
+
+        }
+    }
+}
+
+.btn_light {
+    @include btnStyle(rgba(255, 255, 255, 0.30), $colorIconActive, $colorIconActive);
+    z-index: 10;
+
+    &:hover {
+        @include btnStyle(transparent, $colorTitle, $colorTitle);
+        cursor: pointer;
     }
 }
 
@@ -121,15 +137,42 @@ ul {
     padding-bottom: 64px;
     position: relative;
 
-    &-wrapper {
+    .service-slider__wrap {
         height: auto;
     }
 
     .services__item {
+        position: relative;
+        overflow: hidden;
+
+        & .bg {
+            position: absolute;
+            width: 300%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: -125%;
+            background-image: url(../img/Rectangle\ 1292.jpg);
+            // background: rgb(54, 95, 239);
+            // background: linear-gradient(152deg, rgba(54, 95, 239, 1) 23%, rgba(110, 157, 247, 1) 33%, rgba(54, 95, 239, 1) 56%, rgba(252, 252, 252, 1) 100%);
+            background-size: cover;
+            opacity: 0;
+            transition: cubic-bezier(0.2, 0.6, 0, 1) 2.5s !important;
+        }
+
+        & .services__item-title,
+        & .services__item-text,
+        & .services__item-link,
+        & .services__item-price,
+        & .services__item-icon path {
+            transition: cubic-bezier(0.2, 0.6, 0, 1) .5s !important;
+        }
+
         &.swiper-slide-active {
-            background: rgb(54, 95, 239);
-            background: linear-gradient(152deg, rgba(54, 95, 239, 1) 23%, rgba(110, 157, 247, 1) 33%, rgba(54, 95, 239, 1) 56%, rgba(252, 252, 252, 1) 100%);
-            border-radius: 15px;
+
+            & .bg {
+                opacity: 1;
+            }
 
             & .services__item-title,
             & .services__item-text,
@@ -145,6 +188,7 @@ ul {
                 outline: 1px solid $colorIconActive;
             }
 
+
         }
     }
 
@@ -157,7 +201,8 @@ ul {
             background-color: #D3D3D3;
             opacity: 1;
             border-radius: 0;
-            transition: width .3s ease-in-out;
+            // transition: width .3s ease-in-out;
+            transition: cubic-bezier(0.2, 0.6, 0.6, 1) .5s !important;
 
             &-active {
                 width: 70px;

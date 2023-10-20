@@ -5,6 +5,8 @@ var swiper = new Swiper(".swiper", {
     spaceBetween: 20,
     grabCursor: true,
     loop: true,
+    parallax: true,
+    freeMode: true,
 
     breakpoints: {
 
@@ -21,7 +23,7 @@ var swiper = new Swiper(".swiper", {
 
 
     autoplay: {
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false,
     },
     pagination: {

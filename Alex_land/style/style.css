@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap");
-.header__logo, .btn_light:hover, .btn_light, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav, .services__item-title, .about__list-item .about__list-title, .services__title, .about__title {
+.header__logo, .btn_main, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .header__btn, .header__contacts, .header__nav, .services__item-title, .about__list-item .about__list-title, .services__title, .about__title {
   font-style: normal;
   line-height: normal;
 }
@@ -24,7 +24,7 @@
   font-weight: 400;
 }
 
-.btn_light:hover, .btn_light {
+.btn_main {
   font-size: 16px;
   font-weight: 400;
 }
@@ -38,26 +38,10 @@
   justify-content: center;
 }
 
-.btn_light {
-  color: #365FEF;
-  background: transparent;
-  border-radius: 30px;
-  border: 1px solid #365FEF;
-  overflow: hidden;
-  transition: all 0.3s ease-in;
+.btn_main {
+  min-height: 60px;
   padding: 19px 10px;
   position: relative;
-}
-
-.btn_light:hover {
-  color: #fff;
-  background: transparent;
-  border-radius: 30px;
-  border: 1px solid #365FEF;
-  overflow: hidden;
-  transition: all 0.3s ease-in;
-  cursor: pointer;
-  padding: 19px 10px;
 }
 
 * {
@@ -87,21 +71,67 @@ ul {
   list-style: none;
 }
 
-.btn_light:hover .btn_bg {
-  opacity: 1;
+.btn_main {
+  background: linear-gradient(91deg, #191919 0%, rgba(25, 25, 25, 0.6) 61.52%, #191919 118.11%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 30px;
+  border: 1px solid #737373;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  z-index: 10;
 }
-.btn_light .btn_bg {
+.btn_main .btn_bg {
   position: absolute;
   z-index: -1;
-  width: 100%;
-  min-height: 100%;
-  top: 0;
   left: 0;
-  background-image: url(../img/bgBtn.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 30px;
   opacity: 0;
-  transition: opacity 0.3s ease-in;
+  background: url(../img/bgBtn.svg), lightgray 8.158px -128.423px/131.344% 459.705% no-repeat;
+  box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.3);
+}
+.btn_main:hover {
+  background: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  border-radius: 30px;
+  border: none solid #fff;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.3);
+}
+.btn_main:hover .btn_bg {
+  opacity: 1;
+}
+
+.btn_light {
+  background: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  z-index: 10;
+}
+.btn_light:hover {
+  background: #191919;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #191919;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 
 .swiper {
@@ -110,13 +140,30 @@ ul {
   padding-bottom: 64px;
   position: relative;
 }
-.swiper-wrapper {
+.swiper .service-slider__wrap {
   height: auto;
 }
-.swiper .services__item.swiper-slide-active {
-  background: rgb(54, 95, 239);
-  background: linear-gradient(152deg, rgb(54, 95, 239) 23%, rgb(110, 157, 247) 33%, rgb(54, 95, 239) 56%, rgb(252, 252, 252) 100%);
-  border-radius: 15px;
+.swiper .services__item {
+  position: relative;
+  overflow: hidden;
+}
+.swiper .services__item .bg {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: -125%;
+  background-image: url(../img/Rectangle\ 1292.jpg);
+  background-size: cover;
+  opacity: 0;
+  transition: cubic-bezier(0.2, 0.6, 0, 1) 2.5s !important;
+}
+.swiper .services__item .services__item-title, .swiper .services__item .services__item-text, .swiper .services__item .services__item-link, .swiper .services__item .services__item-price, .swiper .services__item .services__item-icon path {
+  transition: cubic-bezier(0.2, 0.6, 0, 1) 0.5s !important;
+}
+.swiper .services__item.swiper-slide-active .bg {
+  opacity: 1;
 }
 .swiper .services__item.swiper-slide-active .services__item-title, .swiper .services__item.swiper-slide-active .services__item-text, .swiper .services__item.swiper-slide-active .services__item-link, .swiper .services__item.swiper-slide-active .services__item-price, .swiper .services__item.swiper-slide-active .services__item-icon path {
   color: #fff;
@@ -132,7 +179,7 @@ ul {
   background-color: #D3D3D3;
   opacity: 1;
   border-radius: 0;
-  transition: width 0.3s ease-in-out;
+  transition: cubic-bezier(0.2, 0.6, 0.6, 1) 0.5s !important;
 }
 .swiper-pagination-bullet-active {
   width: 70px;
@@ -288,7 +335,7 @@ ul {
   background-color: #fff;
 }
 .header__contacts .contacts-social__item:hover {
-  transform: scale(1.1);
+  box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.3);
 }
 .header__contacts .contacts-social__item:active {
   background-color: transparent;
@@ -305,18 +352,14 @@ ul {
   width: 100%;
 }
 .header__btn {
-  color: #fff;
-  background: transparent;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  overflow: hidden;
-  transition: all 0.3s ease-in;
   position: relative;
-  padding: 14px 10px;
+  padding: 14px 20px;
 }
 .header__btn:hover {
   cursor: pointer;
-  border-color: #365FEF;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.3);
+  color: #191919;
 }
 .header__btn:hover .btn_bg {
   opacity: 1;
@@ -525,9 +568,9 @@ ul {
   min-height: 430px;
   width: calc((100% - 60px) / 4);
   padding: 30px;
-  background: rgb(54, 95, 239);
+  background: rgb(231, 237, 254);
   border: 1px solid #FCFCFC;
-  border-radius: 8px;
+  border-radius: 15px;
   transition: transform 0.3s ease-in-out;
 }
 .services__item:nth-child(odd) {
@@ -591,8 +634,8 @@ ul {
   background-color: #365FEF;
   color: #fff;
 }
-.services__info .services__link:hover svg {
-  fill: #fff;
+.services__info .services__link:hover .services__link-icon path {
+  stroke: #fff;
 }
 .services__slider {
   grid-column: 2/3;

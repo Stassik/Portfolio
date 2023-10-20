@@ -27,10 +27,10 @@
         min-height: 430px;
         width: calc((100% - 60px) / 4);
         padding: 30px;
-        background: rgb(54, 95, 239);
+        background: rgb(231,237,254);
         border: 1px solid #FCFCFC;
-        border-radius: 8px;
-        transition: transform 0.3s ease-in-out;
+        border-radius: 15px;
+        transition: transform 0.3s ease-in-out; 
 
         &:nth-child(odd) {
             background: linear-gradient(166deg, rgba(54, 95, 239, .1) 0%, rgba(252, 252, 252, 1) 100%);
@@ -116,8 +116,8 @@
                 background-color: $colorHover;
                 color: $colorIconActive;
 
-                & svg {
-                    fill: $colorIconActive;
+                & .services__link-icon path {
+                    stroke: $colorIconActive;
                 }
             }
         }

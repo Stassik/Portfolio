@@ -16,10 +16,8 @@
         text-align: center;
         max-width: 1080px;
         margin-bottom: 25px;
-        background: linear-gradient(90deg, #15151A 17.55%, rgba(21, 21, 26, 0.60) 42.57%, rgba(21, 21, 26, 0.76) 60.08%, rgba(21, 21, 26, 0.80) 95.52%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: $colorTitle;
+
 
         .title_underline {
             position: relative;
@@ -262,7 +260,8 @@
             &:not(:first-child) {
 
                 & .about__text,
-                & .services__link {
+                & .services__link,
+                & .about__title {
 
                     color: $colorIconActive;
 
@@ -276,10 +275,6 @@
                     &:hover {
                         text-decoration: underline;
                     }
-                }
-
-                & .about__title {
-                    -webkit-text-fill-color: $colorIconActive;
                 }
 
             }

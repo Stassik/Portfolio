@@ -11,10 +11,7 @@
 %fontSizeTitle {
     @include fontSizeWeight(36px, 600);
     @extend %fontStyle;
-    background: linear-gradient(90deg, #15151A 17.55%, rgba(21, 21, 26, 0.60) 42.57%, rgba(21, 21, 26, 0.76) 60.08%, rgba(21, 21, 26, 0.80) 95.52%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $colorTitle;
 }
 
 %fontSizeSubTitle {

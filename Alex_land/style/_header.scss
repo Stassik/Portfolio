@@ -3,7 +3,6 @@
     &__nav {
         @extend %fontSizeText;
         color: $colorRegular;
-        padding: 20px 0;
 
 
         &-list {
@@ -16,6 +15,7 @@
         }
 
         &-summary {
+            padding: 20px 0;
             list-style-type: none;
             @extend %flexCenter;
             transition: color .3s ease-in;
@@ -34,7 +34,7 @@
 
         &-sub {
             position: absolute;
-            z-index: 10;
+            z-index: 101;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -42,12 +42,12 @@
             padding: 20px 25px;
             border-radius: 12px;
             box-shadow: 0px 4px 20px 3px rgba(75, 75, 75, 0.15);
-            background-color: #fff;
+            background-color: $colorIconActive;
         }
 
         &-link {
             color: $colorRegular;
-            transition: color .3s ease-in;
+            transition: color .2s ease-in;
 
             &:hover {
                 color: $colorHover;
@@ -59,7 +59,8 @@
         }
 
         &-details[open] &-sub {
-            top: 23px;
+            top: 46px;
+            left: -25px;
         }
 
         &-details[open] &-summary {
@@ -69,7 +70,7 @@
 
     &__heading {
         position: relative;
-        z-index: 9;
+        z-index: 100;
         @include flexCenterJustify(space-between);
         padding: 21px 20px;
         border-radius: 50px;
@@ -89,8 +90,16 @@
         text-transform: lowercase;
         transition: color .3s ease-in;
 
+        .logo__img path {
+            transition: fill .3s ease-in;
+        }
+
         &:hover {
             color: $colorHover;
+
+            & .logo__img path {
+                fill: $colorHover;
+            }
         }
 
     }
@@ -103,11 +112,130 @@
 
         .contacts-city {
             @extend %flexCenter;
+            position: relative;
 
             &__icon {
                 margin-right: 5px;
             }
+
+            &__label {
+                @extend %flexCenter;
+                padding: 5px 10px;
+                border-radius: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: rgba(255, 255, 255, 0.10);
+                }
+            }
+
+            &__input {
+                display: none;
+
+            }
+
+            &__box {
+                display: none;
+                position: absolute;
+                top: 45px;
+                left: -20px;
+                width: 746px;
+                height: 511px;
+                padding: 35px;
+                border-radius: 12px;
+                background: $colorIconActive;
+                box-shadow: 0px 4px 20px 3px rgba(75, 75, 75, 0.15);
+                overflow: hidden;
+            }
+
+            &__title {
+                @include fontSizeWeight(20px, 600);
+                color: $colorTitle;
+                margin-bottom: 15px;
+            }
+
+            &__text {
+                @include fontSizeWeight(13px, 400);
+                color: $colorSubTitle;
+            }
+
+            &__list {
+                overflow-x: scroll;
+                @extend %fontSizeText;
+                height: 363px;
+                width: 100%;
+                padding: 24px 0 29px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                color: $colorRegular;
+                scrollbar-width: thin;
+                scrollbar-color: $colorHover rgba(77, 67, 244, 0.10);
+
+                &::-webkit-scrollbar {
+                    height: 4px;
+                    /* ширина всей полосы прокрутки */
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: $colorHover;
+                    border-radius: 20px;
+                    //border: 1px solid $colorIconActive;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: rgba(77, 67, 244, 0.10);
+                    /* цвет зоны отслеживания */
+                }
+            }
+
+            &__item {
+                width: 25%;
+            }
+
+            &__link {
+                @extend %flexCenter;
+                color: $colorRegular;
+                text-decoration: underline;
+                padding: 5.8px 0;
+            }
+
+
+
+
+            &__link::before {
+                content: "";
+                display: block;
+                margin-right: 5px;
+                height: 16px;
+                width: 16px;
+                background-image: url(../img/MapPin.svg);
+                background-position: center;
+                background-size: cover;
+            }
+
+
+
+
+
+
         }
+
+        #myCity:checked {
+            &~.contacts-city__label {
+                background: rgba(255, 255, 255, 0.10);
+                border-radius: 20px;
+            }
+
+            &~.contacts-city__box {
+                display: block;
+            }
+        }
+
+
+
+
 
         .contacts-phone {
             &__icon {
@@ -139,24 +267,71 @@
                 background-color: transparent;
                 border-radius: 50%;
                 transition: all .2s ease-in;
-                background-color: #fff;
+                background-color: $colorIconActive;
+                transition: all .2s ease-in;
 
-
-                &:hover {
-                    box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.30); 
-                }
-
-                &:active {
-                    background-color: transparent;
-                }
-
-                &:not(:first-child) path {
+                & path {
                     fill: rgba(49, 43, 45, 0.87);
                     transition: fill .2s ease-in;
                 }
 
-                &:not(:first-child):hover path {
-                    fill: $colorHover;
+                &:hover {
+
+                    &.social-item_avito {
+
+                        box-shadow: 4px 4px 20px 0px rgba(147, 201, 37, 0.3),
+                            -2px 2px 20px 0px rgba(157, 102, 240, 0.3),
+                            2px -2px 20px 0px rgba(248, 94, 96, 0.3),
+                            -4px -4px 20px 0px rgba(0, 165, 248, 0.3);
+
+                        path:first-child {
+                            fill: #00A5F8;
+
+                        }
+
+                        path:nth-child(2) {
+                            fill: #F85E60;
+
+                        }
+
+                        path:nth-child(3) {
+                            fill: #9D66F0;
+
+                        }
+
+                        path:last-child {
+                            fill: #93C925;
+
+                        }
+                    }
+
+                    &.social-item_telegram {
+                        box-shadow: 0px 0px 20px 4px rgba(42, 171, 238, 0.30);
+
+                        path {
+                            fill: #2AABEE;
+
+                        }
+                    }
+
+                    &.social-item_whatsapp {
+                        box-shadow: 0px 0px 20px 4px rgba(37, 211, 102, 0.3);
+
+                        path {
+                            fill: #25D366;
+
+                        }
+                    }
+                }
+
+                &.social-item_whatsapp,
+                &.social-item_telegram,
+                &.social-item_avito {
+                    &:active {
+                        background-color: transparent;
+                        box-shadow: none;
+                        -webkit-box-shadow: none;
+                    }
                 }
             }
 

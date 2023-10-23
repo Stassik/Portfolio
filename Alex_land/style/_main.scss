@@ -64,6 +64,9 @@
     }
 
     &__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         border-radius: 15px;
         background-position: bottom;
         background-size: cover;
@@ -85,17 +88,20 @@
         }
 
         &_item3 {
-            grid-row: 2 / 6;
+            grid-row: 3 / 6;
             grid-column: 3 / 4;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        }
+
+        &_item6 {
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+            padding: 22px 0 15px;
+            justify-content: center;
         }
 
         &-rate {
             @extend %flexCenter;
             gap: 7px;
-            margin-bottom: 13px;
 
             .rate {
                 &__img-box {
@@ -141,18 +147,13 @@
                 }
             }
         }
-
         &-img {
-            border-radius: 15px;
+            height: 100%;
         }
 
         &_item4 {
             grid-row: 2 / 6;
             grid-column: 4 / 5;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
         }
 
 
@@ -200,6 +201,8 @@
                     background-color: $colorIconActive;
                     border-radius: 50%;
                     text-align: center;
+                    opacity: 1;
+                    transition: opacity .2s ease-in;
 
                 }
 
@@ -251,7 +254,7 @@
                     }
 
                     &::after {
-                        display: none;
+                        opacity: 0;;
                     }
 
                 }

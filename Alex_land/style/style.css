@@ -552,6 +552,9 @@ ul {
   grid-template-rows: repeat(5, minmax(20%, 83px));
 }
 .main__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   border-radius: 15px;
   background-position: bottom;
   background-size: cover;
@@ -570,15 +573,17 @@ ul {
   background-image: url(../img/main_2.jpg);
 }
 .main__cards_item3 {
-  grid-row: 2/6;
+  grid-row: 3/6;
   grid-column: 3/4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+.main__cards_item6 {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  padding: 22px 0 15px;
+  justify-content: center;
 }
 .main__cards-rate {
   gap: 7px;
-  margin-bottom: 13px;
 }
 .main__cards-rate .rate__img-box {
   display: flex;
@@ -615,14 +620,11 @@ ul {
   font-weight: 600;
 }
 .main__cards-img {
-  border-radius: 15px;
+  height: 100%;
 }
 .main__cards_item4 {
   grid-row: 2/6;
   grid-column: 4/5;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
 }
 .main__cards-about {
   position: relative;
@@ -662,6 +664,8 @@ ul {
   background-color: #fff;
   border-radius: 50%;
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
 .main__cards-about .about__label:hover {
   cursor: pointer;
@@ -702,7 +706,7 @@ ul {
   max-height: 67px;
 }
 .main__cards-about .about__input[type=radio]:checked ~ .about__label::after {
-  display: none;
+  opacity: 0;
 }
 .main__cards-about:not(:first-child) .about__text, .main__cards-about:not(:first-child) .services__link, .main__cards-about:not(:first-child) .about__title {
   color: #fff;
@@ -933,4 +937,31 @@ ul {
 }
 .services__slider {
   grid-column: 2/3;
+}
+
+@media (max-width: 767px) {
+  .center {
+    max-width: 343px;
+  }
+  .main__cards-box {
+    grid-template-columns: 120px 111px 101px;
+    grid-template-rows: repeat(9, 21px) 41px;
+  }
+  .main__cards_item1 {
+    grid-row: span 9;
+  }
+  .main__cards_item4, .main__cards_item5 {
+    display: none;
+  }
+  .main__cards_item3 {
+    grid-row: 4/10;
+  }
+  .main__cards_item2 {
+    grid-row: 3/10;
+    grid-column: 2/3;
+  }
+  .main__cards_item6 {
+    grid-row: 10/11;
+    grid-column: 1/4;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -165,7 +165,7 @@ ul {
             // background: linear-gradient(152deg, rgba(54, 95, 239, 1) 23%, rgba(110, 157, 247, 1) 33%, rgba(54, 95, 239, 1) 56%, rgba(252, 252, 252, 1) 100%);
             background-size: cover;
             opacity: 0;
-            transition: cubic-bezier(0.2, 0.6, 0, 1) 2.5s !important;
+            transition: all 3s cubic-bezier(0.2, 0.6, 0, 1) !important;
         }
 
         & .services__item-title,

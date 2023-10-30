@@ -14,7 +14,7 @@ var swiper = new Swiper(".swiper", {
             slidesPerView: 2,
             spaceBetween: 10,
         },
-        1024: {
+        1080: {
             slidesPerView: 3,
             spaceBetween: 20,
         },
@@ -35,4 +35,11 @@ var swiper = new Swiper(".swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+});
+
+
+/**Закрытие бургер меню */
+const close = document.getElementById('close');
+close.addEventListener('click', function() {
+   document.getElementById('burger').checked = false;
 });

@@ -21,6 +21,9 @@
             transition: color .3s ease-in;
 
             .summary__icon {
+                width: 4px;
+                height: 3px;
+                fill: $colorRegular;
                 margin-left: 4px;
                 transition: transform .3s ease-in;
             }
@@ -28,6 +31,10 @@
             &:hover {
                 color: $colorHover;
                 cursor: pointer;
+
+                & .summary__icon {
+                    fill: $colorHover;
+                }
             }
         }
 
@@ -46,7 +53,7 @@
         }
 
         &-link {
-            color: $colorRegular;
+            color: inherit;
             transition: color .2s ease-in;
 
             &:hover {
@@ -74,7 +81,7 @@
         @include flexCenterJustify(space-between);
         padding: 21px 20px;
         border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.10);
+        // border: 1px solid rgba(255, 255, 255, 0.10);
         background: linear-gradient(270deg, #312B2D 13.02%, rgba(49, 43, 45, 0.87) 34.54%, #312B2D 55.18%, rgba(49, 43, 45, 0.85) 79.33%, #312B2D 97.33%);
         backdrop-filter: blur(5px);
         color: #fff;
@@ -90,14 +97,17 @@
         text-transform: lowercase;
         transition: color .3s ease-in;
 
-        .logo__img path {
+        .logo__img {
+            fill: $colorIconActive;
+            width: 30px;
+            height: 29px;
             transition: fill .3s ease-in;
         }
 
         &:hover {
             color: $colorHover;
 
-            & .logo__img path {
+            & .logo__img {
                 fill: $colorHover;
             }
         }
@@ -115,6 +125,9 @@
             position: relative;
 
             &__icon {
+                width: 16px;
+                height: 16px;
+                fill: $colorIconActive;
                 margin-right: 5px;
             }
 
@@ -199,27 +212,11 @@
                 color: $colorRegular;
                 text-decoration: underline;
                 padding: 5.8px 0;
+
+                .contacts-city__icon {
+                    fill: $colorRegular;
+                }
             }
-
-
-
-
-            &__link::before {
-                content: "";
-                display: block;
-                margin-right: 5px;
-                height: 16px;
-                width: 16px;
-                background-image: url(../img/MapPin.svg);
-                background-position: center;
-                background-size: cover;
-            }
-
-
-
-
-
-
         }
 
         #myCity:checked {
@@ -239,6 +236,9 @@
 
         .contacts-phone {
             &__icon {
+                width: 16px;
+                height: 16px;
+                fill: $colorIconActive;
                 margin-right: 5px;
             }
 
@@ -261,22 +261,22 @@
                 gap: 20px;
             }
 
+            &__icon {
+                height: 18px;
+                width: 18px;
+                fill: rgba(49, 43, 45, 0.87);
+                transition: fill .2s ease-in;
+            }
+
             &__item {
                 width: 32px;
                 height: 32px;
                 background-color: transparent;
                 border-radius: 50%;
-                transition: all .2s ease-in;
+                transition: box-shadow .2s ease-in;
                 background-color: $colorIconActive;
-                transition: all .2s ease-in;
-
-                & path {
-                    fill: rgba(49, 43, 45, 0.87);
-                    transition: fill .2s ease-in;
-                }
 
                 &:hover {
-
                     &.social-item_avito {
 
                         box-shadow: 4px 4px 20px 0px rgba(147, 201, 37, 0.3),
@@ -284,23 +284,11 @@
                             2px -2px 20px 0px rgba(248, 94, 96, 0.3),
                             -4px -4px 20px 0px rgba(0, 165, 248, 0.3);
 
-                        path:first-child {
-                            fill: #00A5F8;
-
-                        }
-
-                        path:nth-child(2) {
-                            fill: #F85E60;
-
-                        }
-
-                        path:nth-child(3) {
-                            fill: #9D66F0;
-
-                        }
-
-                        path:last-child {
-                            fill: #93C925;
+                        .contacts-social__icon {
+                            --avito-1: #00A5F8;
+                            --avito-2: #F85E60;
+                            --avito-3: #9D66F0;
+                            --avito-4: #93C925;
 
                         }
                     }
@@ -308,16 +296,15 @@
                     &.social-item_telegram {
                         box-shadow: 0px 0px 20px 4px rgba(42, 171, 238, 0.30);
 
-                        path {
+                        .contacts-social__icon {
                             fill: #2AABEE;
-
                         }
                     }
 
                     &.social-item_whatsapp {
                         box-shadow: 0px 0px 20px 4px rgba(37, 211, 102, 0.3);
 
-                        path {
+                        .contacts-social__icon {
                             fill: #25D366;
 
                         }
@@ -373,6 +360,73 @@
             background-repeat: no-repeat;
             opacity: 0;
             transition: opacity .3s ease-in;
+        }
+    }
+
+
+    &__burger {
+        display: none;
+
+        #burger {
+            display: none;
+        }
+
+        .burger-nav__header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 36px;
+        }
+
+        .close__icon {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+
+            &:hover {
+                cursor: pointer;
+                stroke: $colorHover;
+            }
+        }
+
+        &-nav {
+            position: absolute;
+            opacity: 0;
+            top: -1000px;
+            left: -16px;
+            padding: 28px;
+            width: 100vw;
+            max-height: 100vh;
+            background: $colorTitle;
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            transition: opacity .3s ease-in-out;
+        }
+
+        .header__nav {
+            &-list {
+                gap: 25px;
+            }
+
+            &-summary {
+                padding: 0;
+                justify-content: center;
+            }
+
+            &-sub {
+                position: inherit;
+                align-items: center;
+                margin-top: 15px;
+                padding: 15px 38px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.05);
+
+                .header__nav-link {
+                    color: rgba(255, 255, 255, 0.80);
+                }
+
+            }
+
+
         }
     }
 

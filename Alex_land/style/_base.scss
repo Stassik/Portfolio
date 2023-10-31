@@ -138,6 +138,14 @@ ul {
     }
 }
 
+summary {
+    list-style-type: none;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+}
+
 .swiper {
     display: flex;
     width: 100%;

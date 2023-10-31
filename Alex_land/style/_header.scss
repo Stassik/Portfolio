@@ -12,6 +12,10 @@
 
         &-details {
             position: relative;
+            list-style-type: none;
+            &::-webkit-details-marker {
+                display: none;
+            }
         }
 
         &-summary {
@@ -20,9 +24,7 @@
             @extend %flexCenter;
             transition: color .3s ease-in;
 
-            &::-webkit-details-marker {
-                display: none;
-            }
+            
 
             .summary__icon {
                 width: 4px;

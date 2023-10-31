@@ -513,10 +513,19 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   margin-bottom: 36px;
 }
+.header__burger .burger__img {
+  width: 38px;
+  height: 38px;
+  stroke: #fff;
+}
+.header__burger .burger__img:hover {
+  cursor: pointer;
+  stroke: #365FEF;
+}
 .header__burger .close__icon {
   width: 32px;
   height: 32px;
-  stroke: white;
+  stroke: #fff;
 }
 .header__burger .close__icon:hover {
   cursor: pointer;

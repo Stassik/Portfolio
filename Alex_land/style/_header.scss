@@ -20,6 +20,10 @@
             @extend %flexCenter;
             transition: color .3s ease-in;
 
+            &::-webkit-details-marker {
+                display: none;
+            }
+
             .summary__icon {
                 width: 4px;
                 height: 3px;
@@ -410,11 +414,6 @@
             &-summary {
                 padding: 0;
                 justify-content: center;
-
-                &::-webkit-details-marker {
-                    display: none;
-
-                }
             }
 
             &-sub {

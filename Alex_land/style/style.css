@@ -247,6 +247,9 @@ ul {
   list-style-type: none;
   transition: color 0.3s ease-in;
 }
+.header__nav-summary::-webkit-details-marker {
+  display: none;
+}
 .header__nav-summary .summary__icon {
   width: 4px;
   height: 3px;
@@ -536,9 +539,6 @@ ul {
 .header__burger .header__nav-summary {
   padding: 0;
   justify-content: center;
-}
-.header__burger .header__nav-summary::-webkit-details-marker {
-  display: none;
 }
 .header__burger .header__nav-sub {
   position: inherit;

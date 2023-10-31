@@ -27,12 +27,32 @@
 
                 .header__nav-list {
                     flex-direction: column;
+                    margin: 45px 0 50px;
                 }
 
                 .header__nav-item {
                     width: 100%;
                     text-align: center;
                 }
+            }
+
+            .contacts {
+                &-city {
+                    &__box {
+                        width: 100vw;
+                        left: calc(-50vw + 50%);
+                    }
+                }
+
+                &-social {
+                    margin: 25px 0;
+                }
+            }
+
+            .header__btn {
+                display: block;
+                width: 100%;
+                max-width: 343px;
             }
         }
 

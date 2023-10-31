@@ -131,10 +131,12 @@ ul {
   cursor: pointer;
 }
 
-summary {
-  list-style-type: none;
+details > summary {
+  list-style: none;
 }
-summary::-webkit-details-marker {
+
+details > summary::marker,
+details > summary::-webkit-details-marker {
   display: none;
 }
 

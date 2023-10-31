@@ -138,12 +138,17 @@ ul {
     }
 }
 
-summary {
-    list-style-type: none;
+details>summary {
+    list-style: none;
+}
 
-    &::-webkit-details-marker {
-        display: none;
-    }
+details>summary::marker,
+/* Latest Chrome, Edge, Firefox */
+details>summary::-webkit-details-marker
+
+/* Safari */
+    {
+    display: none;
 }
 
 .swiper {

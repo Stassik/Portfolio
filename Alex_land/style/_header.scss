@@ -410,6 +410,11 @@
             &-summary {
                 padding: 0;
                 justify-content: center;
+
+                &::-webkit-details-marker {
+                    display: none;
+
+                }
             }
 
             &-sub {

@@ -537,6 +537,9 @@ ul {
   padding: 0;
   justify-content: center;
 }
+.header__burger .header__nav-summary::-webkit-details-marker {
+  display: none;
+}
 .header__burger .header__nav-sub {
   position: inherit;
   align-items: center;

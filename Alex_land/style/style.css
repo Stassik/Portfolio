@@ -508,19 +508,21 @@ summary::-webkit-details-marker {
 .header__burger #burger {
   display: none;
 }
-.header__burger .burger-nav__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 36px;
-}
 .header__burger .burger__img {
   width: 38px;
   height: 38px;
   stroke: #fff;
 }
-.header__burger .burger__img:hover {
+.header__burger .burger__label:hover {
   cursor: pointer;
+}
+.header__burger .burger__label:hover .burger__img {
   stroke: #365FEF;
+}
+.header__burger .burger-nav__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
 }
 .header__burger .close__icon {
   width: 32px;

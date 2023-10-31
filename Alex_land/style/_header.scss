@@ -370,20 +370,33 @@
             display: none;
         }
 
-        .burger-nav__header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 36px;
-        }
+        .burger {
 
-        .burger__img {
-            width: 38px;
-            height: 38px;
-            stroke: $colorIconActive;
-            &:hover {
-                cursor: pointer;
-                stroke: $colorHover;
+            &__img {
+                width: 38px;
+                height: 38px;
+                stroke: $colorIconActive;
+
             }
+
+            &__label {
+                &:hover {
+                    cursor: pointer;
+
+                    .burger__img {
+                        stroke: $colorHover;
+                    }
+
+                }
+
+            }
+
+            &-nav__header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 36px;
+            }
+
         }
 
         .close__icon {

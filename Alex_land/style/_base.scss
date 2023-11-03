@@ -218,27 +218,30 @@ details>summary::-webkit-details-marker
 
 
         &-bullet {
-            width: 36px;
-            height: 1px;
-            background-color: #D3D3D3;
-            opacity: 1;
+            max-width: 36px;
+            width: 5%;
+            height: 20px;
+            background: none;
             border-radius: 0;
+            border-bottom: 1px solid #D3D3D3;
             // transition: width .3s ease-in-out;
             transition: cubic-bezier(0.2, 0.6, 0.6, 1) .5s !important;
 
             &-active {
-                width: 70px;
-                background-color: $colorRegular;
+                max-width: 70px;
+                width: 15%;
+                border-bottom: 1px solid $colorRegular;
             }
         }
 
     }
 
-    &-horizontal>&-pagination-bullets,
-    &-pagination-bullets.swiper-pagination-horizontal,
-    &-pagination-custom,
-    &-pagination-fraction {
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
         bottom: 16px;
+        height: 20px;
         @extend %flexCenter;
         justify-content: flex-end;
     }

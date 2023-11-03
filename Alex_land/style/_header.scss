@@ -116,7 +116,7 @@
     &__contacts {
         @extend %fontSizeText;
         @extend %flexCenterCenter;
-        gap: 45px;    
+        gap: 45px;
     }
 
     &__btn {
@@ -417,7 +417,6 @@
             padding: 28px;
             padding-bottom: 36px;
             width: 100vw;
-            min-height: 100vh;
             background: $colorTitle;
             backdrop-filter: blur(5px);
             z-index: 10000;
@@ -430,9 +429,11 @@
             &-details {
                 @extend %flexCenter;
                 flex-direction: column;
+                z-index: 0;
             }
 
             &-list {
+                flex-direction: column;
                 gap: 25px;
             }
 

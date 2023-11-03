@@ -1,0 +1,145 @@
+.sequence {
+    @extend %flexCenter;
+    flex-direction: column;
+
+    &__title {
+        @extend %fontSizeTitle;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &__text {
+        @include fontSizeWeight(13px, 400);
+        max-width: 638px;
+        text-align: center;
+        color: $colorLight;
+    }
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        padding: 50px 0 150px;
+    }
+
+    &__item {
+        @extend %fontSizeText;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        min-height: 320px;
+        width: 340px;
+        padding: 40px 29px 40px 40px;
+        flex-shrink: 1;
+        border-radius: 15px;
+        overflow: hidden;
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 15px;
+        }
+
+        &-num {
+            width: 40px;
+            height: 40px;
+            @extend %flexCenterCenter;
+            border-radius: 50%;
+            color: $colorIconActive;
+            font-weight: 600;
+            background-color: $colorHover;
+            filter: drop-shadow(0px 4px 10px rgba(54, 95, 239, .25));
+
+        }
+
+        &-title {
+            @extend %fontSizeSubTitle;
+            font-weight: 600;
+        }
+
+        &-text {
+            @extend %fontSizeText;
+            color: $colorSubTitle;
+        }
+
+        &.item1,
+        &.item4,
+        &.item5 {
+            flex-shrink: 2;
+            width: calc(100% - 340px - 20px);
+            background: linear-gradient(166deg, rgba(54, 95, 239, 0.1) 0%, rgb(252, 252, 252) 100%);
+
+            .sequence__item-num {
+                -webkit-box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
+                -moz-box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
+                box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
+            }
+        }
+
+        &.item2,
+        &.item6 {
+            background-image: url(../img/Rectangle\ 1292.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+
+            .sequence__item-num {
+                color: $colorHover;
+            }
+        }
+
+        &.item3 {
+            background: linear-gradient(252deg, #312B2D -17.18%, rgba(49, 43, 45, 0.87) 9.31%, #312B2D 34.73%, rgba(49, 43, 45, 0.85) 64.47%, #312B2D 86.64%);
+
+            &::before {
+                content: url(../img/sequence3.png);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .sequence__item-num {
+                color: $colorTitle;
+            }
+        }
+
+        &.item2,
+        &.item3,
+        &.item6 {
+            .sequence__item-num {
+                background-color: $colorIconActive;
+                filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.15));
+            }
+
+            .sequence__item-title,
+            .sequence__item-text {
+                color: $colorIconActive;
+            }
+        }
+
+        &.item4 {
+            &::before {
+                content: url(../img/sequence4.png);
+                position: absolute;
+                top: 0;
+                right: 105px;
+            }
+
+        }
+
+        &.item6 {
+            &::before {
+                content: url(../img/sequence6.png);
+                position: absolute;
+                top: 0;
+                right: -26px;
+            }
+
+        }
+
+
+
+    }
+}

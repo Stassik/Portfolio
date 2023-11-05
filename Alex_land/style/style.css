@@ -30,12 +30,12 @@
 .sequence, .services__link, .about__list-item .list-item__heading, .about__box-info, .about__box-item, .main__cards-about .about__label, .main__cards-rate .rate__info-stars, .main__cards-rate .rate__info, .main__cards-rate, .header__burger .header__nav-details, .header__burger-nav, .header .contacts-social__list, .header .contacts-city__link, .header .contacts-city__label, .header .contacts-city, .header__logo, .header__heading, .header__nav-summary, .header__nav-list, .swiper .swiper-horizontal > .swiper-pagination-bullets,
 .swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper .swiper-pagination-custom,
-.swiper .swiper-pagination-fraction, .sequence__item-num, .about__list-item .list-item__icon, .main__btn-box, .main, .header .contacts-social__link, .header .contacts-phone__number, .header__contacts {
+.swiper .swiper-pagination-fraction, .sequence__item-num, .main__btn-box, .main, .header .contacts-social__link, .header .contacts-phone__number, .header__contacts {
   display: flex;
   align-items: center;
 }
 
-.sequence__item-num, .about__list-item .list-item__icon, .main__btn-box, .main, .header .contacts-social__link, .header .contacts-phone__number, .header__contacts {
+.sequence__item-num, .main__btn-box, .main, .header .contacts-social__link, .header .contacts-phone__number, .header__contacts {
   justify-content: center;
 }
 
@@ -766,8 +766,8 @@ details > summary::-webkit-details-marker {
 }
 .main__cards-about .about__label:after {
   content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.4688 6.90625H8.09375V4.53125C8.09375 4.37378 8.03119 4.22276 7.91984 4.11141C7.80849 4.00006 7.65747 3.9375 7.5 3.9375C7.34253 3.9375 7.19151 4.00006 7.08016 4.11141C6.96881 4.22276 6.90625 4.37378 6.90625 4.53125V6.90625H4.53125C4.37378 6.90625 4.22276 6.96881 4.11141 7.08016C4.00006 7.19151 3.9375 7.34253 3.9375 7.5C3.9375 7.65747 4.00006 7.80849 4.11141 7.91984C4.22276 8.03119 4.37378 8.09375 4.53125 8.09375H6.90625V10.4688C6.90625 10.6262 6.96881 10.7772 7.08016 10.8886C7.19151 10.9999 7.34253 11.0625 7.5 11.0625C7.65747 11.0625 7.80849 10.9999 7.91984 10.8886C8.03119 10.7772 8.09375 10.6262 8.09375 10.4688V8.09375H10.4688C10.6262 8.09375 10.7772 8.03119 10.8886 7.91984C10.9999 7.80849 11.0625 7.65747 11.0625 7.5C11.0625 7.34253 10.9999 7.19151 10.8886 7.08016C10.7772 6.96881 10.6262 6.90625 10.4688 6.90625Z' fill='%23737373'/%3e%3c/svg%3e ");
-  width: 19px;
   height: 19px;
+  aspect-ratio: 1/1;
   background-color: #fff;
   border-radius: 50%;
   text-align: center;
@@ -799,7 +799,6 @@ details > summary::-webkit-details-marker {
 }
 .main__cards-about .about__input[type=radio]:checked ~ .about__text {
   max-height: 183px;
-  overflow-y: scroll;
   padding: 10px 0 8px;
   line-height: 130.182%;
 }
@@ -951,10 +950,9 @@ details > summary::-webkit-details-marker {
 }
 .about__list-item .list-item__icon {
   width: 50px;
-  height: 50px;
+  aspect-ratio: 1/1;
   margin-right: 15px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #15151A 0%, rgba(21, 21, 26, 0.68) 37.97%, rgba(21, 21, 26, 0.86) 59.87%, #15151A 91.03%);
 }
 .about__list-item .list-item__text {
   color: #737373;
@@ -1227,6 +1225,12 @@ details > summary::-webkit-details-marker {
   }
   .main__cards_item5 .main__cards-img {
     height: 100%;
+  }
+  .services-main__content {
+    gap: 10px;
+  }
+  .services__item {
+    width: calc((100% - 30px) / 4);
   }
   .services__info {
     width: 33%;

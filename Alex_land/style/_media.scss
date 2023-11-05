@@ -103,6 +103,14 @@
 
     .services {
 
+        &-main__content {
+            gap: 10px;
+        }
+
+        &__item {
+            width: calc((100% - 30px) / 4);
+        }
+
 
         &__info {
             width: 33%;

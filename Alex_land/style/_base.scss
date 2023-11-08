@@ -48,16 +48,6 @@
     position: relative;
 }
 
-// %BtnMainHover {
-//     @include btnStyle($colorIconActive, $colorIconActive, $colorIconActive);
-//     cursor: pointer;
-//     @extend %fontSizeBtn;
-//     padding: 19px 10px;
-// }
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -88,8 +78,22 @@ ul {
 
 .btn_main {
     @extend %BtnMainStyle;
+    @extend %flexCenterCenter;
     @include btnStyle($colorSubTitle, transparent);
     z-index: 10;
+    transition: .2s;
+
+    // &::after {
+    //     content: attr(data-title);
+    //     position: absolute;
+    //     @extend %flexCenterCenter;
+    //     text-align: center;
+    //     color: transparent;
+    //     font-weight: 600;
+    //     transition: 0.3s;
+    //     transform: scale(0.9);
+    //     transform-origin: center center;
+    // }
 
     .btn_bg {
         position: absolute;
@@ -104,23 +108,35 @@ ul {
         background-position: right bottom;
         background-repeat: no-repeat;
         background-size: 150%;
-        box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.30);
-        transition: all .3s ease-in-out;
+        transition: all .2s ease-in-out;
     }
 
     &:hover {
-        @include btnStyle(transparent, transparent, $colorIconActive);
+        @include btnStyle(transparent, transparent, transparent);
         border: none;
         cursor: pointer;
         box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.30);
+
+
+        &::after {
+            color: $colorIconActive;
+            transform: scale(1);
+        }
 
         & .btn_bg {
             opacity: 1;
         }
 
         &:active {
+            box-shadow: none;
+            color: $colorIconActive;
             & .btn_bg {
                 background-position: left top
+            }
+
+            &::after {
+                color: transparent;
+                transform: scale(0.9);
             }
         }
     }
@@ -129,8 +145,23 @@ ul {
 }
 
 .btn_light {
+    @extend %flexCenterCenter;
     @include btnStyle(rgba(255, 255, 255, 0.30), transparent, $colorIconActive);
+    position: relative;
+    transition: .2s;
     z-index: 10;
+
+    // &::after {
+    //     content: attr(data-title);
+    //     position: absolute;
+    //     @extend %flexCenterCenter;
+    //     text-align: center;
+    //     color: transparent;
+    //     font-weight: 600;
+    //     transition: 0.3s;
+    //     transform: scale(0.9);
+    //     transform-origin: center center;
+    // }
 
     &:hover {
         @include btnStyle(transparent, $colorTitle, $colorTitle);
@@ -199,7 +230,7 @@ details>summary::-webkit-details-marker
             & .services__item-text,
             & .services__item-link,
             & .services__item-price,
-            & .services__item-icon path {
+            & .services__item-icon{
                 color: $colorIconActive;
                 fill: $colorIconActive;
             }

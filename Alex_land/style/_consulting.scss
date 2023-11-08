@@ -1,0 +1,274 @@
+.consulting {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 78px 90px;
+    margin-bottom: 20px;
+    background: $colorHover;
+    background: url(../img/mockup.png) right bottom/contain no-repeat, url(../img/consultingBG.jpg) center/cover no-repeat;
+    border-radius: 15px;
+    text-align: center;
+    color: $colorIconActive;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+    }
+
+    &__info {
+        width: 43%;
+
+    }
+
+
+    &__title {
+        @extend %fontSizeTitle;
+        color: $colorIconActive;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        @include fontSizeWeight(13px, 400);
+        margin-bottom: 35px;
+        opacity: .7;
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        &-label {
+            @extend %flexCenter;
+            position: relative;
+            flex-grow: 1;
+            flex-basis: calc(50% - 15px);
+        }
+
+        .input__icon,
+        .resize__icon {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+        }
+
+        .input__icon {
+            left: 20px;
+            fill: none;
+            stroke: $colorIconActive;
+            stroke-opacity: 0.8;
+        }
+
+        &-input {
+            @extend %flexCenter;
+            @extend %fontSizeText;
+            line-height: 135.023%;
+            width: 100%;
+            min-height: 59px;
+            padding: 20px;
+            padding-left: 46px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.10);
+            border: 1px solid transparent;
+            outline: none;
+            color: $colorIconActive;
+            text-align: left;
+            box-sizing: border-box;
+
+            &::placeholder,
+            .form-input__text {
+
+                @extend %fontSizeText;
+                font-family: 'Open sans';
+                color: rgba(255, 255, 255, 0.80);
+                opacity: 1;
+
+            }
+
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+                border: 1px solid rgba(255, 255, 255, 0.80);
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.40);
+                }
+            }
+        }
+
+        #clientFile {
+            display: none;
+
+            &:hover~.consulting__form-input {
+                background: rgba(255, 255, 255, 0.30);
+                cursor: pointer;
+            }
+        }
+
+        #clientQuestion {
+            padding-right: 46px;
+            resize: vertical;
+            height: 59px;
+            max-height: 250px;
+            overflow: hidden;
+
+            &~.input__icon {
+                stroke: none;
+            }
+
+            // &~.resize__icon {
+            //     right: 20px;
+            //     &:hover {
+            //         cursor: ns-resize;
+            //     }
+            // }
+        }
+
+        &-btn {
+            position: relative;
+            @extend %flexCenterCenter;
+            padding: 19px 10px;
+            height: 60px;
+            @extend %fontSizeBtn;
+            color: $colorHover;
+            border-radius: 30px;
+            border: none;
+            background: $colorIconActive;
+            box-shadow: 0px 4px 20px 3px rgba(255, 255, 255, 0.10);
+            transition: 0.2s;
+
+            &::after {
+                content: attr(data-title);
+                position: absolute;
+                @extend %flexCenterCenter;
+                text-align: center;
+                color: transparent;
+                font-weight: 600;
+                transition: 0.2s;
+                transform: scale(0.9);
+                transform-origin: center center;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0px 4px 20px 3px rgba(255, 255, 255, 0.30);
+                color: transparent;
+
+                &::after {
+                    color: $colorHover;
+                    transform: scale(1);
+                }
+            }
+
+            &:disabled {
+                background: #254BD0;
+                box-shadow: none;
+                color: #87A0F9;
+
+                &:hover {
+                    &::after {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    &__form-group {
+        @extend %flexCenterCenter;
+        flex-wrap: wrap;
+        padding: 15px 0 25px;
+        margin-bottom: 25px;
+        border: none;
+        gap: 32px;
+
+        .form-group {
+            &__title {
+                @include fontSizeWeight(14px, 600);
+                width: 100%;
+                margin-bottom: -13px;
+            }
+
+            &__input[type="checkbox"] {
+                display: none;
+
+                &:checked {
+                    &+.form-group__label {
+                        background: $colorIconActive;
+                        box-shadow: 0px 4px 20px 5px rgba(255, 255, 255, 0.15);
+                    }
+                }
+
+                &[id="mobile"]+.form-group__label .form-group__checkbox {
+                    background-color: #E9B653;
+
+                    & .form-group__icon {
+                        fill: none;
+                        stroke: $colorIconActive;
+                    }
+                }
+
+                &[id="whatsapp"]+.form-group__label .form-group__checkbox {
+                    background-color: #66C109;
+                }
+
+                &[id="telegram"]+.form-group__label .form-group__checkbox {
+                    background-color: #0088CC;
+                }
+
+                &[id="viber"]+.form-group__label .form-group__checkbox {
+                    background-color: #7F4DA0;
+                }
+            }
+
+            &__label {
+                @extend %flexCenterCenter;
+                @include fontSizeWeight(13px, 400);
+                position: relative;
+                line-height: 135.023%;
+                flex-direction: column;
+                width: 50px;
+                height: 50px;
+                border-radius: 30px;
+                background: rgba(255, 255, 255, 0.10);
+
+                &::after {
+                    content: attr(data-title);
+                    position: absolute;
+                    bottom: -23px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &__checkbox {
+                @extend %flexCenterCenter;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+
+            }
+
+            &__icon {
+                width: 18px;
+                height: 18px;
+                fill: $colorIconActive;
+            }
+        }
+
+    }
+
+
+}

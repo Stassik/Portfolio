@@ -1,0 +1,23 @@
+.footer {
+
+    &__main {
+        padding: 100px 86px 29px 50px;
+        background-color: $colorTitle;
+        border-radius: 15px;
+    }
+
+    &__sub {
+        padding: 20px 0;
+        &-list {
+            @extend %flexCenter;
+            flex-wrap: wrap;
+            gap: 15%;
+        }
+
+        &-item, &-link {
+            @include fontSizeWeight(13px, 400);
+            color: $colorRegular;
+        }
+    }
+
+}

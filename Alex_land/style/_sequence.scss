@@ -70,7 +70,6 @@
         &.item5 {
             flex-shrink: 2;
             width: calc(100% - 340px - 20px);
-            background: linear-gradient(166deg, rgba(54, 95, 239, 0.1) 0%, rgb(252, 252, 252) 100%);
 
             .sequence__item-num {
                 -webkit-box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
@@ -79,29 +78,40 @@
             }
         }
 
-        &.item2,
-        &.item6 {
-            background-image: url(../img/Rectangle\ 1292.jpg);
-            background-repeat: no-repeat;
-            background-position: right;
+        &.item1 {
+            background: url(../img/sequence1.png) 100% / auto no-repeat, url(../img/sequence1-2.jpg) center/cover no-repeat;
+        }
 
-            .sequence__item-num {
-                color: $colorHover;
-            }
+        &.item2 {
+            background: url(../img/sequence2.png) top 0px right -5%/ auto no-repeat, url(../img/sequence2-2.jpg) center/cover no-repeat;
         }
 
         &.item3 {
-            background: linear-gradient(252deg, #312B2D -17.18%, rgba(49, 43, 45, 0.87) 9.31%, #312B2D 34.73%, rgba(49, 43, 45, 0.85) 64.47%, #312B2D 86.64%);
-
-            &::before {
-                content: url(../img/sequence3.png);
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
+            background: url(../img/sequence3.png) top center/auto no-repeat, linear-gradient(252deg, #312B2D -17.18%, rgba(49, 43, 45, 0.87) 9.31%, #312B2D 34.73%, rgba(49, 43, 45, 0.85) 64.47%, #312B2D 86.64%);
 
             .sequence__item-num {
                 color: $colorTitle;
+            }
+        }
+
+        &.item4 {
+            background: url(../img/sequence4.png) 90%/auto no-repeat, url(../img/sequence4-2.jpg) center/cover no-repeat;
+        }
+
+        &.item5 {
+            background: url(../img/sequence5.png), url(../img/sequence5-2.jpg);
+            background-repeat: no-repeat;
+            background-position: top 0px right 7%;
+        }
+
+        &.item6 {
+            background: url(../img/sequence6.png) top 0px right -26px/ auto no-repeat, url(../img/sequence2-2.jpg) center/cover no-repeat;
+        }
+
+        &.item2,
+        &.item6 {
+            .sequence__item-num {
+                color: $colorHover;
             }
         }
 
@@ -118,28 +128,5 @@
                 color: $colorIconActive;
             }
         }
-
-        &.item4 {
-            &::before {
-                content: url(../img/sequence4.png);
-                position: absolute;
-                top: 0;
-                right: 105px;
-            }
-
-        }
-
-        &.item6 {
-            &::before {
-                content: url(../img/sequence6.png);
-                position: absolute;
-                top: 0;
-                right: -26px;
-            }
-
-        }
-
-
-
     }
 }

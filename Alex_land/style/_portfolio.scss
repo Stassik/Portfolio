@@ -1,0 +1,109 @@
+.portfolio {
+    margin-bottom: 150px;
+
+    &__title {
+        @extend %fontSizeTitle;
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        @extend %flexCenter;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__btn {
+        width: 241px;
+        @include btnStyle(transparent, transparent, $colorIconActive);
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.30);
+
+        & .btn_bg {
+            opacity: 1;
+        }
+        
+    }
+
+    &__list {
+        @extend %flexCenterCenter;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        width: calc(50% - 10px);
+        // min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        &-sticker {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 30px;
+            background-color: $colorIconActive;
+            color: $colorTitle;
+            @include fontSizeWeight(13px, 400);
+        }
+
+        &-img {
+            width: 100%;
+            max-width: 521px;
+            min-width: 250px;
+        }
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            background-color: $bgColorSuperLight;
+            padding: 58px 45px 0;
+            border-radius: 15px;
+        }
+
+        &-description {
+            @include flexCenterJustify(space-between);
+            background-color: $bgColorSuperLight;
+            border-radius: 15px;
+            padding: 20px 30px;
+        }
+
+        &-title {
+            @include fontSizeWeight(20px, 600);
+            color: $colorTitle;
+            margin-bottom: 5px;
+
+        }
+
+        &-text {
+            @extend %fontSizeText;
+            color: $colorRegular;
+        }
+
+        &-link {
+            min-width: 145px;
+            @extend %flexCenter;
+            @extend %fontSizeText;
+            padding: 10px 12px;
+            border: 1px solid $colorHover;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            color: $colorHover;
+
+            &:hover {
+                background-color: $colorHover;
+                color: $colorIconActive;
+
+                & .services__link-icon {
+                    stroke: $colorIconActive;
+                }
+            }
+        }
+    }
+}

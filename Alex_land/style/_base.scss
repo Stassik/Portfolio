@@ -112,7 +112,7 @@ ul {
     }
 
     &:hover {
-        @include btnStyle(transparent, transparent, transparent);
+        @include btnStyle(transparent, transparent, $colorIconActive);
         border: none;
         cursor: pointer;
         box-shadow: 0px 4px 20px 0px rgba(54, 95, 239, 0.30);
@@ -130,6 +130,7 @@ ul {
         &:active {
             box-shadow: none;
             color: $colorIconActive;
+
             & .btn_bg {
                 background-position: left top
             }
@@ -169,6 +170,56 @@ ul {
     }
 }
 
+.form__btn {
+    position: relative;
+    @extend %flexCenterCenter;
+    padding: 19px 10px;
+    height: 60px;
+    min-width: 271px;
+    @extend %fontSizeBtn;
+    color: $colorHover;
+    border-radius: 30px;
+    border: none;
+    background: $colorIconActive;
+    box-shadow: 0px 4px 20px 3px rgba(255, 255, 255, 0.10);
+    transition: 0.2s;
+
+    &::after {
+        content: attr(data-title);
+        position: absolute;
+        @extend %flexCenterCenter;
+        text-align: center;
+        color: transparent;
+        font-weight: 600;
+        transition: 0.2s;
+        transform: scale(0.9);
+        transform-origin: center center;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 4px 20px 3px rgba(255, 255, 255, 0.30);
+        color: transparent;
+
+        &::after {
+            color: $colorHover;
+            transform: scale(1);
+        }
+    }
+
+    &:disabled {
+        background: #254BD0;
+        box-shadow: none;
+        color: #87A0F9;
+
+        &:hover {
+            &::after {
+                color: transparent;
+            }
+        }
+    }
+}
+
 details>summary {
     list-style: none;
 }
@@ -192,62 +243,7 @@ details>summary::-webkit-details-marker
         height: auto;
     }
 
-    .services__item {
-        position: relative;
-        overflow: hidden;
-
-        & .bg {
-
-            position: absolute;
-            width: 300%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: -125%;
-            background-image: url(../img/Rectangle\ 1292.jpg);
-            // background: rgb(54, 95, 239);
-            // background: linear-gradient(152deg, rgba(54, 95, 239, 1) 23%, rgba(110, 157, 247, 1) 33%, rgba(54, 95, 239, 1) 56%, rgba(252, 252, 252, 1) 100%);
-            background-size: cover;
-            opacity: 0;
-            transition: all 3s cubic-bezier(0.2, 0.6, 0, 1) !important;
-        }
-
-        & .services__item-title,
-        & .services__item-text,
-        & .services__item-link,
-        & .services__item-price,
-        & .services__item-icon path {
-            transition: cubic-bezier(0.2, 0.6, 0, 1) .5s !important;
-        }
-
-        &.swiper-slide-active {
-
-            & .bg {
-                opacity: 1;
-            }
-
-            & .services__item-title,
-            & .services__item-text,
-            & .services__item-link,
-            & .services__item-price,
-            & .services__item-icon{
-                color: $colorIconActive;
-                fill: $colorIconActive;
-            }
-
-            & .services__item-price {
-                background-color: transparent;
-                border-radius: 30px;
-                outline: 1px solid $colorIconActive;
-            }
-
-
-        }
-    }
-
     &-pagination {
-
-
         &-bullet {
             max-width: 36px;
             width: 5%;

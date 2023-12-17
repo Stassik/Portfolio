@@ -1,0 +1,84 @@
+.team {
+    &__title {
+        @extend %fontSizeTitle;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0 150px;
+    }
+
+    &__slider {
+        width: 100%;
+    }
+
+    &__item {
+
+        &-content {
+            position: relative;
+        }
+
+        &-contact {
+            @extend %flexCenter;
+            gap: 15px;
+            
+            position: absolute;
+            right: 20px;
+            bottom: 90px;
+        }
+
+        &-link {
+            @extend %flexCenterCenter;
+            border-radius: 50%;
+            width: 38px;
+            aspect-ratio: 1/1;
+            background-color: $colorTitle;
+
+            &:hover {
+                background-color: $colorHover;
+            }
+        }
+
+        &-icon {
+            height: 20px;
+            fill: $colorIconActive;
+        }
+
+        &-img {
+            border-radius: 15px;
+            width: 100%;
+            aspect-ratio: auto;
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 15px;
+            
+        }
+
+        &-name {
+            @include fontSizeWeight(16px, 600);
+            color: $colorTitle;
+            margin-bottom: 5px;
+        }
+
+        &-post {
+            @include fontSizeWeight(13px, 400);
+            line-height: 149.9%;
+            color: $colorSubTitle;
+        }
+
+        &-experience {
+            @include fontSizeWeight(13px, 400);
+            line-height: 149.9%;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 30px;
+            border: 1px solid #DFDFDF;
+            color: $colorSubTitle;
+        }
+    }
+}

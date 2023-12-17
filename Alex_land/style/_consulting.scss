@@ -133,55 +133,6 @@
             //     }
             // }
         }
-
-        &-btn {
-            position: relative;
-            @extend %flexCenterCenter;
-            padding: 19px 10px;
-            height: 60px;
-            @extend %fontSizeBtn;
-            color: $colorHover;
-            border-radius: 30px;
-            border: none;
-            background: $colorIconActive;
-            box-shadow: 0px 4px 20px 3px rgba(255, 255, 255, 0.10);
-            transition: 0.2s;
-
-            &::after {
-                content: attr(data-title);
-                position: absolute;
-                @extend %flexCenterCenter;
-                text-align: center;
-                color: transparent;
-                font-weight: 600;
-                transition: 0.2s;
-                transform: scale(0.9);
-                transform-origin: center center;
-            }
-
-            &:hover {
-                cursor: pointer;
-                box-shadow: 0px 4px 20px 3px rgba(255, 255, 255, 0.30);
-                color: transparent;
-
-                &::after {
-                    color: $colorHover;
-                    transform: scale(1);
-                }
-            }
-
-            &:disabled {
-                background: #254BD0;
-                box-shadow: none;
-                color: #87A0F9;
-
-                &:hover {
-                    &::after {
-                        color: transparent;
-                    }
-                }
-            }
-        }
     }
 
     &__form-group {

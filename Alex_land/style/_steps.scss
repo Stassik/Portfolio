@@ -1,4 +1,4 @@
-.sequence {
+.steps {
     @extend %flexCenter;
     flex-direction: column;
 
@@ -71,7 +71,7 @@
             flex-shrink: 2;
             width: calc(100% - 340px - 20px);
 
-            .sequence__item-num {
+            .steps__item-num {
                 -webkit-box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
                 -moz-box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
                 box-shadow: 0px 8px 10px 1px rgba(255, 255, 255, 0.3) inset;
@@ -79,38 +79,38 @@
         }
 
         &.item1 {
-            background: url(../img/sequence1.png) 100% / auto no-repeat, url(../img/sequence1-2.jpg) center/cover no-repeat;
+            background: url(../img/steps1.png) 100% / auto no-repeat, url(../img/steps1-2.jpg) center/cover no-repeat;
         }
 
         &.item2 {
-            background: url(../img/sequence2.png) top 0px right -5%/ auto no-repeat, url(../img/sequence2-2.jpg) center/cover no-repeat;
+            background: url(../img/steps2.png) top 0px right -5%/ auto no-repeat, url(../img/steps2-2.jpg) center/cover no-repeat;
         }
 
         &.item3 {
-            background: url(../img/sequence3.png) top center/auto no-repeat, linear-gradient(252deg, #312B2D -17.18%, rgba(49, 43, 45, 0.87) 9.31%, #312B2D 34.73%, rgba(49, 43, 45, 0.85) 64.47%, #312B2D 86.64%);
+            background: url(../img/steps3.png) top center/auto no-repeat, linear-gradient(252deg, #312B2D -17.18%, rgba(49, 43, 45, 0.87) 9.31%, #312B2D 34.73%, rgba(49, 43, 45, 0.85) 64.47%, #312B2D 86.64%);
 
-            .sequence__item-num {
+            .steps__item-num {
                 color: $colorTitle;
             }
         }
 
         &.item4 {
-            background: url(../img/sequence4.png) 90%/auto no-repeat, url(../img/sequence4-2.jpg) center/cover no-repeat;
+            background: url(../img/steps4.png) 90%/auto no-repeat, url(../img/steps4-2.jpg) center/cover no-repeat;
         }
 
         &.item5 {
-            background: url(../img/sequence5.png), url(../img/sequence5-2.jpg);
+            background: url(../img/steps5.png), url(../img/steps5-2.jpg);
             background-repeat: no-repeat;
             background-position: top 0px right 7%;
         }
 
         &.item6 {
-            background: url(../img/sequence6.png) top 0px right -26px/ auto no-repeat, url(../img/sequence2-2.jpg) center/cover no-repeat;
+            background: url(../img/steps6.png) top 0px right -26px/ auto no-repeat, url(../img/steps2-2.jpg) center/cover no-repeat;
         }
 
         &.item2,
         &.item6 {
-            .sequence__item-num {
+            .steps__item-num {
                 color: $colorHover;
             }
         }
@@ -118,13 +118,13 @@
         &.item2,
         &.item3,
         &.item6 {
-            .sequence__item-num {
+            .steps__item-num {
                 background-color: $colorIconActive;
                 filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.15));
             }
 
-            .sequence__item-title,
-            .sequence__item-text {
+            .steps__item-title,
+            .steps__item-text {
                 color: $colorIconActive;
             }
         }

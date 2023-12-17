@@ -1,0 +1,126 @@
+.pricing {
+
+    &__title {
+        @extend %fontSizeTitle;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__box {
+        margin-bottom: 150px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__view {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px;
+        flex-basis: 625px;
+        flex-grow: 1;
+        width: calc(50% - 10px);
+        max-width: 700px;
+        background-image: url(../img/Rectangle\ 1292.jpg);
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+
+        &-img {
+            align-self: center;
+            width: auto;
+            height: auto;
+            max-height: 326px;
+            // aspect-ratio: auto;
+        }
+
+        &-info {
+            @extend %fontSizeText;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 6px;
+            border: 1px solid $colorIconActive;
+            border-radius: 30px;
+            color: $colorIconActive;
+            box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.30) inset;
+        }
+
+        &-title {
+            @include fontSizeWeight(20px, 600);
+            color: $colorIconActive;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 10px);
+        max-width: 700px;
+        flex-basis: 625px;
+        flex-grow: 1;
+        gap: 20px;
+    }
+
+    &__item {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+
+    &__summary {
+        position: relative;
+        @extend %flexCenter;
+        gap: 20px;
+        padding: 30px;
+        background-color: $bgColorSuperLight;
+        border-radius: 100px;
+        transition: background-color .2s ease-in;
+
+        &::after {
+            position: absolute;
+            right: 30px;
+            content: "";
+            background-image: url(../img/fi-sr-plus-small.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @extend %flexCenterCenter;
+            height: 26px;
+            aspect-ratio: 1/1;
+        }
+
+        &-info {
+            @extend %fontSizeBtn;
+            padding: 10px;
+            border-radius: 30px;
+            background: #AAA;
+            box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.30) inset;
+            color: $colorIconActive;
+        }
+
+        &-title {
+            @extend %fontSizeBtn;
+            color: $colorRegular;
+        }
+    }
+
+    &__details[open] &__summary {
+        background-color: $colorSubTitle;
+
+        &::after {
+            background-image: url(../img/Line.png);
+            background-size: auto;
+        }
+
+        &-title {
+            color: $colorIconActive;
+        }
+    }
+}

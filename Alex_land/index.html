@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/style.css">
     <title>Digitrex</title>
@@ -22,6 +23,17 @@
                                     <use xlink:href="img/sprite.svg#arrow_dropdown"></use>
                                 </svg>
                             </summary>
+                            <ul class="header__nav-sub">
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Дизайн сайта в FIGMA</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Дизайн сайта в Photoshop</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Ошибки при создании дизайна</a>
+                                </li>
+                            </ul>
                         </details>
                     </li>
                     <li class="header__nav-item">
@@ -32,6 +44,20 @@
                                     <use xlink:href="img/sprite.svg#arrow_dropdown"></use>
                                 </svg>
                             </summary>
+                            <ul class="header__nav-sub">
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Адаптивная верстка сайтов</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Валидная вёрстка</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Вёрстка на языке LESS\SASS</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Ошибки при верстке сайтов</a>
+                                </li>
+                            </ul>
                         </details>
                     </li>
                     <li class="header__nav-item">
@@ -76,6 +102,14 @@
                                     <use xlink:href="img/sprite.svg#arrow_dropdown"></use>
                                 </svg>
                             </summary>
+                            <ul class="header__nav-sub">
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Доработка сайта</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Исправление ошибок</a>
+                                </li>
+                            </ul>
                         </details>
                     </li>
                     <li class="header__nav-item">
@@ -86,6 +120,17 @@
                                     <use xlink:href="img/sprite.svg#arrow_dropdown"></use>
                                 </svg>
                             </summary>
+                            <ul class="header__nav-sub">
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Аудит верстки сайта</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Аудит дизайна сайта</a>
+                                </li>
+                                <li class="nav-sub__list-item">
+                                    <a href="#" class="header__nav-link"> Проверка скорости работы сайта</a>
+                                </li>
+                            </ul>
                         </details>
                     </li>
                     <li class="header__nav-item">
@@ -162,9 +207,9 @@
                         </ul>
                     </div>
                 </div>
-                <button class="header__btn btn_light" data-title="Связаться с нами">
+                <a href='#consulting_form' class="header__btn btn_light" data-title="Связаться с нами">
                     Связаться с нами
-                </button>
+                </a>
                 <div class="header__burger">
                     <label class="burger__label" for="burger">
                         <svg class="burger__img">
@@ -187,10 +232,10 @@
                 и повышения узнаваемости бренда.</p>
             <div class="main__btn-box">
                 <button class="main__btn btn_main" data-title="Больше о нас">
-                    <div class="btn_bg"></div>Больше о нас
+                    <span class="btn_bg"></span>Больше о нас
                 </button>
                 <button class="main__btn btn_main" data-title="Заказать сайт">
-                    <div class="btn_bg"></div>Заказать сайт
+                    <span class="btn_bg"></span>Заказать сайт
                 </button>
             </div>
             <div class="main__cards-box">
@@ -243,7 +288,7 @@
                     <div class="main__cards-about">
                         <input class="about__input" id="about_1" type="radio" name="about_1" checked>
                         <label class="about__label" for="about_1">
-                            <h4 class="about__title">Полное сопровождение</h4>
+                            <span class="about__title">Полное сопровождение</span>
                         </label>
                         <p class="about__text">
                             Мы предоставляем бесплатную консультацию, чтобы обсудить ваши потребности и построить
@@ -258,7 +303,7 @@
                     <div class="main__cards-about">
                         <input class="about__input" id="about_2" type="radio" name="about_1">
                         <label class="about__label" for="about_2">
-                            <h4 class="about__title">Бесплатная консультация</h4>
+                            <span class="about__title">Бесплатная консультация</span>
                         </label>
                         <p class="about__text">
                             Мы предоставляем бесплатную консультацию, чтобы обсудить ваши потребности и построить
@@ -273,7 +318,7 @@
                     <div class="main__cards-about">
                         <input class="about__input" id="about_3" type="radio" name="about_1">
                         <label class="about__label" for="about_3">
-                            <h4 class="about__title">Опытные специалисты</h4>
+                            <span class="about__title">Опытные специалисты</span>
                         </label>
                         <p class="about__text">
                             Мы предоставляем бесплатную консультацию.
@@ -287,7 +332,7 @@
                     <div class="main__cards-about">
                         <input class="about__input" id="about_4" type="radio" name="about_1">
                         <label class="about__label" for="about_4">
-                            <h4 class="about__title">Чистый, понятный код</h4>
+                            <span class="about__title">Чистый, понятный код</span>
                         </label>
                         <p class="about__text">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, tempore sapiente? Est
@@ -559,7 +604,7 @@
                     </div>
 
                     <div class="services__slider">
-                        <div class="swiper">
+                        <div class="swiper swiper-services">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper service-slider__wrap">
                                 <div class="services__item swiper-slide">
@@ -723,10 +768,10 @@
 
                             </div>
                             <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-pagination" id="swiper-services__pagination"></div>
 
                             <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev">
+                            <div class="swiper-button-prev" id="swiper-services__prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="8" viewBox="0 0 32 8"
                                     fill="none">
                                     <path
@@ -734,7 +779,7 @@
                                         fill="#191919" />
                                 </svg>
                             </div>
-                            <div class="swiper-button-next">
+                            <div class="swiper-button-next" id="swiper-services__next">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="8" viewBox="0 0 32 8"
                                     fill="none">
                                     <path
@@ -748,59 +793,418 @@
                 </div>
             </section>
         </div>
-        <div class="sequence">
-            <h2 class="sequence__title">Порядок сотрудничества</h2>
-            <p class="sequence__text">Сегодня услуги по разработке и продвижению сайтов в интернете предоставляют
+        <section class="steps">
+            <h2 class="steps__title">Порядок сотрудничества</h2>
+            <p class="steps__text">Сегодня услуги по разработке и продвижению сайтов в интернете предоставляют
                 многие. Но не каждый из них даст гарантию на вывод ресурса в ТОП. Наши SEO-специалисты гарантируют вывод
                 вашего сайта на первые позиции поисковой выдачи Яндекса и Google, так как владеют секретами раскрутки в
                 популярных поисковиках.</p>
-            <div class="sequence__box">
-                <div class="sequence__item item1">
-                    <div class="sequence__item-info">
-                        <div class="sequence__item-num">1</div>
-                        <h4 class="sequence__item-title">Вы высылаете нам</h4>
-                        <p class="sequence__item-text">техническое задание или заполненный брифинг</p>
+            <div class="steps__box">
+                <div class="steps__item item1">
+                    <div class="steps__item-info">
+                        <div class="steps__item-num">1</div>
+                        <h4 class="steps__item-title">Вы высылаете нам</h4>
+                        <p class="steps__item-text">техническое задание или заполненный брифинг</p>
                     </div>
                 </div>
-                <div class="sequence__item item2">
-                    <div class="sequence__item-info">
-                        <div class="sequence__item-num">2</div>
-                        <h4 class="sequence__item-title">Мы детально изучаем</h4>
-                        <p class="sequence__item-text">и составляем смету на список работ, производим оценку стоимости
+                <div class="steps__item item2">
+                    <div class="steps__item-info">
+                        <div class="steps__item-num">2</div>
+                        <h4 class="steps__item-title">Мы детально изучаем</h4>
+                        <p class="steps__item-text">и составляем смету на список работ, производим оценку стоимости
                         </p>
                     </div>
                 </div>
-                <div class="sequence__item item3">
-                    <div class="sequence__item-info">
-                        <div class="sequence__item-num">3</div>
-                        <h4 class="sequence__item-title">Заключение договора</h4>
-                        <p class="sequence__item-text">обязательное условие начала сотрудничества</p>
+                <div class="steps__item item3">
+                    <div class="steps__item-info">
+                        <div class="steps__item-num">3</div>
+                        <h4 class="steps__item-title">Заключение договора</h4>
+                        <p class="steps__item-text">обязательное условие начала сотрудничества</p>
                     </div>
                 </div>
-                <div class="sequence__item item4">
-                    <div class="sequence__item-info">
-                        <div class="sequence__item-num">4</div>
-                        <h4 class="sequence__item-title">Оплата услуг (нал/бнал)</h4>
-                        <p class="sequence__item-text">предоплата 50%, 2-я часть перед передачей сайта</p>
+                <div class="steps__item item4">
+                    <div class="steps__item-info">
+                        <div class="steps__item-num">4</div>
+                        <h4 class="steps__item-title">Оплата услуг (нал/бнал)</h4>
+                        <p class="steps__item-text">предоплата 50%, 2-я часть перед передачей сайта</p>
                     </div>
                 </div>
-                <div class="sequence__item item5">
-                    <div class="sequence__item-info">
-                        <div class="sequence__item-num">5</div>
-                        <h4 class="sequence__item-title">Перенос готового сайта</h4>
-                        <p class="sequence__item-text">на хостинг заказчика, обучение администрированию</p>
+                <div class="steps__item item5">
+                    <div class="steps__item-info">
+                        <div class="steps__item-num">5</div>
+                        <h4 class="steps__item-title">Перенос готового сайта</h4>
+                        <p class="steps__item-text">на хостинг заказчика, обучение администрированию</p>
                     </div>
                 </div>
-                <div class="sequence__item item6">
-                    <div class="sequence__item-info">
-                        <div class="sequence__item-num">6</div>
-                        <h4 class="sequence__item-title">Бесплатные консультации</h4>
-                        <p class="sequence__item-text">по работе с сайтом без ограничения по времени</p>
+                <div class="steps__item item6">
+                    <div class="steps__item-info">
+                        <div class="steps__item-num">6</div>
+                        <h4 class="steps__item-title">Бесплатные консультации</h4>
+                        <p class="steps__item-text">по работе с сайтом без ограничения по времени</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="consulting">
+        </section>
+        <section class="pricing">
+            <h2 class="pricing__title">Сколько стоит сделать хороший сайт </h2>
+            <div class="pricing__box">
+                <div class="pricing__view">
+                    <img src="" alt="pricing image" class="pricing__view-img">
+                    <div class="pricing__view-info"></div>
+                    <h4 class="pricing__view-title"></h4>
+                </div>
+                <ul class="pricing__list">
+                    <li class="pricing__item">
+                        <details class="pricing__details" open data-img="../img/pricing_1.png" data-info="&lt; 30.000 ₽"
+                            data-title="Не возьмемся т.к. за эти деньги хорошо не сделать">
+                            <summary class="pricing__summary">
+                                <span class="pricing__summary-info">
+                                    &lt; 30.000 ₽
+                                </span>
+                                <h4 class="pricing__summary-title">
+                                    Не возьмемся т.к. за эти деньги хорошо не сделать
+                                </h4>
+                            </summary>
+                        </details>
+                    </li>
+                    <li class="pricing__item">
+                        <details class="pricing__details" data-img="../img/pricing_2.png"
+                            data-info="30.000 ₽ — 50.000 ₽" data-title="Шаблонный дизайн, обычные страницы">
+                            <summary class="pricing__summary">
+                                <span class="pricing__summary-info">30.000 ₽ —
+                                    50.000 ₽</span>
+                                <h4 class="pricing__summary-title">Шаблонный дизайн, обычные
+                                    страницы</h4>
+                            </summary>
+                        </details>
+                    </li>
+                    <li class="pricing__item">
+                        <details class="pricing__details" data-img="../img/pricing_3.png"
+                            data-info="50.000 ₽ — 100.000 ₽" data-title="Индивидуальный дизайн">
+                            <summary class="pricing__summary">
+                                <span class="pricing__summary-info">50.000 ₽ —
+                                    100.000 ₽</span>
+                                <h4 class="pricing__summary-title">
+                                    Индивидуальный дизайн
+                                </h4>
+                            </summary>
+                        </details>
+                    </li>
+                    <li class="pricing__item">
+                        <details class="pricing__details" data-img="../img/pricing_4.png" data-info="100.000 ₽ > "
+                            data-title="Все перечисленное выше + настройка рекламы">
+                            <summary class="pricing__summary">
+                                <span class="pricing__summary-info">100.000 ₽ ></span>
+                                <h4 class="pricing__summary-title">Все перечисленное
+                                    выше + настройка рекламы
+                                </h4>
+                            </summary>
+                        </details>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+        <section class="team">
+            <h2 class="team__title">Наша команда</h2>
+            <div class="team__content">
+                <div class="team__slider">
+                    <div class="swiper swiper-team">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper service-slider__wrap">
+                            <div class="team__item swiper-slide">
+                                <div class="team__item-content">
+                                    <div class="team__item-contact">
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#email"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <img class="team__item-img" src="img/team1.jpg" alt="person photo">
+                                    <div class="team__item-info">
+                                        <div class="team__item-text">
+                                            <h4 class="team__item-name">1 Дмитрий Артемов</h4>
+                                            <span class="team__item-post">Верстальщик</span>
+                                        </div>
+                                        <span class="team__item-experience">15 лет опыта</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="team__item swiper-slide">
+                                <div class="team__item-content">
+                                    <div class="team__item-contact">
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#email"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <img class="team__item-img" src="img/team1.jpg" alt="person photo">
+                                    <div class="team__item-info">
+                                        <div class="team__item-text">
+                                            <h4 class="team__item-name">Дмитрий Артемов</h4>
+                                            <span class="team__item-post">Верстальщик</span>
+                                        </div>
+                                        <span class="team__item-experience">15 лет опыта</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="team__item swiper-slide">
+                                <div class="team__item-content">
+                                    <div class="team__item-contact">
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#email"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <img class="team__item-img" src="img/team1.jpg" alt="person photo">
+                                    <div class="team__item-info">
+                                        <div class="team__item-text">
+                                            <h4 class="team__item-name">Дмитрий Артемов</h4>
+                                            <span class="team__item-post">Верстальщик</span>
+                                        </div>
+                                        <span class="team__item-experience">15 лет опыта</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="team__item swiper-slide">
+                                <div class="team__item-content">
+                                    <div class="team__item-contact">
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#email"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <img class="team__item-img" src="img/team1.jpg" alt="person photo">
+                                    <div class="team__item-info">
+                                        <div class="team__item-text">
+                                            <h4 class="team__item-name">Дмитрий Артемов</h4>
+                                            <span class="team__item-post">Верстальщик</span>
+                                        </div>
+                                        <span class="team__item-experience">15 лет опыта</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="team__item swiper-slide">
+                                <div class="team__item-content">
+                                    <div class="team__item-contact">
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#email"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <img class="team__item-img" src="img/team1.jpg" alt="person photo">
+                                    <div class="team__item-info">
+                                        <div class="team__item-text">
+                                            <h4 class="team__item-name">Дмитрий Артемов</h4>
+                                            <span class="team__item-post">Верстальщик</span>
+                                        </div>
+                                        <span class="team__item-experience">15 лет опыта</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="team__item swiper-slide">
+                                <div class="team__item-content">
+                                    <div class="team__item-contact">
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="team__item-link">
+                                            <svg class="team__item-icon">
+                                                <use xlink:href="img/sprite.svg#email"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <img class="team__item-img" src="img/team1.jpg" alt="person photo">
+                                    <div class="team__item-info">
+                                        <div class="team__item-text">
+                                            <h4 class="team__item-name">8 Дмитрий Артемов</h4>
+                                            <span class="team__item-post">Верстальщик</span>
+                                        </div>
+                                        <span class="team__item-experience">15 лет опыта</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination" id="swiper-team__pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev" id="swiper-team__prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="8" viewBox="0 0 32 8"
+                                fill="none">
+                                <path
+                                    d="M31 3.5C31.2761 3.5 31.5 3.72386 31.5 4C31.5 4.27614 31.2761 4.5 31 4.5V3.5ZM0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM31 4.5H1V3.5H31V4.5Z"
+                                    fill="#191919" />
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next" id="swiper-team__next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="8" viewBox="0 0 32 8"
+                                fill="none">
+                                <path
+                                    d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM1 4.5H31V3.5H1V4.5Z"
+                                    fill="#191919" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <h2 class="portfolio__title">Наше портфолио</h2>
+            <div class="portfolio__content">
+                <ul class="portfolio__list">
+                    <li class="portfolio__item">
+                        <span class="portfolio__item-sticker">сайт под ключ</span>
+                        <div class="portfolio__item-box">
+                            <img src="./img/portfolio.png" alt="portfolio image" class="portfolio__item-img">
+                        </div>
+                        <div class="portfolio__item-description">
+                            <div class="portfolio__item-info">
+                                <h4 class="portfolio__item-title">BNKRF</h4>
+                                <p class="portfolio__item-text">Услуги банкротства под ключ</p>
+                            </div>
+                            <a href="#" class="portfolio__item-link">Смотреть cайт
+                                <svg class="services__link-icon">
+                                    <use xlink:href="img/sprite.svg#arrow_link"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+
+                    </li>
+                    <li class="portfolio__item">
+                        <span class="portfolio__item-sticker">сайт под ключ</span>
+                        <div class="portfolio__item-box">
+                            <img src="./img/portfolio.png" alt="portfolio image" class="portfolio__item-img">
+                        </div>
+                        <div class="portfolio__item-description">
+                            <div class="portfolio__item-info">
+                                <h4 class="portfolio__item-title">BNKRF</h4>
+                                <p class="portfolio__item-text">Услуги банкротства под ключ</p>
+                            </div>
+                            <a href="#" class="portfolio__item-link">Смотреть cайт
+                                <svg class="services__link-icon">
+                                    <use xlink:href="img/sprite.svg#arrow_link"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+
+                    </li>
+                    <li class="portfolio__item">
+                        <span class="portfolio__item-sticker">сайт под ключ</span>
+                        <div class="portfolio__item-box">
+                            <img src="./img/portfolio.png" alt="portfolio image" class="portfolio__item-img">
+                        </div>
+                        <div class="portfolio__item-description">
+                            <div class="portfolio__item-info">
+                                <h4 class="portfolio__item-title">BNKRF</h4>
+                                <p class="portfolio__item-text">Услуги банкротства под ключ</p>
+                            </div>
+                            <a href="#" class="portfolio__item-link">Смотреть cайт
+                                <svg class="services__link-icon">
+                                    <use xlink:href="img/sprite.svg#arrow_link"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+
+                    </li>
+                    <li class="portfolio__item">
+                        <span class="portfolio__item-sticker">сайт под ключ</span>
+                        <div class="portfolio__item-box">
+                            <img src="./img/portfolio.png" alt="portfolio image" class="portfolio__item-img">
+                        </div>
+                        <div class="portfolio__item-description">
+                            <div class="portfolio__item-info">
+                                <h4 class="portfolio__item-title">BNKRF</h4>
+                                <p class="portfolio__item-text">Услуги банкротства под ключ</p>
+                            </div>
+                            <a href="#" class="portfolio__item-link">Смотреть cайт
+                                <svg class="services__link-icon">
+                                    <use xlink:href="img/sprite.svg#arrow_link"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+
+                    </li>
+                </ul>
+                <button class="portfolio__btn btn_main" data-title="Загрузить еще">
+                    <span class="btn_bg"></span>Загрузить еще
+                </button>
+            </div>
+        </section>
+        <div class="consulting" id="consulting_form">
             <section class="consulting__info">
                 <h2 class="consulting__title">Закажите консультацию</h2>
                 <p class="consulting__text">
@@ -832,16 +1236,16 @@
                         </label>
                         <label class="consulting__form-label">
                             <input type="file" name="file" id="clientFile">
-                            <div class="consulting__form-input">
+                            <span class="consulting__form-input">
                                 <svg class="input__icon">
                                     <use xlink:href="img/sprite.svg#paperClip"></use>
                                 </svg>
                                 <span class="form-input__text">Прикрепить файл</span>
-                            </div>
+                            </span>
                         </label>
                     </div>
                     <label class="consulting__form-label">
-                        <textarea type="text" class="consulting__form-input" name="question" id="clientQuestion"
+                        <textarea class="consulting__form-input" name="question" id="clientQuestion"
                             placeholder="Задайте вопрос"></textarea>
                         <svg class="input__icon">
                             <use xlink:href="img/sprite.svg#message"></use>
@@ -852,45 +1256,49 @@
                         <span class="form-group__title">Выберите удобный способ связи</span>
                         <input class="form-group__input" type="checkbox" name="contactType" id="mobile" checked>
                         <label class="form-group__label" for="mobile" data-title="Телефон">
-                            <div class="form-group__checkbox">
+                            <span class="form-group__checkbox">
                                 <svg class="form-group__icon">
                                     <use xlink:href="img/sprite.svg#phone"></use>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                         <input class="form-group__input" type="checkbox" name="contactType" id="whatsapp">
                         <label class="form-group__label" for="whatsapp" data-title="WhatsApp">
-                            <div class="form-group__checkbox">
+                            <span class="form-group__checkbox">
                                 <svg class="form-group__icon">
                                     <use xlink:href="img/sprite.svg#whatsapp"></use>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                         <input class="form-group__input" type="checkbox" name="contactType" id="telegram">
                         <label class="form-group__label" for="telegram" data-title="Telegram">
-                            <div class="form-group__checkbox">
+                            <span class="form-group__checkbox">
                                 <svg class="form-group__icon">
                                     <use xlink:href="img/sprite.svg#telegram"></use>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                         <input class="form-group__input" type="checkbox" name="contactType" id="viber">
                         <label class="form-group__label" for="viber" data-title="Viber">
-                            <div class="form-group__checkbox">
+                            <span class="form-group__checkbox">
                                 <svg class="form-group__icon">
                                     <use xlink:href="img/sprite.svg#viber"></use>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </fieldset>
-                    <button class="consulting__form-btn" type="submit" data-title="Заказать консультацию">Заказать
+                    <button class="form__btn" type="submit" data-title="Заказать консультацию">Заказать
                         консультацию</button>
                 </form>
             </section>
             <!-- <img src="img/mockup.png" alt="phone image" class="consulting__img"> -->
         </div>
         <div class="footer">
-            <div class="footer__main"></div>
+            <div class="footer__main">
+                <div class="footer__nav">
+
+                </div>
+            </div>
             <div class="footer__sub">
                 <ul class="footer__sub-list">
                     <li class="footer__sub-item">©2016 - 2023 Digitrex</li>
@@ -898,6 +1306,22 @@
                     <li class="footer__sub-item"><a href="#" class="footer__sub-link">Политика конфиденциальности</a>
                     </li>
                 </ul>
+            </div>
+            <div class="modal">
+                <div class="modal__box">
+                    <div class="modal__close">
+                        <svg class="modal__close-icon">
+                            <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                    <img src="img/modal.png" alt="modal image" class="modal__img">
+                    <section class="modal__info">
+                        <h2 class="modal__title">Ваш запрос отправлен!</h2>
+                        <p class="modal__text">В течение 30 минут наш менеджер обработает запрос и свяжется c Вами!</p>
+                    </section>
+                    <a class="form__btn modal__btn" href="#" data-title="Вернуться на главную">Вернуться на главную</a>
+                </div>
+
             </div>
         </div>
     </div>

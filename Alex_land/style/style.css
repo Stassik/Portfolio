@@ -1804,6 +1804,7 @@ details > summary::-webkit-details-marker {
   height: 50px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease-in-out;
 }
 .consulting__form-group .form-group__label::after {
   content: attr(data-title);

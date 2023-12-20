@@ -3,19 +3,18 @@
 
 const Menu = {
     baseEl: document.querySelector('.header'),
-
-    copyAppendElement: function(parent, elementSelector) {
+    copyAppendElement: function (parent, elementSelector) {
         const el = this.baseEl.querySelector(elementSelector).cloneNode(true);
         parent.appendChild(el);
     },
-    copyprependElement: function(parent, elementSelector) {
+    copyprependElement: function (parent, elementSelector) {
         const el = this.baseEl.querySelector(elementSelector).cloneNode(true);
         parent.prepend(el);
     }
 }
 
-
 const burgerMenu = document.getElementById('burgerNav');
+
 Menu.copyprependElement(burgerMenu.querySelector('.burger-nav__header'), '.header__logo');
 Menu.copyAppendElement(burgerMenu, '.contacts-city');
 Menu.copyAppendElement(burgerMenu, '.header__nav-list');

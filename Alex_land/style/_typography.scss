@@ -48,72 +48,7 @@
 
 }
 
-.breadcrumb {
-    display: flex;
-    margin: 20px 0;
-    list-style: none;
-    gap: 6px;
-    @include fontSizeWeight(13px, 400);
-    color: $colorSubTitle;
 
-    &__item {
-        @extend %flexCenter;
-
-        & a:visited {
-            color: $colorSubTitle;
-        }
-
-        & a:hover {
-            color: $colorHover;
-        }
-    }
-
-    &__icon {
-        margin-left: 6px;
-        width: 3px;
-        height: 4px;
-        fill: $colorSubTitle;
-    }
-}
-
-.heading {
-    @extend %flexCenterCenter;
-    padding: 90px;
-    border-radius: 15px;
-    background-image: url(../img/BG.png);
-    background-size: 140%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    animation: backgroundAnimation 15s infinite cubic-bezier(0.8, 0.6, 1, 1);
-
-    &__content {
-        @extend %flexCenterCenter;
-        flex-direction: column;
-        text-align: center;
-        max-width: 735px;
-    }
-
-    &__title {
-        margin-bottom: 25px;
-        color: $colorIconActive
-    }
-
-    .title__underline {
-        position: relative;
-        z-index: 1;
-
-        &::after {
-            @extend %underline;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='304' height='26' viewBox='0 0 304 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M211.514 24.8874C176.772 17.4597 137.989 21.49 102.838 22.1721C92.7307 22.3685 82.3895 23.6777 72.2918 23.1171C70.9748 23.0443 65.2288 22.7711 64.1509 21.3113C64.0102 21.1214 68.4908 20.3723 70.6676 20.0519C74.9002 19.4288 79.1309 18.9691 83.36 18.3111C94.4785 16.5822 105.791 15.7386 117.007 14.9615C145.798 12.9682 197.303 6.82556 225.442 15.4881C226.836 15.9173 222.526 15.4143 221.068 15.3744C218.672 15.3094 216.278 15.2154 213.881 15.1401C206.066 14.8955 198.185 14.4605 190.369 14.5289C165.18 14.7479 139.903 13.6956 114.721 14.6381C107.143 14.9221 99.59 15.5117 92.0093 15.7396C87.6182 15.8715 87.815 15.9832 83.2768 15.8292C81.3091 15.7622 75.8531 16.3543 77.4093 15.148C80.1501 13.0228 88.7167 13.5544 92.0299 13.1208C107.158 11.1433 122.249 8.5609 137.454 7.1735C176.442 3.61615 216.132 3.60778 255.209 5.09608C271.194 5.70489 287.345 3.34992 303.262 5.25262C264.64 0.264555 224.496 0.972768 185.663 1.11697C141.94 1.27938 98.2666 1.29021 54.543 2.21154C36.5928 2.58952 19.0048 6.00797 1 5.75844' stroke='white' stroke-opacity='0.6' stroke-miterlimit='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-        }
-    }
-
-    &__text {
-        @extend %fontSizeBtn;
-        margin-bottom: 50px;
-        color: $colorBannerText;
-    }
-}
 
 .table {
     width: 100%;
@@ -160,12 +95,6 @@
         font-size: 32px;
     }
 
-    .heading {
-        padding: 60px 16px;
-
-        &__text {
-            font-size: 12px;
-        }
-    }
+    
 
 }

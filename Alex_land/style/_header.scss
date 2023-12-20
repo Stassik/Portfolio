@@ -20,10 +20,10 @@
             transition: color .3s ease-in;
 
             .summary__icon {
-                width: 4px;
-                height: 3px;
+                width: 6px;
+               aspect-ratio: 1/0.75;
                 fill: $colorRegular;
-                margin-left: 4px;
+                margin-left: 6px;
                 transition: transform .3s ease-in;
             }
 

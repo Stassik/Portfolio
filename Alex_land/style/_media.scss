@@ -1,8 +1,17 @@
+@media (max-width: 1452px) {
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+}
+
+
+
 @media (max-width: 1080px) {
     .center {
         max-width: $contentWidthTablet;
-        padding-left: 16px;
-        padding-right: 16px;
     }
 
     .header {
@@ -468,21 +477,16 @@
             font-size: 32px;
             text-align: center;
         }
+    }
 
-        &__img {
-            position: absolute;
-            width: 340px;
-            bottom: -430px;
-            left: 10%;
-            display: block;
-            z-index: -1;
+    .heading {
+        padding: 60px 16px;
+        background-size: auto;
+
+        &__text {
+            font-size: 12px;
         }
     }
-
-    .footer {
-        margin-top: 430px;
-    }
-
 }
 
 @media (max-width: 737px) {

@@ -1915,7 +1915,7 @@ details > summary::-webkit-details-marker {
   max-height: 636px;
   max-width: 756px;
   border-radius: 20px;
-  background: url(../img/consultingBG.jpg) right/cover no-repeat;
+  background: url(../img/consultingBG.webp) right/cover no-repeat;
 }
 .footer .modal__close {
   align-self: flex-end;

@@ -1599,7 +1599,7 @@ details > summary::-webkit-details-marker {
   padding: 78px 90px;
   margin-bottom: 20px;
   background: #365FEF;
-  background: url(../img/mockup.png) right bottom/contain no-repeat, url(../img/consultingBG.jpg) center/cover no-repeat;
+  background: url(../img/mockup.webp) right bottom/contain no-repeat, url(../img/consultingBG.webp) center/cover no-repeat;
   border-radius: 15px;
   text-align: center;
   color: #fff;

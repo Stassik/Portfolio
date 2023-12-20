@@ -1,91 +1,3 @@
-
-
-var swiperServices = new Swiper(".swiper-services", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    grabCursor: true,
-    loop: true,
-    parallax: true,
-
-    breakpoints: {
-
-        738: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-        },
-
-        1081: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-    },
-
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: "#swiper-services__pagination",
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: '#swiper-services__next',
-        prevEl: '#swiper-services__prev',
-    },
-});
-
-
-var swiperTeam = new Swiper(".swiper-team", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    grabCursor: true,
-    loop: true,
-
-    breakpoints: {
-
-        738: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-        },
-
-        850: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-
-        1081: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-    },
-
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
-    pagination: {
-        el: "#swiper-team__pagination",
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: '#swiper-team__next',
-        prevEl: '#swiper-team__prev',
-    },
-});
-
-
 // Клонирование элементов для бургер меню
 
 const burgerMenu = document.getElementById('burgerNav');
@@ -106,9 +18,6 @@ function cloneEl() {
     burgerBtnClone = document.querySelector('.header__btn.btn_light').cloneNode(true);
 }
 
-
-
-
 cloneEl();
 
 burgerMenu.innerHTML = '<div class="burger-nav__header"><svg class="close__icon" id="close"><use xlink:href="img/sprite.svg#close"></use></svg></div>';
@@ -128,62 +37,6 @@ const close = document.getElementById('close');
 close.addEventListener('click', function () {
     document.getElementById('burger').checked = false;
 });
-
-
-// Pricing
-
-const pricingBox = document.querySelector('.pricing__box');
-const pricingItem = pricingBox.querySelectorAll('.pricing__item');
-
-let pricingView = pricingBox.querySelector('.pricing__view');
-let pricingViewTitle = pricingView.querySelector('.pricing__view-title');
-let pricingViewInfo = pricingView.querySelector('.pricing__view-info');
-let pricingViewImg = pricingView.querySelector('.pricing__view-img');
-
-setPricingViewText(pricingBox);
-
-
-pricingItem.forEach(element => {
-    element.addEventListener('click', function (e) {
-        searchOpenItem(pricingItem, element);
-    });
-});
-
-function searchOpenItem(pricingItem, clickElem) {
-    pricingItem.forEach(element => {
-        let clickItemDetail = clickElem.querySelector('.pricing__details');
-        let elementDetail = element.querySelector('.pricing__details');
-        if (!clickItemDetail.getAttributeNames().includes('open')) {
-            if (element != clickElem && elementDetail.getAttributeNames().includes('open')) {
-                elementDetail.removeAttribute('open');
-                pricingViewImg.src = clickItemDetail.getAttribute('data-img');
-                setPricingViewText(clickElem);
-            }
-
-        } else {
-            if (clickElem != pricingItem[pricingItem.length - 1]) {
-                const nextEl = clickElem.nextElementSibling;
-                let nextItem = nextEl.querySelector('.pricing__details');
-                nextItem.setAttribute('open', '');
-                setPricingViewText(nextEl);
-            } else {
-                let nextItem = pricingItem[0].querySelector('.pricing__details');
-                nextItem.setAttribute('open', '');
-                setPricingViewText(pricingItem[0]);
-            }
-
-
-        }
-    });
-
-}
-
-function setPricingViewText(item) {
-    const pricingItem = item.querySelector('.pricing__details');
-    pricingViewImg.src = pricingItem.getAttribute('data-img');
-    pricingViewTitle.textContent = pricingItem.getAttribute('data-title');
-    pricingViewInfo.textContent = pricingItem.getAttribute('data-info');
-}
 
 
 

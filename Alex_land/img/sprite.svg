@@ -4,6 +4,9 @@
             <path d="M2 3L0.267949 0H3.73205L2 3Z"/>
         
     </symbol>
+    <symbol id="arrow_right" viewBox="0 0 3 4">
+        <path d="M3 2L0 0.267949L0 3.73205L3 2Z"/>   
+    </symbol>
     <symbol id="arrow_link" viewBox="0 0 15 16">
         
             <path

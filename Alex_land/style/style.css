@@ -1,13 +1,36 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap");
+@keyframes backgroundAnimation {
+  0% {
+    background-position: center;
+  }
+  25% {
+    background-position: left top;
+  }
+  50% {
+    background-position: top;
+  }
+  75% {
+    background-position: right bottom;
+  }
+  100% {
+    background-position: center;
+  }
+}
 .consulting__form-input::-moz-placeholder {
   font-style: normal;
   line-height: normal;
 }
-.header__logo, .footer__logo, .pricing__summary-title, .pricing__summary-info, .form__btn, .btn_main, .consulting__form-input::placeholder,
-.consulting__form-input .form-input__text, .consulting__form-input, .portfolio__item-link, .portfolio__item-text, .pricing__view-info, .steps__item-text, .steps__item, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .main__text, .header .contacts-city__list, .footer .contacts-city__list, .header__btn, .footer__btn, .header__contacts, .footer__contacts, .header__nav, .footer__nav, .steps__item-title, .services__item-title, .about__list-item .about__list-title, .footer .modal__title, .consulting__title, .portfolio__title, .team__title, .pricing__title, .steps__title, .services__title, .about__title {
+.header__logo, .footer__logo, .pricing__summary-title, .pricing__summary-info, .heading__text, .text,
+.list__item, .form__btn, .btn_main, .consulting__form-input::placeholder,
+.consulting__form-input .form-input__text, .consulting__form-input, .portfolio__item-link, .portfolio__item-text, .pricing__view-info, .steps__item-text, .steps__item, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .main__text, .header .contacts-city__list, .footer .contacts-city__list, .header__btn, .footer__btn, .header__contacts, .footer__contacts, .header__nav, .footer__nav, .link__btn, .steps__item-title, .services__item-title, .about__list-item .about__list-title, .subtitle, .footer .modal__title, .consulting__title, .portfolio__title, .team__title, .pricing__title, .steps__title, .services__title, .about__title, .main-title {
   font-style: normal;
   line-height: normal;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 600;
 }
 
 .footer .modal__title, .consulting__title, .portfolio__title, .team__title, .pricing__title, .steps__title, .services__title, .about__title {
@@ -16,7 +39,7 @@
   color: #191919;
 }
 
-.steps__item-title, .services__item-title, .about__list-item .about__list-title {
+.steps__item-title, .services__item-title, .about__list-item .about__list-title, .subtitle {
   font-size: 20px;
   font-weight: 400;
   color: #191919;
@@ -28,25 +51,26 @@
 }
 
 .consulting__form-input::placeholder,
-.consulting__form-input .form-input__text, .consulting__form-input, .portfolio__item-link, .portfolio__item-text, .pricing__view-info, .steps__item-text, .steps__item, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .main__text, .header .contacts-city__list, .footer .contacts-city__list, .header__btn, .footer__btn, .header__contacts, .footer__contacts, .header__nav, .footer__nav {
+.consulting__form-input .form-input__text, .consulting__form-input, .portfolio__item-link, .portfolio__item-text, .pricing__view-info, .steps__item-text, .steps__item, .services__info, .services__link, .services__item-link, .services__item-text, .about__list-item .list-item__text, .about__box-text, .main__text, .header .contacts-city__list, .footer .contacts-city__list, .header__btn, .footer__btn, .header__contacts, .footer__contacts, .header__nav, .footer__nav, .link__btn {
   font-size: 14px;
   font-weight: 400;
 }
 
-.pricing__summary-title, .pricing__summary-info, .form__btn, .btn_main {
+.pricing__summary-title, .pricing__summary-info, .heading__text, .text,
+.list__item, .form__btn, .btn_main {
   font-size: 16px;
   font-weight: 400;
 }
 
-.footer__sub-list, .consulting__form-input, .consulting__form-label, .portfolio__item-link, .portfolio__item-description, .portfolio__content, .team__item-contact, .pricing__summary, .steps, .services__link, .about__list-item .list-item__heading, .about__box-info, .about__box-item, .main__cards-about .about__label, .main__cards-rate .rate__info-stars, .main__cards-rate .rate__info, .main__cards-rate, .header__burger .header__nav-details, .footer__burger .header__nav-details, .header__burger-nav, .footer__burger-nav, .header .contacts-social__list, .footer .contacts-social__list, .header .contacts-city__link, .footer .contacts-city__link, .header .contacts-city__label, .footer .contacts-city__label, .header .contacts-city, .footer .contacts-city, .header__logo, .footer__logo, .header__heading, .footer__heading, .header__nav-summary, .footer__nav-summary, .header__nav-list, .footer__nav-list, .swiper .swiper-horizontal > .swiper-pagination-bullets,
+.footer__sub-list, .consulting__form-input, .consulting__form-label, .portfolio__item-link, .portfolio__item-description, .portfolio__content, .team__item-contact, .pricing__summary, .steps, .services__link, .about__list-item .list-item__heading, .about__box-info, .about__box-item, .main__cards-about .about__label, .main__cards-rate .rate__info-stars, .main__cards-rate .rate__info, .main__cards-rate, .header__burger .header__nav-details, .footer__burger .header__nav-details, .header__burger-nav, .footer__burger-nav, .header .contacts-social__list, .footer .contacts-social__list, .header .contacts-city__link, .footer .contacts-city__link, .header .contacts-city__label, .footer .contacts-city__label, .header .contacts-city, .footer .contacts-city, .header__logo, .footer__logo, .header__heading, .footer__heading, .header__nav-summary, .footer__nav-summary, .header__nav-list, .footer__nav-list, .link__btn, .breadcrumb__item, .swiper .swiper-horizontal > .swiper-pagination-bullets,
 .swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper .swiper-pagination-custom,
-.swiper .swiper-pagination-fraction, .footer .modal__close, .consulting__form-group .form-group__checkbox, .consulting__form-group .form-group__label, .consulting__form-group, .portfolio__list, .team__item-link, .pricing__summary::after, .steps__item-num, .main__btn-box, .main, .header .contacts-social__link, .footer .contacts-social__link, .header .contacts-phone__number, .footer .contacts-phone__number, .header__contacts, .footer__contacts, .form__btn::after, .form__btn, .btn_light, .btn_main {
+.swiper .swiper-pagination-fraction, .footer .modal__close, .consulting__form-group .form-group__checkbox, .consulting__form-group .form-group__label, .consulting__form-group, .portfolio__list, .team__item-link, .pricing__summary::after, .steps__item-num, .main__btn-box, .main, .header .contacts-social__link, .footer .contacts-social__link, .header .contacts-phone__number, .footer .contacts-phone__number, .header__contacts, .footer__contacts, .heading__content, .heading, .form__btn::after, .form__btn, .btn_light, .btn_main {
   display: flex;
   align-items: center;
 }
 
-.footer .modal__close, .consulting__form-group .form-group__checkbox, .consulting__form-group .form-group__label, .consulting__form-group, .portfolio__list, .team__item-link, .pricing__summary::after, .steps__item-num, .main__btn-box, .main, .header .contacts-social__link, .footer .contacts-social__link, .header .contacts-phone__number, .footer .contacts-phone__number, .header__contacts, .footer__contacts, .form__btn::after, .form__btn, .btn_light, .btn_main {
+.footer .modal__close, .consulting__form-group .form-group__checkbox, .consulting__form-group .form-group__label, .consulting__form-group, .portfolio__list, .team__item-link, .pricing__summary::after, .steps__item-num, .main__btn-box, .main, .header .contacts-social__link, .footer .contacts-social__link, .header .contacts-phone__number, .footer .contacts-phone__number, .header__contacts, .footer__contacts, .heading__content, .heading, .form__btn::after, .form__btn, .btn_light, .btn_main {
   justify-content: center;
 }
 
@@ -54,6 +78,17 @@
   min-height: 60px;
   padding: 19px 10px;
   position: relative;
+}
+
+.main__title .title_underline::after, .heading .title__underline::after {
+  content: "";
+  width: 232px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: -9px;
+  right: 0;
 }
 
 * {
@@ -284,6 +319,144 @@ details > summary::-webkit-details-marker {
   left: 65px;
 }
 
+.content {
+  margin: 75px 0;
+}
+
+.container {
+  margin-bottom: 45px;
+}
+
+.main-title {
+  color: #191919;
+  margin-bottom: 30px;
+}
+
+.main-subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #191919;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: #191919;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.text {
+  margin-bottom: 10px;
+}
+.text_light {
+  margin: 15px 0;
+  line-height: normal;
+  color: #737373;
+}
+
+.list {
+  list-style: inside;
+  margin: 15px 0 15px 10px;
+}
+
+.text,
+.list__item {
+  color: #4B4B4B;
+  line-height: 145%;
+}
+
+.breadcrumb {
+  display: flex;
+  margin: 20px 0;
+  list-style: none;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #737373;
+}
+.breadcrumb__item a:visited {
+  color: #737373;
+}
+.breadcrumb__item a:hover {
+  color: #365FEF;
+}
+.breadcrumb__icon {
+  margin-left: 6px;
+  width: 3px;
+  height: 4px;
+  fill: #737373;
+}
+
+.heading {
+  padding: 90px;
+  border-radius: 15px;
+  background-image: url(../img/BG.png);
+  background-size: 140%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  animation: backgroundAnimation 15s infinite cubic-bezier(0.8, 0.6, 1, 1);
+}
+.heading__content {
+  flex-direction: column;
+  text-align: center;
+  max-width: 735px;
+}
+.heading__title {
+  margin-bottom: 25px;
+  color: #fff;
+}
+.heading .title__underline {
+  position: relative;
+  z-index: 1;
+}
+.heading .title__underline::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='304' height='26' viewBox='0 0 304 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M211.514 24.8874C176.772 17.4597 137.989 21.49 102.838 22.1721C92.7307 22.3685 82.3895 23.6777 72.2918 23.1171C70.9748 23.0443 65.2288 22.7711 64.1509 21.3113C64.0102 21.1214 68.4908 20.3723 70.6676 20.0519C74.9002 19.4288 79.1309 18.9691 83.36 18.3111C94.4785 16.5822 105.791 15.7386 117.007 14.9615C145.798 12.9682 197.303 6.82556 225.442 15.4881C226.836 15.9173 222.526 15.4143 221.068 15.3744C218.672 15.3094 216.278 15.2154 213.881 15.1401C206.066 14.8955 198.185 14.4605 190.369 14.5289C165.18 14.7479 139.903 13.6956 114.721 14.6381C107.143 14.9221 99.59 15.5117 92.0093 15.7396C87.6182 15.8715 87.815 15.9832 83.2768 15.8292C81.3091 15.7622 75.8531 16.3543 77.4093 15.148C80.1501 13.0228 88.7167 13.5544 92.0299 13.1208C107.158 11.1433 122.249 8.5609 137.454 7.1735C176.442 3.61615 216.132 3.60778 255.209 5.09608C271.194 5.70489 287.345 3.34992 303.262 5.25262C264.64 0.264555 224.496 0.972768 185.663 1.11697C141.94 1.27938 98.2666 1.29021 54.543 2.21154C36.5928 2.58952 19.0048 6.00797 1 5.75844' stroke='white' stroke-opacity='0.6' stroke-miterlimit='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+}
+.heading__text {
+  margin-bottom: 50px;
+  color: #eee;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.table-heading__row {
+  background-color: #737373;
+}
+.table .row {
+  height: 64px;
+}
+.table-body__row:nth-child(odd) {
+  background-color: #fff;
+}
+.table-body__row:nth-child(even) {
+  background-color: #F8F8F8;
+}
+
+.link__btn {
+  margin-top: 30px;
+  color: #365FEF;
+}
+.link__btn-icon {
+  width: 15px;
+  height: 16px;
+  margin-left: 5px;
+  stroke: #365FEF;
+  fill: none;
+}
+
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 32px;
+  }
+  .heading {
+    padding: 60px 16px;
+  }
+  .heading__text {
+    font-size: 12px;
+  }
+}
 .header__nav, .footer__nav {
   color: #4B4B4B;
 }
@@ -651,14 +824,6 @@ details > summary::-webkit-details-marker {
   position: relative;
 }
 .main__title .title_underline::after {
-  content: "";
-  width: 232px;
-  height: 30px;
-  display: block;
-  position: absolute;
-  z-index: -1;
-  bottom: -9px;
-  right: 0;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='232' height='30' viewBox='0 0 232 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M174.909 0.120112C142.292 0.461154 132.966 0.683009 114.869 1.54904C96.1143 2.44652 82.6926 3.34615 61.3966 5.13321C56.4598 5.54749 51.1737 5.94065 44.9766 6.35436C22.2122 7.87404 17.7823 8.27899 10.4231 9.51248C6.7769 10.1238 3.62354 10.5468 1.85618 10.6621C0.284852 10.7645 0 10.829 0 11.0821C0 11.3059 2.51312 11.5019 3.88769 11.3853C4.38029 11.3436 5.71488 11.2415 6.85358 11.1587C7.99227 11.0757 10.4981 10.853 12.4221 10.6637C16.9528 10.2178 19.128 10.0772 26.9146 9.72701C40.0045 9.13826 49.8929 8.57249 62.0392 7.71737C66.5154 7.40218 72.4587 6.98375 75.2466 6.78745C96.3904 5.2985 122.218 3.9708 138 3.56169C157.151 3.06499 216.606 2.62587 215.602 2.98831C215.204 3.13205 208.401 4.20113 204.322 4.76087C200.576 5.27509 194.317 6.01676 186.617 6.85881C182.966 7.2583 177.954 7.81115 175.48 8.08743C166.187 9.12549 163.126 9.44743 157.846 9.94269C133.523 12.224 117.456 14.212 95.0934 17.7068C81.801 19.7841 70.906 22.1688 58.7474 25.6624C51.8347 27.6486 51.1612 28.0014 51.8416 29.2801C52.2844 30.1121 55.7723 30.22 62.8072 29.619C75.6635 28.5209 87.7448 27.6693 99.4483 27.036C106.789 26.6388 107.762 26.5722 115.226 25.9556C118.014 25.7254 122.833 25.3888 125.934 25.2079L131.574 24.8789L124.078 24.7492C112.719 24.5527 100.534 24.5646 96.5212 24.7762C83.2356 25.477 76.0093 26.0163 64.2059 27.1879C61.3925 27.4672 59.019 27.6717 58.9313 27.6424C58.0861 27.359 77.0058 23.076 86.0315 21.5077C106.406 17.967 127.388 15.3253 159.631 12.2405C162.576 11.9588 168.487 11.3425 172.767 10.871C177.047 10.3995 183.794 9.65708 187.759 9.22098C203.024 7.54276 207.572 6.91769 222.242 4.48157C231.637 2.92125 231.687 2.9079 231.943 1.88176C232.225 0.753517 231.472 0.241598 229.316 0.0952733C227.267 -0.0438718 188.913 -0.0263568 174.909 0.120112ZM132.183 24.765C132.361 24.7993 132.618 24.7981 132.754 24.7622C132.891 24.7263 132.745 24.6981 132.431 24.6997C132.117 24.7013 132.005 24.7307 132.183 24.765Z' fill='%2357D34C'/%3e%3c/svg%3e ");
 }
 .main__text {
@@ -1658,6 +1823,9 @@ details > summary::-webkit-details-marker {
   height: 18px;
   fill: #fff;
 }
+.consulting__img {
+  display: none;
+}
 
 .footer__main {
   padding: 100px 50px 29px;
@@ -2076,6 +2244,17 @@ details > summary::-webkit-details-marker {
   .consulting__title {
     font-size: 32px;
     text-align: center;
+  }
+  .consulting__img {
+    position: absolute;
+    width: 340px;
+    bottom: -430px;
+    left: 10%;
+    display: block;
+    z-index: -1;
+  }
+  .footer {
+    margin-top: 430px;
   }
 }
 @media (max-width: 737px) {

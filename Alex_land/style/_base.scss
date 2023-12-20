@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap');
 
 
+@keyframes backgroundAnimation {
+    0%   { background-position: center; }
+    25%  { background-position: left top; }
+    50%  { background-position: top; }
+    75%  { background-position: right bottom; }
+    100% { background-position: center; }
+  }
 
 
 %fontStyle {
     font-style: normal;
     line-height: normal;
+}
+
+%fontSizeMainTitle {
+    @include fontSizeWeight(48px, 600);
+    @extend %fontStyle;
 }
 
 %fontSizeTitle {
@@ -48,6 +60,17 @@
     position: relative;
 }
 
+%underline {
+
+    content: "";
+    width: 232px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: -9px;
+    right: 0;
+}
 * {
     margin: 0;
     padding: 0;

@@ -1599,7 +1599,7 @@ details > summary::-webkit-details-marker {
   padding: 78px 90px;
   margin-bottom: 20px;
   background: #365FEF;
-  background: url(../img/mockup.webp) right bottom/contain no-repeat, url(../img/consultingBG.webp) center/cover no-repeat;
+  background: url(../img/mockup.png) 100% bottom/auto no-repeat, url(../img/consultingBG.jpg) center/cover no-repeat;
   border-radius: 15px;
   text-align: center;
   color: #fff;
@@ -1611,6 +1611,7 @@ details > summary::-webkit-details-marker {
 }
 .consulting__info {
   width: 43%;
+  min-width: 455px;
 }
 .consulting__title {
   color: #fff;
@@ -1915,7 +1916,7 @@ details > summary::-webkit-details-marker {
   max-height: 636px;
   max-width: 756px;
   border-radius: 20px;
-  background: url(../img/consultingBG.webp) right/cover no-repeat;
+  background: url(../img/consultingBG.jpg) right/cover no-repeat;
 }
 .footer .modal__close {
   align-self: flex-end;

@@ -448,6 +448,7 @@ details > summary::-webkit-details-marker {
 }
 .header__nav-details[open] .summary__icon, .footer__nav-details[open] .summary__icon {
   transform: rotate(-90deg);
+  fill: #365FEF;
 }
 .header__nav-details[open] .header__nav-sub, .header__nav-details[open] .footer__nav-sub, .footer__nav-details[open] .header__nav-sub, .footer__nav-details[open] .footer__nav-sub {
   top: 46px;
@@ -1828,6 +1829,9 @@ details > summary::-webkit-details-marker {
   gap: 150px;
   color: #fff;
 }
+.footer__nav-left {
+  min-width: 165px;
+}
 .footer__nav-left .header__logo {
   margin-bottom: 43px;
 }
@@ -1859,6 +1863,7 @@ details > summary::-webkit-details-marker {
   color: #fff;
 }
 .footer__nav-right .header__nav-sub {
+  margin-top: 15px;
   position: relative;
   padding: 0;
   background-color: transparent;
@@ -1870,12 +1875,12 @@ details > summary::-webkit-details-marker {
   color: #fff;
 }
 .footer__nav-right .header__nav-summary {
-  padding-top: 0;
+  padding: 0;
 }
 .footer__nav-right .summary__icon {
   display: none;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  aspect-ratio: 1/0.75;
 }
 .footer__sub {
   padding: 20px 0;

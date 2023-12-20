@@ -4,7 +4,6 @@
         @extend %fontSizeText;
         color: $colorRegular;
 
-
         &-list {
             @include flexCenterJustify(center);
             gap: 45px;
@@ -62,6 +61,7 @@
 
         &-details[open] .summary__icon {
             transform: rotate(-90deg);
+            fill: $colorHover;
         }
 
         &-details[open] &-sub {

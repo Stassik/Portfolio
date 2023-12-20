@@ -1,36 +1,79 @@
-// Клонирование элементов для бургер меню
 
-const burgerMenu = document.getElementById('burgerNav');
-let contactsClone;
-let logoClone;
-let burgerListClone;
-let contactsPhoneClone;
-let contactsSocialClone;
-let burgerBtnClone;
+// Клонирование элементов для меню
 
-
-function cloneEl() {
-    contactsClone = document.querySelector('.contacts-city').cloneNode(true);
-    logoClone = document.querySelector('.header__logo').cloneNode(true);
-    burgerListClone = document.querySelector('.header__nav-list').cloneNode(true);
-    contactsPhoneClone = document.querySelector('.contacts-phone').cloneNode(true);
-    contactsSocialClone = document.querySelector('.contacts-social').cloneNode(true);
-    burgerBtnClone = document.querySelector('.header__btn.btn_light').cloneNode(true);
+const Menu = {
+    baseEl: document.querySelector('.header'),
+    logoClone: function (parent) {
+        const el = this.baseEl.querySelector('.header__logo').cloneNode(true);
+        parent.appendChild(el);
+    },
+    logoClonePrep: function (parent) {
+        const el = this.baseEl.querySelector('.header__logo').cloneNode(true);
+        parent.prepend(el);
+    },
+    contactsClone: function (parent) {
+        const el = this.baseEl.querySelector('.contacts-city').cloneNode(true);
+        parent.appendChild(el);
+    },
+    listClone: function (parent) {
+        const el = this.baseEl.querySelector('.header__nav-list').cloneNode(true);
+        parent.appendChild(el);
+    },
+    phoneClone: function (parent) {
+        const el = this.baseEl.querySelector('.contacts-phone').cloneNode(true);
+        parent.appendChild(el);
+    },
+    socialClone: function (parent) {
+        const el = this.baseEl.querySelector('.contacts-social').cloneNode(true);
+        parent.appendChild(el);
+    },
+    btnClone: function (parent) {
+        const el = this.baseEl.querySelector('.header__btn.btn_light').cloneNode(true);
+        parent.appendChild(el);
+    }
 }
 
-cloneEl();
 
-burgerMenu.innerHTML = '<div class="burger-nav__header"><svg class="close__icon" id="close"><use xlink:href="img/sprite.svg#close"></use></svg></div>';
-burgerMenu.querySelector('.burger-nav__header').prepend(logoClone);
+const burgerMenu = document.getElementById('burgerNav');
+// burgerMenu.innerHTML = '<div class="burger-nav__header"><svg class="close__icon" id="close"><use xlink:href="img/sprite.svg#close"></use></svg></div>';
+// const navBurgerMenu = burgerMenu.querySelector('.burger-nav__header');
 
-burgerMenu.appendChild(contactsClone);
 
+// Menu.burgerEl(burgerMenu);
+Menu.logoClonePrep(burgerMenu.querySelector('.burger-nav__header'));
+Menu.contactsClone(burgerMenu);
 burgerMenu.querySelector('.contacts-city__label').setAttribute('for', 'myCityBurger');
 burgerMenu.querySelector('#myCity').setAttribute('id', 'myCityBurger');
-burgerMenu.appendChild(burgerListClone);
-burgerMenu.appendChild(contactsPhoneClone);
-burgerMenu.appendChild(contactsSocialClone);
-burgerMenu.appendChild(burgerBtnClone);
+Menu.listClone(burgerMenu);
+Menu.phoneClone(burgerMenu);
+Menu.socialClone(burgerMenu);
+Menu.btnClone(burgerMenu);
+
+// let contactsClone;
+// let logoClone;
+// let burgerListClone;
+// let contactsPhoneClone;
+// let contactsSocialClone;
+// let burgerBtnClone;
+
+// function cloneEl() {
+//     contactsClone = document.querySelector('.contacts-city').cloneNode(true);
+//     logoClone = document.querySelector('.header__logo').cloneNode(true);
+//     burgerListClone = document.querySelector('.header__nav-list').cloneNode(true);
+//     contactsPhoneClone = document.querySelector('.contacts-phone').cloneNode(true);
+//     contactsSocialClone = document.querySelector('.contacts-social').cloneNode(true);
+//     burgerBtnClone = document.querySelector('.header__btn.btn_light').cloneNode(true);
+// }
+
+// cloneEl();
+
+// burgerMenu.innerHTML = '<div class="burger-nav__header"><svg class="close__icon" id="close"><use xlink:href="img/sprite.svg#close"></use></svg></div>';
+// burgerMenu.querySelector('.burger-nav__header').prepend(logoClone);
+// burgerMenu.appendChild(contactsClone);
+// burgerMenu.appendChild(burgerListClone);
+// burgerMenu.appendChild(contactsPhoneClone);
+// burgerMenu.appendChild(contactsSocialClone);
+// burgerMenu.appendChild(burgerBtnClone);
 
 /**Закрытие бургер меню */
 const close = document.getElementById('close');
@@ -41,23 +84,21 @@ close.addEventListener('click', function () {
 
 
 // Footer
-cloneEl();
+// cloneEl();
 
 const footerNavBox = document.querySelector('.footer .footer__main .footer__nav');
-const footerNavLeft = document.createElement('div');
-footerNavLeft.className = 'footer__nav-left';
+const footerNavLeft = footerNavBox.querySelector('.footer__nav-left');
+const footerNavRight = footerNavBox.querySelector('.footer__nav-right');
+Menu.logoClone(footerNavLeft);
+Menu.phoneClone(footerNavLeft);
+Menu.socialClone(footerNavLeft);
+Menu.listClone(footerNavRight);
 
 
-footerNavLeft.appendChild(logoClone);
-footerNavLeft.appendChild(contactsPhoneClone);
-footerNavLeft.appendChild(contactsSocialClone);
-
-const footerNavRight = document.createElement('div');
-footerNavRight.className = 'footer__nav-right';
-footerNavRight.appendChild(burgerListClone);
-
-footerNavBox.appendChild(footerNavLeft);
-footerNavBox.appendChild(footerNavRight);
+// footerNavLeft.appendChild(logoClone);
+// footerNavLeft.appendChild(contactsPhoneClone);
+// footerNavLeft.appendChild(contactsSocialClone);
+// footerNavRight.appendChild(burgerListClone);
 
 const footerDetails = footerNavBox.querySelectorAll('.header__nav-details');
 footerDetails.forEach(element => {
@@ -80,6 +121,65 @@ window.addEventListener('resize', function (e) {
 
     });
 }, true);
+
+// Выпадающее меню
+const navSummaryItems = document.querySelectorAll('.header__nav-summary')
+const headerNavBurger = document.querySelector('.header__burger-nav');
+const navSummaryBurger = headerNavBurger.querySelectorAll('.header__nav-summary');
+const headerNav = document.querySelector('.header__nav');
+const navItemsHeader = headerNav.querySelectorAll('.header__nav-item');
+
+const footer = document.querySelector('.footer');
+const footerSummaryItems = footer.querySelectorAll('.header__nav-summary');
+
+
+navItemsHeader.forEach(element => {
+    element.addEventListener('mouseover', function (el) {
+        element.children[0].setAttribute('open', '');
+    })
+});
+navItemsHeader.forEach(element => {
+    element.addEventListener('mouseout', function (el) {
+        element.children[0].removeAttribute('open');
+    })
+});
+
+navSummaryItems.forEach(element => {
+    element.addEventListener('click', function (el) {
+        el.preventDefault();
+    })
+});
+
+navSummaryBurger.forEach(element => {
+    element.addEventListener('click', function (el) {
+        searchOpen(navSummaryBurger, this);
+    })
+});
+
+if (window.screen.width <= 737) {
+    footerSummaryItems.forEach(element => {
+        element.addEventListener('click', function (el) {
+            searchOpen(footerSummaryItems, this);
+        })
+    });
+}
+
+function searchOpen(items, clickElem) {
+    const parent = clickElem.closest('details');
+    if (!parent.getAttribute('open')) {
+        parent.setAttribute('open', ' ');
+        items.forEach(element => {
+            let elementDetails = element.closest('details');
+            if (elementDetails != parent) {
+                elementDetails.removeAttribute('open');
+            }
+        });
+    } else {
+        parent.removeAttribute('open');
+    }
+}
+
+
 
 
 

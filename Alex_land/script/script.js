@@ -3,77 +3,29 @@
 
 const Menu = {
     baseEl: document.querySelector('.header'),
-    logoClone: function (parent) {
-        const el = this.baseEl.querySelector('.header__logo').cloneNode(true);
+
+    copyAppendElement: function(parent, elementSelector) {
+        const el = this.baseEl.querySelector(elementSelector).cloneNode(true);
         parent.appendChild(el);
     },
-    logoClonePrep: function (parent) {
-        const el = this.baseEl.querySelector('.header__logo').cloneNode(true);
+    copyprependElement: function(parent, elementSelector) {
+        const el = this.baseEl.querySelector(elementSelector).cloneNode(true);
         parent.prepend(el);
-    },
-    contactsClone: function (parent) {
-        const el = this.baseEl.querySelector('.contacts-city').cloneNode(true);
-        parent.appendChild(el);
-    },
-    listClone: function (parent) {
-        const el = this.baseEl.querySelector('.header__nav-list').cloneNode(true);
-        parent.appendChild(el);
-    },
-    phoneClone: function (parent) {
-        const el = this.baseEl.querySelector('.contacts-phone').cloneNode(true);
-        parent.appendChild(el);
-    },
-    socialClone: function (parent) {
-        const el = this.baseEl.querySelector('.contacts-social').cloneNode(true);
-        parent.appendChild(el);
-    },
-    btnClone: function (parent) {
-        const el = this.baseEl.querySelector('.header__btn.btn_light').cloneNode(true);
-        parent.appendChild(el);
     }
 }
 
 
 const burgerMenu = document.getElementById('burgerNav');
-// burgerMenu.innerHTML = '<div class="burger-nav__header"><svg class="close__icon" id="close"><use xlink:href="img/sprite.svg#close"></use></svg></div>';
-// const navBurgerMenu = burgerMenu.querySelector('.burger-nav__header');
+Menu.copyprependElement(burgerMenu.querySelector('.burger-nav__header'), '.header__logo');
+Menu.copyAppendElement(burgerMenu, '.contacts-city');
+Menu.copyAppendElement(burgerMenu, '.header__nav-list');
+Menu.copyAppendElement(burgerMenu, '.contacts-phone');
+Menu.copyAppendElement(burgerMenu, '.contacts-social');
+Menu.copyAppendElement(burgerMenu, '.header__btn.btn_light');
 
-
-// Menu.burgerEl(burgerMenu);
-Menu.logoClonePrep(burgerMenu.querySelector('.burger-nav__header'));
-Menu.contactsClone(burgerMenu);
 burgerMenu.querySelector('.contacts-city__label').setAttribute('for', 'myCityBurger');
 burgerMenu.querySelector('#myCity').setAttribute('id', 'myCityBurger');
-Menu.listClone(burgerMenu);
-Menu.phoneClone(burgerMenu);
-Menu.socialClone(burgerMenu);
-Menu.btnClone(burgerMenu);
 
-// let contactsClone;
-// let logoClone;
-// let burgerListClone;
-// let contactsPhoneClone;
-// let contactsSocialClone;
-// let burgerBtnClone;
-
-// function cloneEl() {
-//     contactsClone = document.querySelector('.contacts-city').cloneNode(true);
-//     logoClone = document.querySelector('.header__logo').cloneNode(true);
-//     burgerListClone = document.querySelector('.header__nav-list').cloneNode(true);
-//     contactsPhoneClone = document.querySelector('.contacts-phone').cloneNode(true);
-//     contactsSocialClone = document.querySelector('.contacts-social').cloneNode(true);
-//     burgerBtnClone = document.querySelector('.header__btn.btn_light').cloneNode(true);
-// }
-
-// cloneEl();
-
-// burgerMenu.innerHTML = '<div class="burger-nav__header"><svg class="close__icon" id="close"><use xlink:href="img/sprite.svg#close"></use></svg></div>';
-// burgerMenu.querySelector('.burger-nav__header').prepend(logoClone);
-// burgerMenu.appendChild(contactsClone);
-// burgerMenu.appendChild(burgerListClone);
-// burgerMenu.appendChild(contactsPhoneClone);
-// burgerMenu.appendChild(contactsSocialClone);
-// burgerMenu.appendChild(burgerBtnClone);
 
 /**Закрытие бургер меню */
 const close = document.getElementById('close');
@@ -84,21 +36,14 @@ close.addEventListener('click', function () {
 
 
 // Footer
-// cloneEl();
 
 const footerNavBox = document.querySelector('.footer .footer__main .footer__nav');
 const footerNavLeft = footerNavBox.querySelector('.footer__nav-left');
 const footerNavRight = footerNavBox.querySelector('.footer__nav-right');
-Menu.logoClone(footerNavLeft);
-Menu.phoneClone(footerNavLeft);
-Menu.socialClone(footerNavLeft);
-Menu.listClone(footerNavRight);
-
-
-// footerNavLeft.appendChild(logoClone);
-// footerNavLeft.appendChild(contactsPhoneClone);
-// footerNavLeft.appendChild(contactsSocialClone);
-// footerNavRight.appendChild(burgerListClone);
+Menu.copyAppendElement(footerNavLeft, '.header__logo');
+Menu.copyAppendElement(footerNavLeft, '.contacts-phone');
+Menu.copyAppendElement(footerNavLeft, '.contacts-social');
+Menu.copyAppendElement(footerNavRight, '.header__nav-list');
 
 const footerDetails = footerNavBox.querySelectorAll('.header__nav-details');
 footerDetails.forEach(element => {
@@ -180,10 +125,6 @@ function searchOpen(items, clickElem) {
 }
 
 
-
-
-
-
 // Input type file
 
 const fileInput = document.querySelector('#clientFile');
@@ -210,8 +151,6 @@ const modalBoxContent = modalBox.querySelector('.modal__box');
 const modalBtn = modalBox.querySelector('.form__btn');
 const modalBtnClose = modalBox.querySelector('.modal__close');
 const content = document.querySelector('.content');
-
-
 
 modalBtn.addEventListener('click', function (e) {
     modalBox.style.display = 'none';

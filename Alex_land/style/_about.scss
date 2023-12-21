@@ -69,7 +69,7 @@
             }
 
             & .about__box-img {
-                background-image: url("../img/about1.jpg");
+                background-image: url("../images/about1.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -81,7 +81,7 @@
             align-self: center;
 
             & .about__box-info {
-                background-image: url("../img/aboutBG.jpg");
+                background-image: url("../images/aboutBG.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -101,7 +101,7 @@
             align-self: flex-end;
 
             & .about__box-img {
-                background-image: url("../img/about2.jpg");
+                background-image: url("../images/about2.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -110,7 +110,7 @@
     }
 
     &__right {
-        
+
         width: 47%;
         padding-top: 12px;
     }
@@ -136,7 +136,7 @@
 
             .list-item__icon {
                 width: 50px;
-                aspect-ratio: 1 / 1 ;
+                aspect-ratio: 1 / 1;
                 margin-right: 15px;
                 border-radius: 12px;
             }

@@ -2,12 +2,26 @@
 
 
 @keyframes backgroundAnimation {
-    0%   { background-position: center; }
-    25%  { background-position: left top; }
-    50%  { background-position: top; }
-    75%  { background-position: right bottom; }
-    100% { background-position: center; }
-  }
+    0% {
+        background-position: center;
+    }
+
+    25% {
+        background-position: left top;
+    }
+
+    50% {
+        background-position: top;
+    }
+
+    75% {
+        background-position: right bottom;
+    }
+
+    100% {
+        background-position: center;
+    }
+}
 
 
 %fontStyle {
@@ -71,6 +85,7 @@
     bottom: -9px;
     right: 0;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -127,7 +142,7 @@ ul {
         top: 0;
         border-radius: 30px;
         opacity: 0;
-        background-image: url(../img/bgBtn.jpg);
+        background-image: url(../images/bgBtn.jpg);
         background-position: right bottom;
         background-repeat: no-repeat;
         background-size: 150%;

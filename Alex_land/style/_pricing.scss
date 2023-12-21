@@ -25,7 +25,7 @@
         flex-grow: 1;
         width: calc(50% - 10px);
         max-width: 700px;
-        background-image: url(../img/Rectangle\ 1292.jpg);
+        background-image: url(../images/Rectangle\ 1292.jpg);
         background-position: center top;
         background-size: cover;
         background-repeat: no-repeat;
@@ -88,7 +88,7 @@
             position: absolute;
             right: 30px;
             content: "";
-            background-image: url(../img/fi-sr-plus-small.svg);
+            background-image: url(../images/fi-sr-plus-small.svg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -116,7 +116,7 @@
         background-color: $colorSubTitle;
 
         &::after {
-            background-image: url(../img/Line.png);
+            background-image: url(../images/Line.png);
             background-size: auto;
         }
 

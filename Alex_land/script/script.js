@@ -7,7 +7,7 @@ const Menu = {
         const el = this.baseEl.querySelector(elementSelector).cloneNode(true);
         parent.appendChild(el);
     },
-    copyprependElement: function (parent, elementSelector) {
+    copyPrependElement: function (parent, elementSelector) {
         const el = this.baseEl.querySelector(elementSelector).cloneNode(true);
         parent.prepend(el);
     }
@@ -15,7 +15,7 @@ const Menu = {
 
 const burgerMenu = document.getElementById('burgerNav');
 
-Menu.copyprependElement(burgerMenu.querySelector('.burger-nav__header'), '.header__logo');
+Menu.copyPrependElement(burgerMenu.querySelector('.burger-nav__header'), '.header__logo');
 Menu.copyAppendElement(burgerMenu, '.contacts-city');
 Menu.copyAppendElement(burgerMenu, '.header__nav-list');
 Menu.copyAppendElement(burgerMenu, '.contacts-phone');

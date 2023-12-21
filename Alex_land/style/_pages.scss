@@ -5,7 +5,7 @@
     margin: 20px 0;
     list-style: none;
     gap: 6px;
-   
+
     color: $colorSubTitle;
 
     &__item {
@@ -30,7 +30,7 @@
     @extend %flexCenterCenter;
     padding: 90px;
     border-radius: 15px;
-    background-image: url(../img/BG.png);
+    background-image: url(../images/BG.png);
     background-size: 140%;
     background-repeat: no-repeat;
     background-position: bottom center;

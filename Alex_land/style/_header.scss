@@ -1,4 +1,5 @@
-.header, .footer {
+.header,
+.footer {
 
     &__nav {
         @extend %fontSizeText;
@@ -20,7 +21,7 @@
 
             .summary__icon {
                 width: 6px;
-               aspect-ratio: 1/0.75;
+                aspect-ratio: 1/0.75;
                 fill: $colorRegular;
                 margin-left: 6px;
                 transition: transform .3s ease-in;
@@ -148,7 +149,7 @@
             min-height: 100%;
             top: 0;
             left: 0;
-            background-image: url(../img/bgBtn.svg);
+            background-image: url(../images/bgBtn.svg);
             background-size: cover;
             background-repeat: no-repeat;
             opacity: 0;

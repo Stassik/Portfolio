@@ -73,7 +73,7 @@
         &_item1 {
             grid-row: span 5;
             grid-column: span 1;
-            // background-image: url(../img/main_1.png);
+            // background-image: url(../images/main_1.png);
             border-radius: 35px 35px 0 0;
 
             .main__cards-img {
@@ -84,7 +84,7 @@
         &_item2 {
             grid-row: 2 / 6;
             grid-column: 2 / 3;
-            // background-image: url(../img/main_2.jpg);
+            // background-image: url(../images/main_2.jpg);
 
             .main__cards-img {
                 aspect-ratio: 0.75/1;
@@ -320,7 +320,7 @@
             grid-row: 1 / 6;
             grid-column: 5 / 6;
 
-            // background-image: url(../img/main_5.jpg);
+            // background-image: url(../images/main_5.jpg);
             .main__cards-img {
                 aspect-ratio: 0.65 / 1;
             }

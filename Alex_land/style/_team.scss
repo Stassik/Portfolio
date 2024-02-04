@@ -22,7 +22,7 @@
         &-contact {
             @extend %flexCenter;
             gap: 15px;
-            
+
             position: absolute;
             right: 20px;
             bottom: 90px;
@@ -34,6 +34,7 @@
             width: 38px;
             aspect-ratio: 1/1;
             background-color: $colorTitle;
+            box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.30) inset;
 
             &:hover {
                 background-color: $colorHover;
@@ -56,7 +57,7 @@
             justify-content: space-between;
             align-items: flex-start;
             padding-top: 15px;
-            
+
         }
 
         &-name {

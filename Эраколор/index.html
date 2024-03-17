@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО «ЭРАКОЛОР» Производство и продажа металлокассет</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="/" class="logo__img-box">
+                <img src="./images/1.svg" alt="Ераколор логотип" class="logo__img">
+                <div class="logo__text-box">
+                    <p class="logo__title">ЭРАКОЛОР</p>
+                    <span class="logo__span">Производство и продажа металлокассет</span>
+                </div>
+            </a>
+            <div class="header__right justify-content-center justify-content-sm-between justify-content-lg-end">
+                <div class="header__phone-box">
+                    <i class="fa-solid fa-phone" style="color: #ea3454;"></i>
+                    <div class="header__phone-text">
+                        <span class="header__phone-span span-text">Звонок бесплатный:</span>
+                        <a href="/" class="header__phone">+7 (495) 199-78-79</a>
+                    </div>
+                    <button class="header__contacts-btn" type="button" data-bs-toggle="modal"
+                        data-bs-target="#contactsModal">
+                        <i class="fa-solid fa-angle-down" style="color: #323232;"></i>
+                    </button>
+                </div>
+                <button type="button" class="header__btn btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#feedbackModal">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+    <nav class="header__nav navbar navbar-expand-lg">
+        <div class="container justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./page.html">Наше производство</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Услуги
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Услуга 1</a></li>
+                                <li><a class="dropdown-item" href="#">Услуга 2</a></li>
+                                <li><a class="dropdown-item" href="#">Услуга 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Проекты
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Проект 1</a></li>
+                                <li><a class="dropdown-item" href="#">Проект 2</a></li>
+                                <li><a class="dropdown-item" href="#">Проект 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Прайс-лист</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-caption d-block">
+                    <div class="carousel-item__text">
+                        <h1>Производство и продажа металлокассет</h1>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="./images/banner_3.webp" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner_2.webp" class="d-block w-100" alt="banner image">
+                </div>
+                <div class="carousel-item ">
+                    <img src="./images/banner_1.webp" class="d-block w-100" alt="banner image">
+                </div>
+            </div>
+            <div class="control-box">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
+
+        </div>
+        <section class="offers section">
+            <div class="offers__container container">
+                <div class="offers__heading">
+                    <h2 class="offers__title title">Наша продукция</h2>
+                    <p class="offers__text text">Наша Компания специализируется на производстве как стандартных изделий,
+                        так и изделий, созданных по индивидуальным замерам или чертежам.</p>
+                </div>
+                <div class="offers__list row gx-lg-5">
+                    <div class="offers__item col-12 col-sm-6 col-lg-4">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box">
+                                <img src="./images/offers_1.webp" alt="Металлокассеты" class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Металлокассеты</h3>
+                        </a>
+                    </div>
+                    <div class="offers__item col-12 col-sm-6 col-lg-4">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box">
+                                <img src="./images/offers_7.webp" alt="Порошковая покраска" class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Нестандартные металлоизделия</h3>
+                        </a>
+                    </div>
+                    <div class="offers__item col-12 col-sm-6 col-lg-4">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box">
+                                <img src="./images/offers_8.webp" alt="Радиусные отливы, откосы, парапеты"
+                                    class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Радиусные отливы, откосы, парапеты</h3>
+                        </a>
+                    </div>
+
+                    <div class="offers__item col-12 col-sm-6 col-lg-4">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box">
+                                <img src="./images/offers_4.webp" alt="Доборные элементы кровли и фасада"
+                                    class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Доборные элементы кровли и фасада</h3>
+                        </a>
+                    </div>
+                    <div class="offers__item col-12 col-sm-6 col-lg-4">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box">
+                                <img src="./images/offers_5.webp" alt="Медные отливы, откосы, парапеты"
+                                    class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Медные отливы, откосы, парапеты</h3>
+                        </a>
+                    </div>
+                    <div class="offers__item col-12 col-sm-6 col-lg-4">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box">
+                                <img src="./images/offers_6.webp" alt="Радиусные металлокассеты" class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Радиусные металлокассеты</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers section">
+            <div class="offers__container container">
+                <div class="offers__heading">
+                    <h2 class="offers__title title">Наши услуги</h2>
+                    <p class="offers__text text">Наша Компания предоставляет полный спектр услуг.</p>
+                </div>
+                <div class="offers__list row gx-5">
+                    <div class="offers__item col-12 col-sm-6">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box offers__img-box_big">
+                                <img src="./images/offers_2.webp" alt="Порошковая покраска" class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Порошковая покраска</h3>
+                        </a>
+                    </div>
+                    <div class="offers__item col-12 col-sm-6">
+                        <a href="/" class="offers__item-link">
+                            <div class="offers__img-box offers__img-box_big">
+                                <img src="./images/offers_3.webp" alt="Перфорация металла" class="offers__img">
+                            </div>
+                            <h3 class="offers__item-title subtitle">Перфорация металла</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="template template_gray section" data-parallax="scroll" data-image-src="./images/pallette.webp">
+            <!-- <img src="./images/pallette.webp" alt="Ral" class="template__img-bg"> -->
+            <div class="template__container container">
+                <div class="template__content row justify-content-between">
+                    <div class="template__heading col-md-6 col-xl-5">
+                        <h2 class="template__title title">Выбор цвета</h2>
+                        <p class="template__text text">Металлические изделия могут быть изготовлены из металла любого
+                            цвета по вашему желанию.</p>
+                    </div>
+                    <div class="template__descr col-md-6">
+                        <h3 class="template__subtitle subtitle">
+                            Металлические изделия - это стильные элементы декора.</h3>
+                        <p class="template__text text">Сегодня на рынке представлено огромное разнообразие
+                            металлических изделий, которые могут быть изготовлены из металла любого цвета.</p>
+                        <p class="template__text text">Благодаря современным технологиям и инновационным способам
+                            окрашивания металла, Вы можете выбрать цвет, который идеально подойдет для Вашего
+                            интерьера
+                            или
+                            экстерьера.</p>
+                        <a href="/" class="template__link">Читать подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="benefits section">
+            <div class="benefits__container container">
+                <div class="row gx-5 benefits__content">
+                    <div class="benefits__left col-12 col-md-6 pr-5">
+                        <div class="benefits__heading">
+                            <h2 class="benefits__title title">Наши преимущества</h2>
+                            <p class="offers__text text">Строительная компания «Название» ставит высокие цели — занимать
+                                ведущие позиции в рейтинге строительных компаний, быть ответственной компанией,
+                                качественно обслуживающей своих клиентов</p>
+                        </div>
+                        <ul class="benefits__list">
+                            <li class="benefits__item">
+                                <div class="benefits__icon-box"><i class="fa-regular fa-thumbs-up"></i>
+                                </div>
+                                <div class="benefits__item-descr">
+                                    <h3 class="benefits__item-title">15 лет</h3>
+                                    <p class="benefits__item-text text">на рынке по производству
+                                        металлокассет, доборных элементов и порошковой покраски</p>
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__icon-box"><i class="fa-solid fa-industry"></i>
+                                </div>
+                                <div class="benefits__item-descr">
+                                    <h3 class="benefits__item-title">Свое производство</h3>
+                                    <p class="benefits__item-text text"> с использованием импортного оборудования с ЧПУ
+                                        из оцинкованной стали 0,7-1,2 мм</p>
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__icon-box"><i class="fa-solid fa-spray-can"></i>
+                                </div>
+                                <div class="benefits__item-descr">
+                                    <h3 class="benefits__item-title">Порошкова покраска</h3>
+                                    <p class="benefits__item-text text"> любых изделий, в том числе металлокассет,
+                                        металлоизделий</p>
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__icon-box"><i class="fa-solid fa-certificate"></i>
+                                </div>
+                                <div class="benefits__item-descr">
+                                    <h3 class="benefits__item-title">Сертификация</h3>
+                                    <p class="benefits__item-text text">всей продукции</p>
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__icon-box"><i class="fa-solid fa-award"></i>
+                                </div>
+                                <div class="benefits__item-descr">
+                                    <h3 class="benefits__item-title">Гарантия</h3>
+                                    <p class="benefits__item-text text">на все виды работ и изделий</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="benefits__right d-none d-md-block col-6">
+                        <div class="benefits__img-box">
+                            <img src="./images/benefits.webp" alt="" class="benefits__img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section> -->
+        <section class="benefits section">
+            <div class="benefits__container container">
+                <div class="row g-3 g-xl-5 benefits__content d-flex justify-content-center">
+                    <div class="benefits__heading col-lg-6 col-xl-4">
+                        <h2 class="benefits__title title">Почему&nbsp;мы&nbsp;?</h2>
+                        <p class="offers__text text">Наша Компания имеет ряд преимуществ, которые делают нас
+                            надежным и незаменимым партнером для строительных и архитектурных проектов.</p>
+                        <!-- <p class="offers__text text">Высокое качество продукции, широкий ассортимент, индивидуальный
+                                подход к каждому проекту, быстрая и надежная поставка, комплексное обслуживание и
+                                конкурентные цены - все это делает Нас привлекательным выбором для тех, кто
+                                ищет качественные и надежные фасадные металлокассеты.</p> -->
+                    </div>
+                    <div class="benefits__item col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4">
+                        <div class="benefits__item-box">
+                            <div class="benefits__icon-box"><i class="fa-regular fa-thumbs-up"></i>
+                            </div>
+                            <div class="benefits__item-descr">
+                                <h3 class="benefits__item-title">15 лет</h3>
+                                <p class="benefits__item-text text">на рынке по производству
+                                    металлокассет, доборных элементов и порошковой покраски</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="benefits__item  col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4">
+                        <div class="benefits__item-box">
+                            <div class="benefits__icon-box"><i class="fa-solid fa-industry"></i>
+                            </div>
+                            <div class="benefits__item-descr">
+                                <h3 class="benefits__item-title">Свое производство</h3>
+                                <p class="benefits__item-text text"> с использованием импортного оборудования с
+                                    ЧПУ
+                                    из оцинкованной стали 0,7-1,2 мм</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="benefits__item  col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4">
+                        <div class="benefits__item-box">
+                            <div class="benefits__icon-box"><i class="fa-solid fa-spray-can"></i>
+                            </div>
+                            <div class="benefits__item-descr">
+                                <h3 class="benefits__item-title">Порошкова покраска</h3>
+                                <p class="benefits__item-text text"> любых изделий, в том числе металлокассет,
+                                    металлоизделий</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits__item col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4">
+                        <div class="benefits__item-box">
+                            <div class="benefits__icon-box"><i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="benefits__item-descr">
+                                <h3 class="benefits__item-title">Сертификация</h3>
+                                <p class="benefits__item-text text">всей продукции</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits__item  col-12 col-sm-6 col-md-4 col-lg-6 col-xl-4">
+                        <div class="benefits__item-box">
+                            <div class="benefits__icon-box"><i class="fa-solid fa-award"></i>
+                            </div>
+                            <div class="benefits__item-descr">
+                                <h3 class="benefits__item-title">Гарантия</h3>
+                                <p class="benefits__item-text text">на все виды работ и изделий</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="feedback section container">
+            <div class="feedback__container row justify-content-between ">
+                <div class="feedback__descr col-12 col-lg-6 col-xl-5 p-0">
+                    <h2 class="feedback__title title">Возникли вопросы или предложения?</h2>
+                    <p class="feedback__text text">Оставьте заявку и мы перезвоним в течение 10 минут и рассчитаем Ваш
+                        заказ</p>
+                </div>
+                <div class="feedback__form-box col-12 col-lg-5 col-xl-6">
+                    <form action="#"
+                        class="feedback__form row d-flex justify-content-start justify-content-xl-between align-items-center">
+                        <input class="feedback__input col-12 col-sm-5 col-lg-12 col-xl-5" type="text" name="name"
+                            id="name" placeholder="Ваше имя">
+                        <input class="feedback__input col-12 col-sm-5 col-lg-12 col-xl-5" type="tel" name="tel" id="tel"
+                            placeholder="Телефон" required>
+                        <div class="form-check col-12 col-xxl-7">
+                            <input class="form-check-input" type="checkbox" value="" id="check" required>
+                            <label class="form-check-label" for="check">Я согласен(а) с обработкой персональных
+                                данных и
+                                политикой конфиденциальности</label>
+                        </div>
+                        <button type="submit"
+                            class="form__btn btn btn-secondary col-12 col-sm-6  col-md-4 col-lg-6 col-xxl-4 offset-sm-6 offset-md-8 offset-lg-6 offset-xxl-0">Заказать
+                            звонок</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="template section">
+            <div class="template__container container">
+                <div class="template__content row justify-content-between">
+                    <div class="template__heading col-md-6 col-xl-5">
+                        <h2 class="template__title title">Дилерам</h2>
+                        <p class="template__text text">На территории Московской области и г.Москвы с «ЭРАКОЛОР»
+                            сотрудничает сеть организаций, работающих на дилерских условиях.</p>
+                    </div>
+                    <div class="template__descr col-md-6">
+                        <h3 class="template__subtitle subtitle">Приглашаем к сотрудничеству</h3>
+                        <p class="template__text text">Мы предоставляем:</p>
+                        <ul>
+                            <li>Выгодные цены</li>
+                            <li>Рекламную поддержку (обеспечение стендами, буклетами, листовками и др. раздаточным
+                                материалами)</li>
+                            <li>Наличие стандартной продукции на нашем складе даже в разгар сезона в достаточном
+                                количестве.</li>
+                            <li>Кратчайшие сроки выполнения заказов</li>
+                            <li>Доставку материалов до вашего склада или объекта</li>
+                        </ul>
+                        <p class="template__text text">
+                            <span class="text__mark">* </span>По вопросам дилерского сотрудничества обращайтесь к
+                            менеджерам компании.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map section">
+            <div class="map__descr-container container  col-12 col-sm-7 col-lg-4">
+                <div class="map__descr">
+                    <h3 class="template__subtitle subtitle">
+                        Находимся в 15 км от МКАД</h3>
+                    <p class="template__text text">Для Вашего удобства наше производство находится в 15 минутах езды от
+                        МКАД.</p>
+                    <p class="template__text text">Мы выполняем заказы на территории Москвы и Подмосковья.</p>
+                </div>
+            </div>
+            <iframe class="map__yandex"
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad94886032b0e902cefecce7f2b82b59a5b414af76e2421eedd5872d532658b33&amp;source=constructor&scroll=false"
+                width="100%" height="450" frameborder="0"></iframe>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content row gy-3">
+                <div class="footer__info col-md-6">
+                    <h3 class="footer__title subtitle">Контактная информация</h3>
+                    <div class="contacts__info-item">
+                        <span class="contacts__item-span span-text">Звоните по номеру:</span>
+                        <span class="contacts__info-text"><strong>+7 (495) 199-78-79</strong></span>
+                    </div>
+                    <div class="contacts__info-item  d-flex flex-column align-items-sm-start">
+                        <span class="contacts__item-span span-text">Для писем и предложений:</span>
+                        <a href="/" class="contacts__info-text"><strong>mail@eracolor.ru</strong></a>
+                    </div>
+                </div>
+                <div class="footer__info col-md-6">
+                    <div class="contacts__info-item">
+                        <span class="contacts__item-span span-text">Режим работы:</span>
+                        <span class="contacts__info-text">Пн-Сб:<strong> 9:00 - 19:00</strong></span>
+                    </div>
+                    <div class="contacts__info-item">
+                        <span class="contacts__item-span span-text">Мы находимся по адресу:</span>
+                        <span class="contacts__info-text">Московская область, Наро-Фоминский городской округ, тер.
+                            «Многофункциональный промышленный округ «Котово», строение 19а</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright-container container">
+            <div class="footer__copyright-content row">
+                <div class="footer__copyright-left col-12 col-md-6">Copyright © 2022 - 2024 ООО "Эраколор"</div>
+                <div class="footer__copyright-right col-12 col-md-6">
+                    Поддержка. Разработка сайтов в Megagroup.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="contactsModal" tabindex="-1" aria-labelledby="contactsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contactsModalLabel">Контактная информация</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="contacts__info-box">
+                        <div class="contacts__info-item">
+                            <span class="contacts__item-span span-text">Режим работы:</span>
+                            <span class="contacts__info-text">Пн-Сб:<strong> 9:00 - 19:00</strong></span>
+                        </div>
+                        <div class="contacts__info-item">
+                            <span class="contacts__item-span span-text">Звоните по номеру:</span>
+                            <span class="contacts__info-text"><strong>+7 (495) 199-78-79</strong></span>
+                        </div>
+                        <div class="contacts__info-item d-flex flex-column align-items-start">
+                            <span class="contacts__item-span span-text">Для писем и предложений:</span>
+                            <a href="/" class="contacts__info-text"><strong>mail@eracolor.ru</strong></a>
+                        </div>
+                        <div class="contacts__info-item">
+                            <span class="contacts__item-span span-text">Мы находимся по адресу:</span>
+                            <span class="contacts__info-text">Московская область, Наро-Фоминский городской округ, тер.
+                                «Многофункциональный промышленный округ «Котово», строение 19а</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="feedbackModalLabel">Оставьте заявку</h1>
+                    <span class="contacts__info-span span-text">и наши специалисты свяжутся с Вами в самое ближайшее
+                        время</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="contacts__info-box">
+                        <form action="#"
+                            class="feedback__form row d-flex justify-content-start justify-content-xl-between align-items-center">
+                            <input class="feedback__input col-12" type="text" name="name" id="name1"
+                                placeholder="Ваше имя">
+                            <input class="feedback__input col-12" type="tel" name="tel" id="tel1" placeholder="Телефон"
+                                required>
+                            <div class="form-check col-12">
+                                <input class="form-check-input" type="checkbox" value="" id="check1" required>
+                                <label class="form-check-label" for="check1">Я согласен(а) с обработкой персональных
+                                    данных и
+                                    политикой конфиденциальности</label>
+                            </div>
+                            <button type="submit" class="form__btn btn btn-primary col-12">Заказать
+                                звонок</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c71a3f0222.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

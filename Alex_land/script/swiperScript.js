@@ -23,10 +23,10 @@ var swiperServices = new Swiper(".swiper-services", {
         },
     },
 
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: "#swiper-services__pagination",
         clickable: true,

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy - Ваш надежный партнер в мобильности!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header class="header container">
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-content">
+                <a class="navbar-brand" href="/">
+                    <img src="images/logo.svg" class="logo_img" alt="Galaxy">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <svg class="burger-icon">
+                        <use xlink:href="images/sprite.svg#burger"></use>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="">
+                        <div class="navbar-info">
+                            <div class="navbar-info_item">
+                                <svg class="navbar-info_icon">
+                                    <use xlink:href="images/sprite.svg#clock"></use>
+                                </svg>
+                                <span class="navbar-info_text">Пн-Пт: 10:00 - 19:00</span>
+                            </div>
+                            <div class="navbar-info_item">
+                                <svg class="navbar-info_icon">
+                                    <use xlink:href="images/sprite.svg#phone"></use>
+                                </svg>
+                                <a href="tel:74955043481" class="navbar-info_link">+7 (495) 504 34 81</a>
+                            </div>
+                            <div class="navbar-info_item">
+                                <svg class="navbar-info_icon">
+                                    <use xlink:href="images/sprite.svg#map"></use>
+                                </svg>
+                                <span class="navbar-info_text">
+                                    Москва, ул. Давыдковская, 12к3
+                                </span>
+                            </div>
+                        </div>
+                        <div class="navbar-nav">
+                            <a class="nav-link" aria-current="page" href="#bestsellers">Стандартные тележки</a>
+                            <a class="nav-link" href="#mobile">Мобильное рабочее место</a>
+                            <a class="nav-link" href="#individual">Заказные любые конструкции</a>
+                            <a class="nav-link" href="#other">Доп. оборудование</a>
+                            <a class="nav-link" href="#contacts">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="main container">
+    <section class="banner">
+        <div class="banner__descr_sub banner__desc">
+            <img src="images/Security.svg" alt="Security">
+            <span class="banner__text subtext">Ваш надежный партнер в мобильности!</span>
+        </div>
+        <h1 class="banner__title">Идеальные решения<br>для перевозки и организации</h1>
+        <p class="banner__descr subtext">
+            Предоставляем широкий выбор <b>тележек, конструкций, оборудования для любых задач.</b> Идеальное решение для
+            вашего <b>перемещения грузов</b> и облегчения повседневных задач!
+        </p>
+        <div class="banner__box">
+            <div class="banner__img-box">
+                <img src="images/banner-1.webp" alt="image" class="banner__img img">
+                <div class="poster__contact-box">
+                    <a href="#mobile" class="poster__contact-link">Мобильное рабочее место</a>
+                    <svg class="poster__contact-icon">
+                        <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="banner__img-box">
+                <img src="images/banner-2.webp" alt="image" class="banner__img img">
+                <div class="poster__contact-box">
+                    <a href="#bestsellers" class="poster__contact-link">Стандартные тележки</a>
+                    <svg class="poster__contact-icon">
+                        <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="benefits container">
+        <div class="benefits__item">
+            <div class="benefits__img-box">
+                <svg class="benefits__item-icon">
+                    <use xlink:href="images/sprite.svg#diamond"></use>
+                </svg>
+            </div>
+            <div class="benefits__item-descr">
+                <h5 class="benefits__item-title">Лучшие цены</h5>
+                <p class="benefits__descr-text subtext">на оборудование и ремонт</p>
+            </div>
+        </div>
+        <div class="benefits__item">
+            <div class="benefits__img-box">
+                <svg class="benefits__item-icon">
+                    <use xlink:href="images/sprite.svg#wrench"></use>
+                </svg>
+            </div>
+            <div class="benefits__item-descr">
+                <h5 class="benefits__item-title">Сервисное обслуживание</h5>
+                <p class="benefits__descr-text subtext">для сохранения функциональности оборудования</p>
+            </div>
+        </div>
+        <div class="benefits__item">
+            <div class="benefits__img-box">
+                <svg class="benefits__item-icon">
+                    <use xlink:href="images/sprite.svg#time"></use>
+                </svg>
+            </div>
+            <div class="benefits__item-descr">
+                <h5 class="benefits__item-title">Ремонт за 2-3 дня</h5>
+                <p class="benefits__descr-text subtext">Большинство запчастей в наличии</p>
+            </div>
+        </div>
+    </div>
+    <section class="bestsellers section" id="bestsellers">
+        <div class="section__heading">
+            <h2 class="section__title">Стандартные тележки<br><span class="contrast-text">бестселлеры</span></h2>
+        </div>
+        <div class="section__container">
+            <ul class="nav nav-pills center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-multipick-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-multipick" type="button" role="tab" aria-controls="pills-multipick"
+                        aria-selected="true">Multipick</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-ktz-tab" data-bs-toggle="pill" data-bs-target="#pills-ktz"
+                        type="button" role="tab" aria-controls="pills-ktz" aria-selected="false">КТЗ</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-ktt-tab" data-bs-toggle="pill" data-bs-target="#pills-ktt"
+                        type="button" role="tab" aria-controls="pills-ktt" aria-selected="false">KT-T</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-t21-tab" data-bs-toggle="pill" data-bs-target="#pills-t21"
+                        type="button" role="tab" aria-controls="pills-t21" aria-selected="false">T21</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-t25-tab" data-bs-toggle="pill" data-bs-target="#pills-t25"
+                        type="button" role="tab" aria-controls="pills-t25" aria-selected="false">T25</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane show active" id="pills-multipick" role="tabpanel"
+                    aria-labelledby="pills-multipick-tab" tabindex="0">
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-5">
+                            <div class="tab-pane__item-content tab-pane__item-content_dark">
+                                <h4 class="tab-pane__title">Для комплектации заказов коробками европейского стандарта
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-7">
+                            <div class="tab-pane__item-content">
+                                <ul class="tab-pane__item-list">
+                                    <li>Подходит для размещения шести ящиков.</li>
+                                    <li>Может поворачиваться на месте на 360°</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-md-6 col-lg-5">
+                            <div class="tab-pane__img-box tab-pane__item-content">
+                                <img src="images/best-1.webp" alt="multipick" class="tab-pane__img img-fluid">
+                            </div>
+                        </div>
+                        <div class="tab-pane__item-box  col-12 col-md-6 col-lg-7">
+                            <div class="row   gx-2">
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-2.webp" alt="multipick" class="tab-pane__img">
+                                    </div>
+                                </div>
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-3.webp" alt="multipick" class="tab-pane__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="pills-ktz" role="tabpanel" aria-labelledby="pills-ktz-tab" tabindex="0">
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-5">
+                            <div class="tab-pane__item-content tab-pane__item-content_dark">
+                                <h4 class="tab-pane__title">Для комплектации заказов.<br>
+                                    Универсальность и большое количество опций
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-7">
+                            <div class="tab-pane__item-content">
+                                <ul class="tab-pane__item-list">
+                                    <li>Системная конструкция с индивидуальными надстройками</li>
+                                    <li>Грузоподъемность до 300 кг</li>
+                                    <li>Возможна высокая степень индивидуализации, в том числе для периферийного
+                                        электрооборудования</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-md-6 col-lg-5">
+                            <div class="tab-pane__img-box tab-pane__item-content">
+                                <img src="images/best-4.webp" alt="ktz" class="tab-pane__img  img-fluid">
+                                <div class="bestsellers__box-sticker">
+                                    <div class="bestsellers__sticker">Конфигурация под ваши потребности</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane__item-box  col-12 col-md-6 col-lg-7">
+                            <div class="row   gx-2">
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box">
+                                        <img src="images/best-5.webp" alt="ktz" class="tab-pane__img_fluid ">
+                                    </div>
+                                </div>
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-6.webp" alt="ktz" class="tab-pane__img">
+                                        <div class="bestsellers__box-sticker">
+                                            <div class="bestsellers__sticker">l 90 /1,300 / 1,700 mm</div>
+                                            <div class="bestsellers__sticker">w 467 / 625 mm</div>
+                                            <div class="bestsellers__sticker">h 1,630 / 1,830 mm</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="pills-ktt" role="tabpanel" aria-labelledby="pills-ktt-tab" tabindex="0">
+
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-5">
+                            <div class="tab-pane__item-content tab-pane__item-content_dark">
+                                <h4 class="tab-pane__title">Для комплектования небольших заказов.<br>Как мобильное
+                                    рабочее место
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-7">
+                            <div class="tab-pane__item-content">
+                                <ul class="tab-pane__item-list">
+                                    <li>Малая высота — всего 1230 мм</li>
+                                    <li>Грузоподъемность до 200 кг</li>
+                                    <li>По желанию с литийионным аккумулятором</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-md-6 col-lg-5">
+                            <div class="tab-pane__img-box tab-pane__item-content">
+                                <img src="images/best-7.webp" alt="ktt" class="tab-pane__img  img-fluid">
+                            </div>
+                        </div>
+                        <div class="tab-pane__item-box  col-12 col-md-6 col-lg-7">
+                            <div class="row   gx-2">
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-8.webp" alt="ktt" class="tab-pane__img">
+                                    </div>
+                                </div>
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-9.webp" alt="ktt" class="tab-pane__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="pills-t21" role="tabpanel" aria-labelledby="pills-t21-tab" tabindex="0">
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-5">
+                            <div class="tab-pane__item-content tab-pane__item-content_dark">
+                                <h4 class="tab-pane__title">С откидной проволочной полкой
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-7">
+                            <div class="tab-pane__item-content">
+                                <ul class="tab-pane__item-list">
+                                    <li>Прочная конструкция и превосходное качество</li>
+                                    <li>Для экономии места задвигаются друг в друга.</li>
+                                    <li>Складные проволочные полки, которые при необходимости убираются в заднюю стенку
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-md-6 col-lg-5">
+                            <div class="tab-pane__img-box tab-pane__item-content">
+                                <img src="images/best-10.webp" alt="t21" class="tab-pane__img  img-fluid">
+                            </div>
+                        </div>
+                        <div class="tab-pane__item-box  col-12 col-md-6 col-lg-7">
+                            <div class="row   gx-2">
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-11.webp" alt="t21" class="tab-pane__img">
+                                    </div>
+                                </div>
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-12.webp" alt="t21" class="tab-pane__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="pills-t25" role="tabpanel" aria-labelledby="pills-t25-tab" tabindex="0">
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-5">
+                            <div class="tab-pane__item-content tab-pane__item-content_dark">
+                                <h4 class="tab-pane__title">Популярная универсальная модель для разнообразных сфер
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="tab-pane__item col-12 col-sm-6 col-lg-7">
+                            <div class="tab-pane__item-content">
+                                <ul class="tab-pane__item-list">
+                                    <li>Для перевозок любого рода</li>
+                                    <li>Высокая маневренность</li>
+                                    <li>Прочная конструкция — превосходное качество</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane__item-box row gx-2">
+                        <div class="tab-pane__item col-12 col-md-6 col-lg-5">
+                            <div class="tab-pane__img-box tab-pane__item-content">
+                                <img src="images/best-13.webp" alt="t25" class="tab-pane__img">
+                            </div>
+                        </div>
+                        <div class="tab-pane__item-box  col-12 col-md-6 col-lg-7">
+                            <div class="row   gx-2">
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-14.webp" alt="t25" class="tab-pane__img">
+                                    </div>
+                                </div>
+                                <div class="tab-pane__item col-12 col-sm-6">
+                                    <div class="tab-pane__img-box tab-pane__item-content">
+                                        <img src="images/best-15.webp" alt="t25" class="tab-pane__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="mobile section" id="mobile">
+        <div class="section__heading">
+            <h2 class="section__title">Мобильное рабочее место</h2>
+            <p class="section__descr">Идеально для учёта товара. Для работы сервисных специалистов
+                по&nbsp;обслуживанию техники</p>
+        </div>
+        <div class="section__container">
+            <div class="row w-100 gx-0 gx-lg-2">
+                <div class="mobile__box col-12 col-lg-8">
+                    <div class="mobile__item-content">
+                        <div class="mobile__img-box">
+                            <img src="images/mobile-1.webp" alt="мобильное рабочее место" class="tab-pane__img">
+                        </div>
+                        <div class="mobile__img-box ">
+                            <img src="images/mobile-2.webp" alt="мобильное рабочее место" class="tab-pane__img">
+                        </div>
+
+                    </div>
+                    <div class="stickers-box">
+                        <div class="sticker scticker_regular">Перемещение в любое удобное место </div>
+                        <div class="sticker sticker_contrast">Эргономичное исполнение</div>
+                        <div class="sticker sticker_light">Регулировка по высоте</div>
+                        <div class="sticker">Опциональный набор дополнительного оборудования</div>
+                    </div>
+                </div>
+                <div class="stickers-box">
+                    <div class="sticker scticker_regular">Перемещение в любое удобное место </div>
+                    <div class="sticker sticker_contrast">Эргономичное исполнение</div>
+                    <div class="sticker sticker_light">Регулировка по высоте</div>
+                    <div class="sticker">Опциональный набор дополнительного оборудования</div>
+                </div>
+                <div class="mobile__box-group col-lg-4">
+                    <div class="mobile__box">
+                        <div class="mobile__item-content">
+                            <div class="mobile__img-box">
+                                <img src="images/mobile-3.webp" alt="мобильное рабочее место"
+                                    class="tab-pane__img_fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile__box">
+                        <div class="mobile__item-content">
+                            <div class="mobile__img-box ">
+                                <img src="images/mobile-4.webp" alt="мобильное рабочее место" class="tab-pane__img">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="individual section" id="individual">
+        <div class="section__heading">
+            <h2 class="section__title">Подкатные конструкции<br><span class="contrast-text">по&nbsp;вашим эскизам</span>
+            </h2>
+            <p class="section__descr">Индивидуальные решения для ваших бизнес-процессов</p>
+        </div>
+        <div class="section__container">
+            <div class="tab-pane">
+                <div class="tab-pane__item-box row gx-2">
+                    <div class="tab-pane__item col-12 col-sm-6 col-lg-5">
+                        <div class="tab-pane__img-box">
+                            <img src="images/individual-1.webp" alt="подкатные конструкции" class="tab-pane__img_fluid">
+                        </div>
+                    </div>
+                    <div class="tab-pane__item col-12 col-sm-6 col-lg-7">
+                        <div class="tab-pane__item-content">
+                            <ul class="tab-pane__item-list">
+                                <li>Размеры и конструкция под ваши требования</li>
+                                <li>Опциональный набор дополнительного оборудования</li>
+                                <li>Возможность оснастить подвесными отсеками хранения, освещением, крепежными панелями
+                                    для
+                                    инструмента и расходных материалов</li>
+                            </ul>
+                            <div class="stickers-box">
+                                <div class="sticker sticker_contrast">Стойки</div>
+                                <div class="sticker scticker_regular">Стеллажи</div>
+                                <div class="sticker">Столы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane__item-box row gx-2">
+                    <div class="tab-pane__item col-12 col-md-6 col-lg-5">
+                        <div class="tab-pane__img-box">
+                            <img src="images/individual-2.webp" alt="индивидуальные решения"
+                                class="tab-pane__img_fluid">
+                        </div>
+                    </div>
+                    <div class="tab-pane__item-box  col-12 col-md-6 col-lg-7">
+                        <div class="row   gx-2">
+                            <div class="tab-pane__item col-6">
+                                <div class="tab-pane__img-box tab-pane__item-content">
+                                    <img src="images/individual-3.webp" alt="индивидуальные решения"
+                                        class="tab-pane__img">
+                                </div>
+                            </div>
+                            <div class="tab-pane__item col-6">
+                                <div class="tab-pane__img-box tab-pane__item-content zigzag">
+                                    <img src="images/individual-4.webp" alt="индивидуальные решения"
+                                        class="tab-pane__img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="other section" id="other">
+        <div class="other__box">
+            <div class="section__heading">
+                <h2 class="section__title">Дополнительное оборудование</h2>
+                <p class="section__descr">Большой выбор оборудования и аксессуаров в нашем интернет-магазине</p>
+            </div>
+            <div class="section__container">
+                <div class="stickers-box">
+                    <a href="https://galaxyrf.ru/product_cat/promyshlennye-planshety/" class="sticker sticker_stroke"
+                        target="_blank">Планшеты</ф>
+                        <a href="#" class="sticker sticker_stroke" target="_blank">Ноутбуки</a>
+                        <a href="https://galaxyrf.ru/product_cat/mobilnye-kompyutery/" class="sticker sticker_stroke"
+                            target="_blank">Мобильные компьютеры</a>
+                        <a href="https://galaxyrf.ru/product_cat/transportnye-terminaly/" class="sticker sticker_stroke"
+                            target="_blank">Терминалы</a>
+                        <a href="https://galaxyrf.ru/product_cat/skanery-shtrihkodov/" class="sticker sticker_stroke"
+                            target="_blank">Сканеры</a>
+                        <a href="https://galaxyrf.ru/product_cat/printery/" class="sticker sticker_stroke"
+                            target="_blank">Принтеры
+                            этикеток</a>
+                        <a href="https://galaxyrf.ru/product_cat/golosovoe-oborudovanie/" class="sticker sticker_stroke"
+                            target="_blank">Рации</a>
+                        <a href="#" class="sticker sticker_stroke" target="_blank">Источники бесперебойного питания</a>
+                        <a href="https://galaxyrf.ru/product_cat/rfid/" class="sticker sticker_stroke"
+                            target="_blank">RFID</a>
+                        <a href="https://galaxyrf.ru/product_cat/rashodnye-materialy/" class="sticker sticker_stroke"
+                            target="_blank">Расходные материалы</a>
+                </div>
+                <div class="other__items-box container-fluid">
+                    <div class="other__item row">
+                        <div class="other__img-box zigzag col-12 col-md-6">
+                            <img src="images/other-1.webp" alt="планшет" class="other__item-img">
+                        </div>
+                        <div class="other__item-content col-12 col-md-6">
+                            <div class="other__item-descr">
+                                <h3 class="other__item-title">Защищенные планшеты</h3>
+                                <p class="other__item-text">Мобильное устройство для любого бизнеса в самых
+                                    экстремальных
+                                    условиях и средах</p>
+                                <ul class="other__item-list">
+                                    <li>Работа в экстремальных условиях</li>
+                                    <li>Работа в условиях «грязи» и «запыленности»</li>
+                                    <li>Работа в условиях ограниченного рабочего пространства</li>
+                                </ul>
+                            </div>
+                            <a href="https://galaxyrf.ru/product_cat/promyshlennye-planshety/" class="other__item-link"
+                                target="_blank">Посмотреть каталог</a>
+                        </div>
+                    </div>
+                    <div class="other__item row">
+                        <div class="other__item-content col-12 col-md-6">
+                            <div class="other__item-descr">
+                                <h3 class="other__item-title">Источники бесперебойного питания</h3>
+                                <p class="other__item-text">Предназначен для обеспечения автономным электропитанием
+                                    потребителей напряжения 220В синусоидальной формы</p>
+                                <ul class="other__item-list">
+                                    <li>Изменяя количество и емкость подключенных батарей, можно наращивать или
+                                        уменьшать
+                                        время автономной работы</li>
+                                </ul>
+                            </div>
+                            <a href="https://galaxyrf.ru/oborudovanie/" class="other__item-link"
+                                target="_blank">Посмотреть каталог</a>
+                        </div>
+                        <div class="other__img-box  zigzag-2 col-12 col-md-6">
+                            <img src="images/other-2.webp" alt="источники бесперебойного питания"
+                                class="other__item-img">
+                            <div class="other__img-descr">
+                                <div class="other__icon-box ">
+                                    <svg class="other__icon">
+                                        <use xlink:href="images/sprite.svg#diamond"></use>
+                                    </svg>
+                                </div>
+                                <p class="other__img-text">Количество подключаемых батарей ограничено только временем их
+                                    заряда, весом и габаритами</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="other__items-box container-fluid">
+            <div class="other__item row">
+                <div class="other__img-box zigzag-2 col-12 col-md-6">
+                    <img src="images/other-3.webp" alt="сканеры" class="other__item-img">
+                </div>
+                <div class="other__item-content col-12 col-md-6">
+                    <div class="other__item-descr">
+                        <h3 class="other__item-title">Защищенные сканеры штрих-кодов</h3>
+                        <p class="other__item-text">Предназначен для чтения 1D- и 2D- штрих-кодов в широком диапазоне
+                            расстояний на различных поверхностях</p>
+                        <ul class="other__item-list">
+                            <li>Для суровых условий складирования</li>
+                            <li>Превосходные характеристики сканирования</li>
+                            <li>Степень защиты IP65</li>
+                            <li>Устойчивость к падению с высоты 1,8 м</li>
+                        </ul>
+                    </div>
+                    <a href="https://galaxyrf.ru/product_cat/skanery-shtrihkodov/" class="other__item-link"
+                        target="_blank">Посмотреть
+                        каталог</a>
+                </div>
+            </div>
+            <div class="other__item row">
+                <div class="other__item-content col-12 col-md-6">
+                    <div class="other__item-descr">
+                        <h3 class="other__item-title">Мобильные промышленные принтеры этикеток</h3>
+                        <p class="other__item-text">Обеспечивает исключительную надежность и превосходные возможности
+                            подключения для самых требовательных бизнесприложений</p>
+                        <ul class="other__item-list">
+                            <li>Непревзойденные возможности печати</li>
+                            <li>Исключительная мобильность</li>
+                            <li>Эргономичный промышленный дизайн</li>
+                        </ul>
+                    </div>
+                    <a href="https://galaxyrf.ru/product_cat/promyshlennye-printery//" class="other__item-link"
+                        target="_blank">Посмотреть
+                        каталог</a>
+                </div>
+                <div class="other__img-box zigzag col-12 col-md-6">
+                    <img src="images/other-4.webp" alt="принтеры" class="other__item-img ">
+                    <div class="other__img-descr">
+                        <div class="other__icon-box ">
+                            <svg class="other__icon">
+                                <use xlink:href="images/sprite.svg#diamond"></use>
+                            </svg>
+                        </div>
+                        <p class="other__img-text"><span>Высокая производительность</span><br>способен печатать на
+                            различных носителях </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="poster section">
+        <div class="section__heading">
+            <h2 class="section__title">Остались вопросы?<br>
+                Свяжитесь с нами уже сегодня!</h2>
+            <div class="poster__box ">
+                <img src="images/poster.webp" alt="poster" class="poster__img">
+                <span class="poster__img-text">и мы ответим на ваши вопросы</span>
+            </div>
+
+            <p class="section__descr">Готовы сделать заказ или нужна консультация? Наша команда экспертов всегда готова
+                помочь вам с выбором и ответить на ваши вопросы. Свяжитесь с нами сегодня, чтобы начать улучшать ваш
+                бизнес уже сейчас!
+            </p>
+        </div>
+        <div class="poster__contact">
+            <div class="poster__contact-box poster__contact-box_contrast">
+                <svg class="navbar-info_icon">
+                    <use xlink:href="images/sprite.svg#phone"></use>
+                </svg>
+                <a href="tel:+74955043481" class="poster__contact-link">+7 (495) 504 34 81</a>
+                <svg class="poster__contact-icon">
+                    <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg>
+            </div>
+            <div class="poster__contact-box poster__contact-box_dark">
+                <svg class="navbar-info_icon">
+                    <use xlink:href="images/sprite.svg#mail"></use>
+                </svg>
+                <a href="mailto:sales@galaxy-rf.ru" class="poster__contact-link">sales@galaxy-rf.ru</a>
+                <svg class="poster__contact-icon">
+                    <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__contacts" id="contacts">
+            <div class="  row g-2 g-md-3">
+                <div class="col-12 col-sm-6">
+                    <div class="footer__contacts-item  d-flex flex-column justify-content-between">
+                        <h4 class="footer__contacts-title">Наши контакты</h4>
+                        <div class="footer__contacts-box row gy-2 g-xl-2">
+                            <div class="col-12 col-xl-6">
+                                <div class="footer__contacts-element">
+                                    <svg class="navbar-info_icon">
+                                        <use xlink:href="images/sprite.svg#phone"></use>
+                                    </svg>
+                                    <a href="tel:74955043481" class="footer__contacts-link">+7 (495) 504 34 81</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="footer__contacts-element">
+                                    <svg class="navbar-info_icon">
+                                        <use xlink:href="images/sprite.svg#phone"></use>
+                                    </svg>
+                                    <a href="tel:74955043482" class="footer__contacts-link">+7 (495) 504 34 82</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="footer__contacts-item">
+                        <div class="footer__contacts-box row  gy-2 g-xl-2">
+                            <div class="footer__contacts-element footer__contacts-element_transparent col-12">
+                                <svg class="navbar-info_icon">
+                                    <use xlink:href="images/sprite.svg#mail"></use>
+                                </svg>
+                                <a href="mailto:sales@galaxy-rf.ru" class="footer__contacts-link">sales@galaxy-rf.ru</a>
+                            </div>
+                            <div class="col-12 col-xl-5">
+                                <div class="footer__contacts-element">
+                                    <svg class="navbar-info_icon">
+                                        <use xlink:href="images/sprite.svg#clock"></use>
+                                    </svg>
+                                    <span class="footer__contacts-link">Пн-Пт: 10:00 - 19:00</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-7">
+                                <div class="footer__contacts-element">
+                                    <svg class="navbar-info_icon">
+                                        <use xlink:href="images/sprite.svg#map"></use>
+                                    </svg>
+                                    <span class="footer__contacts-link">Москва, ул. Давыдковская, 12к3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer__box">
+            <div class=" row gx-2">
+                <div class="footer__descr col-12 col-md-7">
+                    <a class="footer__logo" href="/">
+                        <img src="images/logo.svg" class="logo_img" alt="Galaxy">
+                    </a>
+                    <p class="footer__text">
+                        «Галакси Инжиниринг» работает на рынке России с 1996 года и является ведущим поставщиком решений
+                        на
+                        базе портативных компьютеров и индустриальных терминалов для государственных структур и частных
+                        предприятий.
+                    </p>
+                </div>
+                <nav class="footer__nav col-12 col-md-5">
+                    <div
+                        class="row gx-3 justify-content-end flex-column align-items-center align-items-md-stretch flex-md-row">
+                        <div class="footer__link-box col-12 col-md-5" role="tablist">
+                            <a class="footer__nav-link" href="#bestsellers">Стандартные тележки</a>
+                            <a class="footer__nav-link footer__nav-link_tab" href="#bestsellers" data-bs-toggle="pill"
+                                data-bs-target="#pills-ktz" role="tab" aria-controls="pills-ktz"
+                                aria-selected="false">KT3</a>
+                            <a class="footer__nav-link footer__nav-link_tab" href="#bestsellers" data-bs-toggle="pill"
+                                data-bs-target="#pills-multipick" role="tab" aria-controls="pills-multipick"
+                                aria-selected="false">Multipick</a>
+                            <a class="footer__nav-link footer__nav-link_tab" href="#bestsellers" data-bs-toggle="pill"
+                                data-bs-target="#pills-ktt" role="tab" aria-controls="pills-ktt"
+                                aria-selected="false">KT-T</a>
+                            <a class="footer__nav-link footer__nav-link_tab" href="#bestsellers" data-bs-toggle="pill"
+                                data-bs-target="#pills-t21" role="tab" aria-controls="pills-t21"
+                                aria-selected="false">T21</a>
+                            <a class="footer__nav-link footer__nav-link_tab" href="#bestsellers" data-bs-toggle="pill"
+                                data-bs-target="#pills-t25" type="button" role="tab" aria-controls="pills-t25"
+                                aria-selected="false">T25</a>
+                        </div>
+                        <div class="footer__link-box col-12 col-md-6">
+                            <a class="footer__nav-link" href="#mobile">Мобильное рабочее место</a>
+                            <a class="footer__nav-link" href="#individual">Заказные любые конструкции</a>
+                            <a class="footer__nav-link" href="#other">Доп. оборудование</a>
+                            <a class="footer__nav-link" href="#contacts">Контакты</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <span>© 1996-<span id="currentYear"></span> Галакси Инжиниринг</span>
+            <a class="footer__copy-link" href="#">Политика конфиденциальности</a>
+        </div>
+    </footer>
+</main>
+<button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c71a3f0222.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

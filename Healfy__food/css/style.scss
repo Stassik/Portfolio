@@ -243,7 +243,9 @@ a {
 }
 
 .events__item_1 {
-    .events__title, .events__subtitle {
+
+    .events__title,
+    .events__subtitle {
         color: $bgColorSuperLight;
     }
 }
@@ -397,6 +399,11 @@ a {
     font-family: $fontFamily;
     font-size: 18px;
     font-weight: 700;
+}
+
+.item__price {
+    display: flex;
+    justify-content: space-between;
 }
 
 .item__price_stroke {

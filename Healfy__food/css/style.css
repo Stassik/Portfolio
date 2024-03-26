@@ -208,7 +208,8 @@ a {
   font-size: 40px;
 }
 
-.events__item_1 .events__title, .events__item_1 .events__subtitle {
+.events__item_1 .events__title,
+.events__item_1 .events__subtitle {
   color: #fff;
 }
 
@@ -344,6 +345,11 @@ a {
   font-family: "Open sans", san-serif;
   font-size: 18px;
   font-weight: 700;
+}
+
+.item__price {
+  display: flex;
+  justify-content: space-between;
 }
 
 .item__price_stroke {
